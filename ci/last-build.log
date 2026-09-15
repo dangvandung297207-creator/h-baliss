@@ -1,0 +1,152 @@
+# Herbalist's Craft build log
+
+- commit: 6d758e7974419d9a147640e31b8bc1416c10492b
+- branch: arena/01a0a294-h-baliss
+- recorded: 2026-09-15T12:50:28Z
+- result: failure
+
+## Errors
+```
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineUse.java:68: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:20: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:36: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:57: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/WeaponOilItem.java:98: error: incompatible types: Provider cannot be converted to RegistryAccess
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/ToxicityManager.java:146: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:120: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:137: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MillRecipe>
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MortarRecipe.java:118: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MortarRecipe>
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:156: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:174: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<TableRecipe>
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:24: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:25: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:26: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:85: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:86: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:87: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:72: error: Provider is not abstract and does not override abstract method createParticle(SimpleParticleType,ClientLevel,double,double,double,double,double,double) in ParticleProvider
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:81: error: method does not override or implement a method from a supertype
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/JournalScreen.java:213: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbDefinition.java:43: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalistTableScreen.java:76: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/entity/DryingRackBlockEntity.java:72: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/menu/HerbalMillMenu.java:60: error: incompatible types: bad type in conditional expression
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/knowledge/JournalTeaching.java:18: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbSeedItem.java:70: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:41: error: HerbCropBlock is not abstract and does not override abstract method codec() in BushBlock
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:222: error: method does not override or implement a method from a supertype
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/villager/HerbalistTrades.java:80: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/DryingRackBlock.java:127: error: no suitable method found for dropContents(Level,BlockPos,DryingRackBlockEntity)
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModDataComponents.java:40: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/DryingRackBlock.java:127: error: no suitable method found for dropContents(Level,BlockPos,DryingRackBlockEntity)
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:72: error: Provider is not abstract and does not override abstract method createParticle(SimpleParticleType,ClientLevel,double,double,double,double,double,double) in ParticleProvider
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:41: error: HerbCropBlock is not abstract and does not override abstract method codec() in BushBlock
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/WeaponOilItem.java:98: error: incompatible types: Provider cannot be converted to RegistryAccess
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:137: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MillRecipe>
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MortarRecipe.java:118: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MortarRecipe>
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:174: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<TableRecipe>
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/menu/HerbalMillMenu.java:60: error: incompatible types: bad type in conditional expression
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineUse.java:68: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:20: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:36: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:57: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/ToxicityManager.java:146: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:120: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:156: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:25: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:26: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:85: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:86: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:87: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/villager/HerbalistTrades.java:80: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:81: error: method does not override or implement a method from a supertype
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:222: error: method does not override or implement a method from a supertype
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:24: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/JournalScreen.java:213: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbDefinition.java:43: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalistTableScreen.java:76: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/entity/DryingRackBlockEntity.java:72: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/knowledge/JournalTeaching.java:18: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbSeedItem.java:70: error: cannot find symbol
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModDataComponents.java:40: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/DryingRackBlock.java:127: error: no suitable method found for dropContents(Level,BlockPos,DryingRackBlockEntity)
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:72: error: Provider is not abstract and does not override abstract method createParticle(SimpleParticleType,ClientLevel,double,double,double,double,double,double) in ParticleProvider
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:41: error: HerbCropBlock is not abstract and does not override abstract method codec() in BushBlock
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/WeaponOilItem.java:98: error: incompatible types: Provider cannot be converted to RegistryAccess
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:137: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MillRecipe>
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MortarRecipe.java:118: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MortarRecipe>
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:174: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<TableRecipe>
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/menu/HerbalMillMenu.java:60: error: incompatible types: bad type in conditional expression
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineUse.java:68: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:20: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:36: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:57: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/ToxicityManager.java:146: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:120: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:156: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:25: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:26: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:85: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:86: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:87: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/villager/HerbalistTrades.java:80: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:81: error: method does not override or implement a method from a supertype
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:222: error: method does not override or implement a method from a supertype
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:24: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/JournalScreen.java:213: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbDefinition.java:43: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalistTableScreen.java:76: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/entity/DryingRackBlockEntity.java:72: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/knowledge/JournalTeaching.java:18: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbSeedItem.java:70: error: cannot find symbol
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModDataComponents.java:40: error: cannot find symbol
+```
+## Tail
+```
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+	at org.gradle.api.internal.tasks.execution.ProblemsTaskPathTrackingTaskExecuter.execute(ProblemsTaskPathTrackingTaskExecuter.java:41)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 18s
+2 actionable tasks: 2 executed
+```
