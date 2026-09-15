@@ -1,6 +1,7 @@
 package com.herbalistscraft.registry;
 
 import com.google.common.collect.ImmutableSet;
+import com.herbalistscraft.Config;
 import com.herbalistscraft.HerbalistsCraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
@@ -21,7 +22,10 @@ public final class ModVillagers {
 
     public static final DeferredHolder<VillagerProfession, VillagerProfession> HERBALIST = PROFESSIONS.register(
             "herbalist", () -> new VillagerProfession("herbalist",
-                    poi -> poi.is(HERBALIST_TABLE.getKey()),
+                    // The profession disappears when villagers are switched off in the config:
+                    // no villager will take the job when neither predicate matches.
+                    poi -> Config.villagersEnabled() && poi.is(HERBALIST_TABLE.getKey()),
+                    poi -> Config.villagersEnabled() && poi.is(HERBALIST_TABLE.getKey()),
                     ImmutableSet.<net.minecraft.world.item.Item>of(),
                     ImmutableSet.<net.minecraft.world.level.block.Block>of(ModBlocks.HERBALISTS_TABLE.get()),
                     ModSounds.MILL.get()));

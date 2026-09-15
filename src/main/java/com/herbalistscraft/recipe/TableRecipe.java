@@ -150,14 +150,41 @@ public class TableRecipe implements Recipe<TableRecipe.Input> {
                 ResourceLocation.CODEC.optionalFieldOf("medicine").forGetter(TableRecipe::medicine)
         ).apply(instance, TableRecipe::new));
 
-        private static final StreamCodec<RegistryFriendlyByteBuf, TableRecipe> STREAM_CODEC = StreamCodec.composite(
-                Ingredient.CONTENTS_STREAM_CODEC, TableRecipe::base,
-                Ingredient.CONTENTS_STREAM_CODEC, TableRecipe::herb,
-                ByteBufCodecs.optional(Ingredient.CONTENTS_STREAM_CODEC), TableRecipe::extract,
-                ByteBufCodecs.optional(Ingredient.CONTENTS_STREAM_CODEC), TableRecipe::catalyst,
-                ItemStack.STREAM_CODEC, recipe -> recipe.result,
-                ByteBufCodecs.VAR_INT, TableRecipe::brewTime,
-                TableRecipe::new);
+        private static final StreamCodec<RegistryFriendlyByteBuf, TableRecipe> STREAM_CODEC = StreamCodec.of(
+                (buffer, recipe) -> {
+                    Ingredient.CONTENTS_STREAM_CODEC.encode(buffer, recipe.base());
+                    Ingredient.CONTENTS_STREAM_CODEC.encode(buffer, recipe.herb());
+                    OPTIONAL_INGREDIENT.encode(buffer, recipe.extract());
+                    OPTIONAL_INGREDIENT.encode(buffer, recipe.catalyst());
+                    ItemStack.STREAM_CODEC.encode(buffer, recipe.result());
+                    buffer.writeVarInt(recipe.brewTime());
+                    buffer.writeOptional(recipe.medicine(),
+                            (out, id) -> out.writeResourceLocation(id));
+                },
+                buffer -> new TableRecipe(
+                        Ingredient.CONTENTS_STREAM_CODEC.decode(buffer),
+                        Ingredient.CONTENTS_STREAM_CODEC.decode(buffer),
+                        OPTIONAL_INGREDIENT.decode(buffer),
+                        OPTIONAL_INGREDIENT.decode(buffer),
+                        ItemStack.STREAM_CODEC.decode(buffer),
+                        buffer.readVarInt(),
+                        buffer.readOptional(net.minecraft.network.FriendlyByteBuf::readResourceLocation)));
+
+        private static final StreamCodec<RegistryFriendlyByteBuf, Optional<Ingredient>> OPTIONAL_INGREDIENT =
+                new StreamCodec<>() {
+                    @Override
+                    public Optional<Ingredient> decode(RegistryFriendlyByteBuf buffer) {
+                        return buffer.readBoolean()
+                                ? Optional.of(Ingredient.CONTENTS_STREAM_CODEC.decode(buffer))
+                                : Optional.empty();
+                    }
+
+                    @Override
+                    public void encode(RegistryFriendlyByteBuf buffer, Optional<Ingredient> value) {
+                        buffer.writeBoolean(value.isPresent());
+                        value.ifPresent(ingredient -> Ingredient.CONTENTS_STREAM_CODEC.encode(buffer, ingredient));
+                    }
+                };
 
         @Override
         public MapCodec<TableRecipe> codec() {
