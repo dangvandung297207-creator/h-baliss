@@ -1,111 +1,215 @@
 # Herbalist's Craft build log
 
-- commit: 6d758e7974419d9a147640e31b8bc1416c10492b
+- commit: 00afb2b0169df9e6f0923d1dcef7e24e611e8d74
 - branch: arena/01a0a294-h-baliss
-- recorded: 2026-09-15T12:50:28Z
+- recorded: 2026-09-15T12:55:42Z
 - result: failure
 
 ## Errors
 ```
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineUse.java:68: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:20: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:36: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:57: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/WeaponOilItem.java:98: error: incompatible types: Provider cannot be converted to RegistryAccess
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/ToxicityManager.java:146: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:120: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:137: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MillRecipe>
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MortarRecipe.java:118: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MortarRecipe>
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:156: error: cannot find symbol
+    public static void appendTooltip(ItemStack stack, TooltipContext context, List<Component> tooltip,
+                                                      ^
+  symbol:   class TooltipContext
+  location: class MedicineUse
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:32: error: no suitable method found for get(ResourceLocation)
+                .flatMap(lookup -> lookup.get(id))
+                                         ^
+    method HolderGetter.get(ResourceKey<MedicineDefinition>) is not applicable
+      (argument mismatch; ResourceLocation cannot be converted to ResourceKey<MedicineDefinition>)
+--
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:33: error: cannot find symbol
+                .map(holder -> holder.value());
+                                     ^
+  symbol:   method value()
+  location: variable holder of type Object
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:59: error: cannot find symbol
+                    tea ? ModSounds.SIP.get() : ModSounds.POUR.get(), SoundSource.PLAYERS, 0.7F, 1.0F);
+                    ^
+  symbol:   variable tea
+  location: class MedicineApplier
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:174: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<TableRecipe>
+                Ingredient.OPTIONAL_CONTENTS_STREAM_CODEC, TableRecipe::catalyst,
+                          ^
+  symbol:   variable OPTIONAL_CONTENTS_STREAM_CODEC
+  location: class Ingredient
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:24: error: cannot find symbol
+                    Entry.CODEC.codec().listOf().fieldOf("entries").forGetter(modifier -> modifier.entries),
+                                                                                                  ^
+  symbol:   variable entries
+  location: variable modifier of type Object
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:25: error: cannot find symbol
+                    Codec.intRange(0, 8).optionalFieldOf("rolls", 1).forGetter(modifier -> modifier.rolls),
+                    ^
+  symbol:   variable Codec
+  location: class HerbLootModifier
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:26: error: cannot find symbol
+                    Codec.floatRange(0.0F, 1.0F).optionalFieldOf("chance", 0.6F).forGetter(modifier -> modifier.chance)
+                    ^
+  symbol:   variable Codec
+  location: class HerbLootModifier
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:85: error: cannot find symbol
+                Codec.intRange(1, 1000).optionalFieldOf("weight", 1).forGetter(Entry::weight),
+                ^
+  symbol:   variable Codec
+  location: class Entry
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:86: error: cannot find symbol
+                Codec.intRange(1, 64).optionalFieldOf("min_count", 1).forGetter(Entry::minCount),
+                ^
+  symbol:   variable Codec
+  location: class Entry
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:87: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:72: error: Provider is not abstract and does not override abstract method createParticle(SimpleParticleType,ClientLevel,double,double,double,double,double,double) in ParticleProvider
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:81: error: method does not override or implement a method from a supertype
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/JournalScreen.java:213: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbDefinition.java:43: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalistTableScreen.java:76: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/entity/DryingRackBlockEntity.java:72: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/menu/HerbalMillMenu.java:60: error: incompatible types: bad type in conditional expression
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/knowledge/JournalTeaching.java:18: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbSeedItem.java:70: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:41: error: HerbCropBlock is not abstract and does not override abstract method codec() in BushBlock
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:222: error: method does not override or implement a method from a supertype
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/villager/HerbalistTrades.java:80: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/DryingRackBlock.java:127: error: no suitable method found for dropContents(Level,BlockPos,DryingRackBlockEntity)
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModDataComponents.java:40: error: cannot find symbol
+                Codec.intRange(1, 64).optionalFieldOf("max_count", 1).forGetter(Entry::maxCount)
+                ^
+  symbol:   variable Codec
+  location: class Entry
+--
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:231: error: method does not override or implement a method from a supertype
+    @Override
+    ^
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
+            "herbalist", () -> new VillagerProfession("herbalist",
+                               ^
+  required: String,Predicate<Holder<PoiType>>,Predicate<Holder<PoiType>>,ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
+  found:    String,(poi)->poi[...]ey()),ImmutableSet<Object>,ImmutableSet<HerbalistTableBlock>,SoundEvent
+--
   /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/DryingRackBlock.java:127: error: no suitable method found for dropContents(Level,BlockPos,DryingRackBlockEntity)
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:72: error: Provider is not abstract and does not override abstract method createParticle(SimpleParticleType,ClientLevel,double,double,double,double,double,double) in ParticleProvider
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:41: error: HerbCropBlock is not abstract and does not override abstract method codec() in BushBlock
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/WeaponOilItem.java:98: error: incompatible types: Provider cannot be converted to RegistryAccess
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:137: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MillRecipe>
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MortarRecipe.java:118: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MortarRecipe>
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:174: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<TableRecipe>
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/menu/HerbalMillMenu.java:60: error: incompatible types: bad type in conditional expression
+              "herbalist", () -> new VillagerProfession("herbalist",
+                                 ^
+    required: String,Predicate<Holder<PoiType>>,Predicate<Holder<PoiType>>,ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
+    found:    String,(poi)->poi[...]ey()),ImmutableSet<Object>,ImmutableSet<HerbalistTableBlock>,SoundEvent
+--
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:32: error: no suitable method found for get(ResourceLocation)
+                  .flatMap(lookup -> lookup.get(id))
+                                           ^
+      method HolderGetter.get(ResourceKey<MedicineDefinition>) is not applicable
+        (argument mismatch; ResourceLocation cannot be converted to ResourceKey<MedicineDefinition>)
+--
   /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineUse.java:68: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:20: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:36: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:57: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/ToxicityManager.java:146: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:120: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:156: error: cannot find symbol
+      public static void appendTooltip(ItemStack stack, TooltipContext context, List<Component> tooltip,
+                                                        ^
+    symbol:   class TooltipContext
+    location: class MedicineUse
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:59: error: cannot find symbol
+                      tea ? ModSounds.SIP.get() : ModSounds.POUR.get(), SoundSource.PLAYERS, 0.7F, 1.0F);
+                      ^
+    symbol:   variable tea
+    location: class MedicineApplier
   /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:25: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:26: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:85: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:86: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:87: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/villager/HerbalistTrades.java:80: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:81: error: method does not override or implement a method from a supertype
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:222: error: method does not override or implement a method from a supertype
+                  Ingredient.OPTIONAL_CONTENTS_STREAM_CODEC, TableRecipe::catalyst,
+                            ^
+    symbol:   variable OPTIONAL_CONTENTS_STREAM_CODEC
+    location: class Ingredient
   /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:24: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/JournalScreen.java:213: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbDefinition.java:43: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalistTableScreen.java:76: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/entity/DryingRackBlockEntity.java:72: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/knowledge/JournalTeaching.java:18: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbSeedItem.java:70: error: cannot find symbol
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModDataComponents.java:40: error: cannot find symbol
+                      Entry.CODEC.codec().listOf().fieldOf("entries").forGetter(modifier -> modifier.entries),
+                                                                                                    ^
+    symbol:   variable entries
+    location: variable modifier of type Object
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:25: error: cannot find symbol
+                      Codec.intRange(0, 8).optionalFieldOf("rolls", 1).forGetter(modifier -> modifier.rolls),
+                      ^
+    symbol:   variable Codec
+    location: class HerbLootModifier
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:26: error: cannot find symbol
+                      Codec.floatRange(0.0F, 1.0F).optionalFieldOf("chance", 0.6F).forGetter(modifier -> modifier.chance)
+                      ^
+    symbol:   variable Codec
+    location: class HerbLootModifier
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:85: error: cannot find symbol
+                  Codec.intRange(1, 1000).optionalFieldOf("weight", 1).forGetter(Entry::weight),
+                  ^
+    symbol:   variable Codec
+    location: class Entry
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:86: error: cannot find symbol
+                  Codec.intRange(1, 64).optionalFieldOf("min_count", 1).forGetter(Entry::minCount),
+                  ^
+    symbol:   variable Codec
+    location: class Entry
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:87: error: cannot find symbol
+                  Codec.intRange(1, 64).optionalFieldOf("max_count", 1).forGetter(Entry::maxCount)
+                  ^
+    symbol:   variable Codec
+    location: class Entry
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:231: error: method does not override or implement a method from a supertype
+      @Override
+      ^
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/ClientSetup.java:19: warning: [removal] bus() in EventBusSubscriber has been deprecated and marked for removal
+  @EventBusSubscriber(modid = HerbalistsCraft.MODID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+--
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:33: error: cannot find symbol
+                  .map(holder -> holder.value());
+                                       ^
+    symbol:   method value()
+    location: variable holder of type Object
+--
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/DryingRackBlock.java:127: error: no suitable method found for dropContents(Level,BlockPos,DryingRackBlockEntity)
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:72: error: Provider is not abstract and does not override abstract method createParticle(SimpleParticleType,ClientLevel,double,double,double,double,double,double) in ParticleProvider
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:41: error: HerbCropBlock is not abstract and does not override abstract method codec() in BushBlock
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/WeaponOilItem.java:98: error: incompatible types: Provider cannot be converted to RegistryAccess
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:137: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MillRecipe>
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MortarRecipe.java:118: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<MortarRecipe>
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:174: error: incompatible types: no instance(s) of type variable(s) I,T exist so that List<RecipeHolder<T>> conforms to List<TableRecipe>
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/menu/HerbalMillMenu.java:60: error: incompatible types: bad type in conditional expression
+            "herbalist", () -> new VillagerProfession("herbalist",
+                               ^
+  required: String,Predicate<Holder<PoiType>>,Predicate<Holder<PoiType>>,ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
+  found:    String,(poi)->poi[...]ey()),ImmutableSet<Object>,ImmutableSet<HerbalistTableBlock>,SoundEvent
+--
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:32: error: no suitable method found for get(ResourceLocation)
+                .flatMap(lookup -> lookup.get(id))
+                                         ^
+    method HolderGetter.get(ResourceKey<MedicineDefinition>) is not applicable
+      (argument mismatch; ResourceLocation cannot be converted to ResourceKey<MedicineDefinition>)
+--
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineUse.java:68: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:20: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/event/CommonEvents.java:36: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:57: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/ToxicityManager.java:146: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/MillRecipe.java:120: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:156: error: cannot find symbol
+    public static void appendTooltip(ItemStack stack, TooltipContext context, List<Component> tooltip,
+                                                      ^
+  symbol:   class TooltipContext
+  location: class MedicineUse
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:59: error: cannot find symbol
+                    tea ? ModSounds.SIP.get() : ModSounds.POUR.get(), SoundSource.PLAYERS, 0.7F, 1.0F);
+                    ^
+  symbol:   variable tea
+  location: class MedicineApplier
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:25: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:26: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:85: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:86: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:87: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/villager/HerbalistTrades.java:80: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalParticle.java:81: error: method does not override or implement a method from a supertype
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:222: error: method does not override or implement a method from a supertype
+                Ingredient.OPTIONAL_CONTENTS_STREAM_CODEC, TableRecipe::catalyst,
+                          ^
+  symbol:   variable OPTIONAL_CONTENTS_STREAM_CODEC
+  location: class Ingredient
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:24: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/JournalScreen.java:213: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbDefinition.java:43: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/HerbalistTableScreen.java:76: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/block/entity/DryingRackBlockEntity.java:72: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/knowledge/JournalTeaching.java:18: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbSeedItem.java:70: error: cannot find symbol
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModDataComponents.java:40: error: cannot find symbol
+                    Entry.CODEC.codec().listOf().fieldOf("entries").forGetter(modifier -> modifier.entries),
+                                                                                                  ^
+  symbol:   variable entries
+  location: variable modifier of type Object
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:25: error: cannot find symbol
+                    Codec.intRange(0, 8).optionalFieldOf("rolls", 1).forGetter(modifier -> modifier.rolls),
+                    ^
+  symbol:   variable Codec
+  location: class HerbLootModifier
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:26: error: cannot find symbol
+                    Codec.floatRange(0.0F, 1.0F).optionalFieldOf("chance", 0.6F).forGetter(modifier -> modifier.chance)
+                    ^
+  symbol:   variable Codec
+  location: class HerbLootModifier
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:85: error: cannot find symbol
+                Codec.intRange(1, 1000).optionalFieldOf("weight", 1).forGetter(Entry::weight),
+                ^
+  symbol:   variable Codec
+  location: class Entry
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:86: error: cannot find symbol
+                Codec.intRange(1, 64).optionalFieldOf("min_count", 1).forGetter(Entry::minCount),
+                ^
+  symbol:   variable Codec
+  location: class Entry
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:87: error: cannot find symbol
+                Codec.intRange(1, 64).optionalFieldOf("max_count", 1).forGetter(Entry::maxCount)
+                ^
+  symbol:   variable Codec
+  location: class Entry
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:231: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/ClientSetup.java:19: warning: [removal] bus() in EventBusSubscriber has been deprecated and marked for removal
+@EventBusSubscriber(modid = HerbalistsCraft.MODID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+--
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:33: error: cannot find symbol
+                .map(holder -> holder.value());
+                                     ^
+  symbol:   method value()
+  location: variable holder of type Object
 ```
 ## Tail
 ```
