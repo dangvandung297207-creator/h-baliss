@@ -1,8 +1,8 @@
 # Herbalist's Craft build log
 
-- commit: 22c69f1b56da7813edcb3d537d3598aa408aa995
+- commit: 79de4b30d34d8b23fa7df8783247bfeb29c22146
 - branch: arena/01a0a294-h-baliss
-- recorded: 2026-09-15T13:08:30Z
+- recorded: 2026-09-15T13:21:10Z
 - result: success
 
 ## Errors
@@ -19,7 +19,7 @@
  [1m[92m♻[0m Used cache of [4mcompiledWithNeoForge[0m in 0.00s
 [1m*** Started working on [4msourcesAndCompiledWithNeoForge[0m[0m
  [1m[92m♻[0m Used cache of [4msourcesAndCompiledWithNeoForge[0m in 0.00s
-Total runtime: 2.29s
+Total runtime: 1.52s
 
 
 > Task :compileJava
@@ -38,7 +38,7 @@ Note: Recompile with -Xlint:deprecation for details.
 > Task :test NO-SOURCE
 > Task :check UP-TO-DATE
 > Task :build
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1789477680752.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1789478452989.json
 
 [Incubating] Problems report is available at: file:///home/runner/work/h-baliss/h-baliss/build/reports/problems/problems-report.html
 
@@ -48,6 +48,6 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD SUCCESSFUL in 35s
+BUILD SUCCESSFUL in 19s
 5 actionable tasks: 5 executed
 ```
