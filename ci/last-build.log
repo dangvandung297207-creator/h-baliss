@@ -1,47 +1,67 @@
 # Herbalist's Craft build log
 
-- commit: 546f13f36e39c7e9fcd6cd0b6d6de1577fdd7f4d
+- commit: edb16fa61f8c7e47e80a02b93175bad2eb3eef22
 - branch: arena/01a0a294-h-baliss
-- recorded: 2026-09-15T12:59:39Z
+- recorded: 2026-09-15T13:04:03Z
 - result: failure
 
 ## Errors
 ```
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:153: error: no suitable method found for composite(StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::base,StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::herb,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]tract,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]alyst,StreamCodec<RegistryFriendlyByteBuf,ItemStack>,(recipe)->[...]esult,StreamCodec<ByteBuf,Integer>,TableRecip[...]wTime,TableRecipe::new)
-        private static final StreamCodec<RegistryFriendlyByteBuf, TableRecipe> STREAM_CODEC = StreamCodec.composite(
-                                                                                                         ^
-    method StreamCodec.<B#1,C#1,T1#1>composite(StreamCodec<? super B#1,T1#1>,Function<C#1,T1#1>,Function<T1#1,C#1>) is not applicable
-      (cannot infer type-variable(s) B#1,C#1,T1#1
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:167: error: illegal forward reference
+                        OPTIONAL_INGREDIENT.decode(buffer),
+                        ^
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:168: error: illegal forward reference
+                        OPTIONAL_INGREDIENT.decode(buffer),
+                        ^
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: illegal forward reference
+                    OPTIONAL_INGREDIENT.encode(buffer, recipe.extract());
+                    ^
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:158: error: illegal forward reference
+                    OPTIONAL_INGREDIENT.encode(buffer, recipe.catalyst());
+                    ^
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:159: error: cannot find symbol
+                    ItemStack.STREAM_CODEC.encode(buffer, recipe.result());
+                                                                ^
+  symbol:   method result()
+  location: variable recipe of type TableRecipe
 --
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
-            "herbalist", () -> new VillagerProfession("herbalist",
-                               ^
-  required: String,Predicate<Holder<PoiType>>,Predicate<Holder<PoiType>>,ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
-  found:    String,(poi)->poi[...]ey()),ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:167: error: illegal forward reference
+                          OPTIONAL_INGREDIENT.decode(buffer),
+                          ^
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:168: error: illegal forward reference
+                          OPTIONAL_INGREDIENT.decode(buffer),
+                          ^
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: illegal forward reference
+                      OPTIONAL_INGREDIENT.encode(buffer, recipe.extract());
+                      ^
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:158: error: illegal forward reference
+                      OPTIONAL_INGREDIENT.encode(buffer, recipe.catalyst());
+                      ^
+  Note: Recompile with -Xlint:deprecation for details.
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:159: error: cannot find symbol
+                      ItemStack.STREAM_CODEC.encode(buffer, recipe.result());
+                                                                  ^
+    symbol:   method result()
+    location: variable recipe of type TableRecipe
 --
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
-              "herbalist", () -> new VillagerProfession("herbalist",
-                                 ^
-    required: String,Predicate<Holder<PoiType>>,Predicate<Holder<PoiType>>,ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
-    found:    String,(poi)->poi[...]ey()),ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
---
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:153: error: no suitable method found for composite(StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::base,StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::herb,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]tract,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]alyst,StreamCodec<RegistryFriendlyByteBuf,ItemStack>,(recipe)->[...]esult,StreamCodec<ByteBuf,Integer>,TableRecip[...]wTime,TableRecipe::new)
-          private static final StreamCodec<RegistryFriendlyByteBuf, TableRecipe> STREAM_CODEC = StreamCodec.composite(
-                                                                                                           ^
-      method StreamCodec.<B#1,C#1,T1#1>composite(StreamCodec<? super B#1,T1#1>,Function<C#1,T1#1>,Function<T1#1,C#1>) is not applicable
-        (cannot infer type-variable(s) B#1,C#1,T1#1
---
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
-            "herbalist", () -> new VillagerProfession("herbalist",
-                               ^
-  required: String,Predicate<Holder<PoiType>>,Predicate<Holder<PoiType>>,ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
-  found:    String,(poi)->poi[...]ey()),ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
---
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:153: error: no suitable method found for composite(StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::base,StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::herb,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]tract,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]alyst,StreamCodec<RegistryFriendlyByteBuf,ItemStack>,(recipe)->[...]esult,StreamCodec<ByteBuf,Integer>,TableRecip[...]wTime,TableRecipe::new)
-        private static final StreamCodec<RegistryFriendlyByteBuf, TableRecipe> STREAM_CODEC = StreamCodec.composite(
-                                                                                                         ^
-    method StreamCodec.<B#1,C#1,T1#1>composite(StreamCodec<? super B#1,T1#1>,Function<C#1,T1#1>,Function<T1#1,C#1>) is not applicable
-      (cannot infer type-variable(s) B#1,C#1,T1#1
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:167: error: illegal forward reference
+                        OPTIONAL_INGREDIENT.decode(buffer),
+                        ^
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:168: error: illegal forward reference
+                        OPTIONAL_INGREDIENT.decode(buffer),
+                        ^
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: illegal forward reference
+                    OPTIONAL_INGREDIENT.encode(buffer, recipe.extract());
+                    ^
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:158: error: illegal forward reference
+                    OPTIONAL_INGREDIENT.encode(buffer, recipe.catalyst());
+                    ^
+Note: Recompile with -Xlint:deprecation for details.
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:159: error: cannot find symbol
+                    ItemStack.STREAM_CODEC.encode(buffer, recipe.result());
+                                                                ^
+  symbol:   method result()
+  location: variable recipe of type TableRecipe
 ```
 ## Tail
 ```
@@ -83,6 +103,6 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 26s
+BUILD FAILED in 18s
 2 actionable tasks: 2 executed
 ```
