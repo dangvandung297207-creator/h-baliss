@@ -1,0 +1,47 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+issueTrackerURL = "https://github.com/dangvandung297207-creator/h-baliss/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+authors = "${mod_authors}"
+description = '''${mod_description}'''
+logoFile = "herbalistscraft.png"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neo_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+# ---------------------------------------------------------------------------
+# Optional integrations. Herbalist's Craft detects these at runtime through an
+# isolated reflection layer; if they are missing nothing is disabled that the
+# mod needs in order to work. They are declared so that loaders order them
+# correctly when they *are* installed.
+# ---------------------------------------------------------------------------
+
+[[dependencies.${mod_id}]]
+modId = "toughasnails"
+type = "optional"
+versionRange = "[9.0.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "sereneseasons"
+type = "optional"
+versionRange = "[9.0.0,)"
+ordering = "AFTER"
+side = "BOTH"

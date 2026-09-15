@@ -1,0 +1,1307 @@
+{
+  "_comment": "SOURCE OF TRUTH for every medicine, tea, salve and weapon oil. tools/generate.py emits: item registration Java, models/textures, lang, Herbalist's Table recipe JSON, datapack medicine definitions and the journal/recipe discovery pools.",
+  "_schema": {
+    "kind": "TONIC (drunk, vial) | TEA (drunk, cup) | SALVE (applied to skin) | OIL (applied to a weapon)",
+    "effects": "controlled DSL, see tools/gen/effects.py + com.herbalistscraft.medicine.MedicineEffect",
+    "toxicity": "toxin points added to the player's toxin meter (NONE=0 LOW=6 MEDIUM=14 HIGH=26 EXTREME=45)",
+    "craft": "table recipe: base + herb(+form) + extract(herb id, optional) + catalyst(optional). Ingredients are matched exactly; any other combination falls through to the deterministic experiment engine.",
+    "discovery": "STARTER known at world start | EXPERIMENT found by trial | JOURNAL from a torn journal page | TRADE from the herbalist | LOOT from structures",
+    "tier": "1..4, drives journal ordering and trade/villager gating",
+    "cooldown": "ticks before the same medicine can be used again"
+  },
+  "medicines": [
+    {
+      "id": "minor_healing_tonic",
+      "name": "Minor Healing Tonic",
+      "kind": "TONIC",
+      "tier": 1,
+      "rarity": "COMMON",
+      "color": "#c0473a",
+      "toxicity": "LOW",
+      "cooldown": 100,
+      "discovery": "STARTER",
+      "description": "Bitter root steeped in spring water. Closes small wounds at the cost of an empty belly.",
+      "effects": [
+        {
+          "type": "INSTANT_HEALTH",
+          "amount": 4
+        },
+        {
+          "type": "HUNGER",
+          "amount": -1
+        }
+      ],
+      "craft": {
+        "base": "water_vial",
+        "herb": "bloodroot",
+        "form": "powder",
+        "time": 160
+      }
+    },
+    {
+      "id": "healing_tonic",
+      "name": "Healing Tonic",
+      "kind": "TONIC",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#8e2f2a",
+      "toxicity": "LOW",
+      "cooldown": 200,
+      "discovery": "EXPERIMENT",
+      "description": "Comfrey and bloodroot in equal measure. Knits flesh, thickens blood.",
+      "effects": [
+        {
+          "type": "INSTANT_HEALTH",
+          "amount": 6
+        },
+        {
+          "type": "CLEAR_BLEEDING"
+        },
+        {
+          "type": "HERBAL",
+          "effect": "hemostasis",
+          "duration": 600
+        }
+      ],
+      "craft": {
+        "base": "water_vial",
+        "herb": "comfrey",
+        "form": "powder",
+        "extract": "bloodroot",
+        "time": 220
+      }
+    },
+    {
+      "id": "strong_healing_tonic",
+      "name": "Strong Healing Tonic",
+      "kind": "TONIC",
+      "tier": 3,
+      "rarity": "RARE",
+      "color": "#7a1f1c",
+      "toxicity": "MEDIUM",
+      "cooldown": 400,
+      "discovery": "JOURNAL",
+      "description": "Vitalis root distilled through heartleaf. A battlefield medicine, and a costly one.",
+      "effects": [
+        {
+          "type": "INSTANT_HEALTH",
+          "amount": 10
+        },
+        {
+          "type": "VANILLA",
+          "effect": "minecraft:regeneration",
+          "duration": 160,
+          "amplifier": 0
+        },
+        {
+          "type": "HUNGER",
+          "amount": -2
+        },
+        {
+          "type": "TOXIN",
+          "amount": 6
+        }
+      ],
+      "craft": {
+        "base": "water_vial",
+        "herb": "vitalis_root",
+        "form": "powder",
+        "extract": "heartleaf",
+        "catalyst": "life_essence",
+        "time": 320
+      }
+    },
+    {
+      "id": "hemostatic_tonic",
+      "name": "Hemostatic Tonic",
+      "kind": "TONIC",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#a34a3c",
+      "toxicity": "LOW",
+      "cooldown": 160,
+      "discovery": "EXPERIMENT",
+      "description": "Yarrow and blackthorn. It stops bleeding, and it stops it hard.",
+      "effects": [
+        {
+          "type": "CLEAR_BLEEDING"
+        },
+        {
+          "type": "INSTANT_HEALTH",
+          "amount": 2
+        },
+        {
+          "type": "HERBAL",
+          "effect": "hemostasis",
+          "duration": 1200
+        }
+      ],
+      "craft": {
+        "base": "water_vial",
+        "herb": "yarrow",
+        "form": "powder",
+        "extract": "blackthorn",
+        "time": 200
+      }
+    },
+    {
+      "id": "antiseptic_tonic",
+      "name": "Antiseptic Tonic",
+      "kind": "TONIC",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#9fc46a",
+      "toxicity": "LOW",
+      "cooldown": 200,
+      "discovery": "TRADE",
+      "description": "Cleansage and silverleaf. Drives rot out of a wound from the inside.",
+      "effects": [
+        {
+          "type": "CURE",
+          "effects": [
+            "minecraft:poison",
+            "minecraft:nausea",
+            "minecraft:hunger",
+            "minecraft:weakness"
+          ]
+        },
+        {
+          "type": "INSTANT_HEALTH",
+          "amount": 3
+        },
+        {
+          "type": "HERBAL",
+          "effect": "antiseptic",
+          "duration": 900
+        }
+      ],
+      "craft": {
+        "base": "water_vial",
+        "herb": "cleansage",
+        "form": "powder",
+        "extract": "silverleaf",
+        "time": 240
+      }
+    },
+    {
+      "id": "antidote_tonic",
+      "name": "Antidote Tonic",
+      "kind": "TONIC",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#6f9e4c",
+      "toxicity": "NONE",
+      "cooldown": 240,
+      "discovery": "EXPERIMENT",
+      "description": "Marshroot boiled with purifying salt. Strips venom from the blood.",
+      "effects": [
+        {
+          "type": "CURE",
+          "effects": [
+            "minecraft:poison",
+            "minecraft:nausea"
+          ]
+        },
+        {
+          "type": "TOXIN_CLEAR",
+          "amount": 24
+        }
+      ],
+      "craft": {
+        "base": "water_vial",
+        "herb": "marshroot",
+        "form": "powder",
+        "extract": "silverleaf",
+        "catalyst": "purity_salt",
+        "time": 220
+      }
+    },
+    {
+      "id": "detox_tonic",
+      "name": "Detox Tonic",
+      "kind": "TONIC",
+      "tier": 3,
+      "rarity": "RARE",
+      "color": "#7d8f6a",
+      "toxicity": "NONE",
+      "cooldown": 300,
+      "discovery": "JOURNAL",
+      "description": "Spiritwood and grave moss in strong spirits. It purges the toxin meter, and then some.",
+      "effects": [
+        {
+          "type": "TOXIN_CLEAR",
+          "amount": 60
+        },
+        {
+          "type": "CURE",
+          "effects": [
+            "minecraft:poison",
+            "minecraft:nausea",
+            "minecraft:weakness",
+            "minecraft:slowness"
+          ]
+        }
+      ],
+      "craft": {
+        "base": "herbal_alcohol",
+        "herb": "spiritwood",
+        "form": "powder",
+        "extract": "grave_moss",
+        "catalyst": "purity_salt",
+        "time": 300
+      }
+    },
+    {
+      "id": "respiratory_tonic",
+      "name": "Respiratory Tonic",
+      "kind": "TONIC",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#5f8f9c",
+      "toxicity": "LOW",
+      "cooldown": 240,
+      "discovery": "EXPERIMENT",
+      "description": "Cinnamon bark and lungwort. It keeps the breath coming and holds back the dark water.",
+      "effects": [
+        {
+          "type": "CURE",
+          "effects": [
+            "minecraft:nausea",
+            "minecraft:hunger"
+          ]
+        },
+        {
+          "type": "HERBAL",
+          "effect": "respiratory",
+          "duration": 1200
+        },
+        {
+          "type": "HYDRATE",
+          "amount": 3
+        }
+      ],
+      "craft": {
+        "base": "water_vial",
+        "herb": "cinnamon_bark",
+        "form": "powder",
+        "extract": "lungwort",
+        "time": 240
+      }
+    },
+    {
+      "id": "frost_lung_tonic",
+      "name": "Frost Lung Tonic",
+      "kind": "TONIC",
+      "tier": 3,
+      "rarity": "RARE",
+      "color": "#5b86b5",
+      "toxicity": "LOW",
+      "cooldown": 320,
+      "discovery": "JOURNAL",
+      "description": "Winter sage and ice-bearing leaves. The cold reaches the chest and stops there.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "respiratory",
+          "duration": 1800
+        },
+        {
+          "type": "HERBAL",
+          "effect": "cold_ward",
+          "duration": 3600
+        },
+        {
+          "type": "CURE",
+          "effects": [
+            "minecraft:nausea"
+          ]
+        }
+      ],
+      "craft": {
+        "base": "water_vial",
+        "herb": "winter_sage",
+        "form": "powder",
+        "extract": "iceleaf",
+        "catalyst": "frost_crystal",
+        "time": 300
+      }
+    },
+    {
+      "id": "stamina_tonic",
+      "name": "Stamina Tonic",
+      "kind": "TONIC",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#d08a2c",
+      "toxicity": "MEDIUM",
+      "cooldown": 600,
+      "discovery": "TRADE",
+      "description": "Swiftleaf, ginseng and a bite of blaze pepper. Fast legs, and a hunger that follows.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "vigor",
+          "duration": 2400
+        },
+        {
+          "type": "HYDRATE",
+          "amount": 2
+        },
+        {
+          "type": "TOXIN",
+          "amount": 4
+        }
+      ],
+      "sideEffects": [
+        {
+          "effect": "minecraft:hunger",
+          "duration": 400,
+          "amplifier": 0,
+          "chance": 0.5
+        }
+      ],
+      "craft": {
+        "base": "herbal_alcohol",
+        "herb": "swiftleaf",
+        "form": "powder",
+        "extract": "blaze_pepper",
+        "time": 260
+      }
+    },
+    {
+      "id": "focus_tonic",
+      "name": "Focus Tonic",
+      "kind": "TONIC",
+      "tier": 3,
+      "rarity": "RARE",
+      "color": "#c9b04a",
+      "toxicity": "MEDIUM",
+      "cooldown": 600,
+      "discovery": "TRADE",
+      "description": "Dawnbloom drawn through stormherb. The world sharpens; sleep can wait.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "focus",
+          "duration": 2400
+        },
+        {
+          "type": "CURE",
+          "effects": [
+            "minecraft:nausea",
+            "minecraft:blindness"
+          ]
+        },
+        {
+          "type": "TOXIN",
+          "amount": 5
+        }
+      ],
+      "craft": {
+        "base": "herbal_alcohol",
+        "herb": "dawnbloom",
+        "form": "powder",
+        "extract": "stormherb",
+        "catalyst": "purity_salt",
+        "time": 300
+      }
+    },
+    {
+      "id": "recuperation_tonic",
+      "name": "Recuperation Tonic",
+      "kind": "TONIC",
+      "tier": 3,
+      "rarity": "RARE",
+      "color": "#8a6f9e",
+      "toxicity": "MEDIUM",
+      "cooldown": 800,
+      "discovery": "JOURNAL",
+      "description": "Dreamcap and grave moss. Deep, healing sleep for the badly hurt - and a heavy head after.",
+      "effects": [
+        {
+          "type": "VANILLA",
+          "effect": "minecraft:regeneration",
+          "duration": 240,
+          "amplifier": 0
+        },
+        {
+          "type": "HERBAL",
+          "effect": "sedation",
+          "duration": 300
+        },
+        {
+          "type": "TOXIN",
+          "amount": 8
+        }
+      ],
+      "craft": {
+        "base": "water_vial",
+        "herb": "dreamcap",
+        "form": "powder",
+        "extract": "grave_moss",
+        "catalyst": "life_essence",
+        "time": 320
+      }
+    },
+    {
+      "id": "vitalis_tonic",
+      "name": "Vitalis Tonic",
+      "kind": "TONIC",
+      "tier": 4,
+      "rarity": "VERY_RARE",
+      "color": "#e0b03a",
+      "toxicity": "HIGH",
+      "cooldown": 1200,
+      "discovery": "LOOT",
+      "description": "An old apothecary formula. For a time the drinker simply has more life in them.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "vitality",
+          "duration": 2400,
+          "amplifier": 1
+        },
+        {
+          "type": "INSTANT_HEALTH",
+          "amount": 4
+        },
+        {
+          "type": "TOXIN",
+          "amount": 15
+        }
+      ],
+      "craft": {
+        "base": "moonwater",
+        "herb": "wild_ginseng",
+        "form": "extract",
+        "extract": "vitalis_root",
+        "catalyst": "life_essence",
+        "time": 400
+      }
+    },
+    {
+      "id": "ember_tonic",
+      "name": "Ember Tonic",
+      "kind": "TONIC",
+      "tier": 3,
+      "rarity": "RARE",
+      "color": "#d4611f",
+      "toxicity": "MEDIUM",
+      "cooldown": 480,
+      "discovery": "EXPERIMENT",
+      "description": "Thunder thistle and ashleaf. The drinker's blood runs hot against flame and frost alike.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "fire_ward",
+          "duration": 1800
+        },
+        {
+          "type": "TEMP",
+          "warmth": 40
+        },
+        {
+          "type": "TOXIN",
+          "amount": 6
+        }
+      ],
+      "craft": {
+        "base": "herbal_alcohol",
+        "herb": "thunder_thistle",
+        "form": "powder",
+        "extract": "ashleaf",
+        "catalyst": "ember_ash",
+        "time": 300
+      }
+    },
+    {
+      "id": "dragonscale_draught",
+      "name": "Dragonscale Draught",
+      "kind": "TONIC",
+      "tier": 4,
+      "rarity": "VERY_RARE",
+      "color": "#b8351c",
+      "toxicity": "HIGH",
+      "cooldown": 2400,
+      "discovery": "LOOT",
+      "description": "Dragonscale herb burnt with cinder bloom. Heavy, bitter, and worth the burns.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "fire_ward",
+          "duration": 3600,
+          "amplifier": 1
+        },
+        {
+          "type": "TEMP",
+          "warmth": 60
+        },
+        {
+          "type": "TOXIN",
+          "amount": 12
+        }
+      ],
+      "craft": {
+        "base": "moonwater",
+        "herb": "dragonscale_herb",
+        "form": "extract",
+        "extract": "cinder_bloom",
+        "catalyst": "ember_ash",
+        "time": 420
+      }
+    },
+    {
+      "id": "warming_tea",
+      "name": "Warming Tea",
+      "kind": "TEA",
+      "tier": 1,
+      "rarity": "COMMON",
+      "color": "#c9772f",
+      "toxicity": "NONE",
+      "cooldown": 200,
+      "discovery": "EXPERIMENT",
+      "description": "Emberroot and sunpetal. The cup that keeps the cold from settling into the bones.",
+      "effects": [
+        {
+          "type": "TEMP",
+          "warmth": 25
+        },
+        {
+          "type": "HYDRATE",
+          "amount": 3
+        },
+        {
+          "type": "HERBAL",
+          "effect": "cold_ward",
+          "duration": 1800
+        }
+      ],
+      "craft": {
+        "base": "spring_water_cup",
+        "herb": "emberroot",
+        "form": "dried",
+        "extract": "sunleaf",
+        "time": 140
+      }
+    },
+    {
+      "id": "cooling_tea",
+      "name": "Cooling Tea",
+      "kind": "TEA",
+      "tier": 1,
+      "rarity": "COMMON",
+      "color": "#63a8c9",
+      "toxicity": "NONE",
+      "cooldown": 200,
+      "discovery": "EXPERIMENT",
+      "description": "Frostmint steeped with feverfew. For the long walk under a pitiless sun.",
+      "effects": [
+        {
+          "type": "TEMP",
+          "chill": 25
+        },
+        {
+          "type": "HYDRATE",
+          "amount": 5
+        },
+        {
+          "type": "HERBAL",
+          "effect": "heat_ward",
+          "duration": 1800
+        }
+      ],
+      "craft": {
+        "base": "spring_water_cup",
+        "herb": "frostmint",
+        "form": "dried",
+        "extract": "feverfew",
+        "time": 140
+      }
+    },
+    {
+      "id": "herbal_tea",
+      "name": "Herbal Tea",
+      "kind": "TEA",
+      "tier": 1,
+      "rarity": "COMMON",
+      "color": "#c9b473",
+      "toxicity": "NONE",
+      "cooldown": 120,
+      "discovery": "STARTER",
+      "description": "Chamomile, clover and a little lavender. The first cup every herbalist learns.",
+      "effects": [
+        {
+          "type": "HYDRATE",
+          "amount": 4
+        },
+        {
+          "type": "INSTANT_HEALTH",
+          "amount": 1
+        },
+        {
+          "type": "HERBAL",
+          "effect": "antiseptic",
+          "duration": 400
+        }
+      ],
+      "craft": {
+        "base": "spring_water_cup",
+        "herb": "golden_chamomile",
+        "form": "dried",
+        "extract": "red_clover",
+        "time": 120
+      }
+    },
+    {
+      "id": "focus_tea",
+      "name": "Focus Tea",
+      "kind": "TEA",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#d7b84a",
+      "toxicity": "LOW",
+      "cooldown": 400,
+      "discovery": "TRADE",
+      "description": "A mild dawnbloom cup for long nights of work. No jitters, no brilliance, just clarity.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "focus",
+          "duration": 1200
+        },
+        {
+          "type": "HYDRATE",
+          "amount": 3
+        }
+      ],
+      "craft": {
+        "base": "spring_water_cup",
+        "herb": "dawnbloom",
+        "form": "dried",
+        "extract": "moonflower",
+        "time": 160
+      }
+    },
+    {
+      "id": "sleep_tea",
+      "name": "Sleep Tea",
+      "kind": "TEA",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#8f6fb5",
+      "toxicity": "LOW",
+      "cooldown": 600,
+      "discovery": "EXPERIMENT",
+      "description": "Moonflower, snowbell and a pinch of frost crystal. Sleep comes quickly and stays.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "sedation",
+          "duration": 1200
+        },
+        {
+          "type": "CURE",
+          "effects": [
+            "minecraft:nausea"
+          ]
+        },
+        {
+          "type": "HYDRATE",
+          "amount": 2
+        }
+      ],
+      "craft": {
+        "base": "spring_water_cup",
+        "herb": "moonflower",
+        "form": "dried",
+        "extract": "snowbell",
+        "catalyst": "frost_crystal",
+        "time": 180
+      }
+    },
+    {
+      "id": "hush_tea",
+      "name": "Hush Tea",
+      "kind": "TEA",
+      "tier": 3,
+      "rarity": "RARE",
+      "color": "#5d4d7a",
+      "toxicity": "MEDIUM",
+      "cooldown": 900,
+      "discovery": "JOURNAL",
+      "description": "Sleepwort, taken carefully. The marsh keeps its own recipes and shares them grudgingly.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "sedation",
+          "duration": 2400,
+          "amplifier": 1
+        },
+        {
+          "type": "VANILLA",
+          "effect": "minecraft:regeneration",
+          "duration": 100,
+          "amplifier": 0
+        },
+        {
+          "type": "TOXIN",
+          "amount": 6
+        }
+      ],
+      "craft": {
+        "base": "spring_water_cup",
+        "herb": "sleepwort",
+        "form": "dried",
+        "extract": "velvet_bell",
+        "time": 200
+      }
+    },
+    {
+      "id": "recovery_tea",
+      "name": "Recovery Tea",
+      "kind": "TEA",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#9fae6a",
+      "toxicity": "NONE",
+      "cooldown": 300,
+      "discovery": "TRADE",
+      "description": "Feverfew and velvet bell. What you drink the morning after a bad night.",
+      "effects": [
+        {
+          "type": "CURE",
+          "effects": [
+            "minecraft:weakness",
+            "minecraft:slowness",
+            "minecraft:hunger"
+          ]
+        },
+        {
+          "type": "INSTANT_HEALTH",
+          "amount": 2
+        },
+        {
+          "type": "HYDRATE",
+          "amount": 3
+        }
+      ],
+      "craft": {
+        "base": "spring_water_cup",
+        "herb": "feverfew",
+        "form": "dried",
+        "extract": "velvet_bell",
+        "time": 160
+      }
+    },
+    {
+      "id": "bitter_tea",
+      "name": "Bitter Tea",
+      "kind": "TEA",
+      "tier": 1,
+      "rarity": "COMMON",
+      "color": "#7a8a4a",
+      "toxicity": "LOW",
+      "cooldown": 200,
+      "discovery": "EXPERIMENT",
+      "description": "Bitterroot and marshroot. Unpleasant, clearing, and it grows where nothing else will.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "respiratory",
+          "duration": 600
+        },
+        {
+          "type": "TOXIN_CLEAR",
+          "amount": 8
+        },
+        {
+          "type": "HYDRATE",
+          "amount": 2
+        }
+      ],
+      "craft": {
+        "base": "spring_water_cup",
+        "herb": "bitterroot",
+        "form": "dried",
+        "extract": "marshroot",
+        "time": 140
+      }
+    },
+    {
+      "id": "sun_tea",
+      "name": "Sun Tea",
+      "kind": "TEA",
+      "tier": 1,
+      "rarity": "COMMON",
+      "color": "#e0a12c",
+      "toxicity": "NONE",
+      "cooldown": 140,
+      "discovery": "EXPERIMENT",
+      "description": "Sunleaf and its own petals, steeped until the cup glows faintly. A traveller's friend on cold roads.",
+      "effects": [
+        {
+          "type": "HYDRATE",
+          "amount": 4
+        },
+        {
+          "type": "TEMP",
+          "warmth": 15
+        },
+        {
+          "type": "HERBAL",
+          "effect": "cold_ward",
+          "duration": 900
+        }
+      ],
+      "craft": {
+        "base": "spring_water_cup",
+        "herb": "sunleaf",
+        "form": "dried",
+        "extract": "sunpetal",
+        "time": 130
+      }
+    },
+    {
+      "id": "berry_tea",
+      "name": "Sweet Berry Tea",
+      "kind": "TEA",
+      "tier": 1,
+      "rarity": "COMMON",
+      "color": "#b5456a",
+      "toxicity": "NONE",
+      "cooldown": 120,
+      "discovery": "STARTER",
+      "description": "Moonfrost berries and red clover. Sweet, cold, and endlessly drinkable.",
+      "effects": [
+        {
+          "type": "HYDRATE",
+          "amount": 6
+        },
+        {
+          "type": "TEMPERATURE_RELIEF",
+          "amount": 10
+        }
+      ],
+      "craft": {
+        "base": "spring_water_cup",
+        "herb": "moonfrost_berry",
+        "form": "fresh",
+        "extract": "red_clover",
+        "time": 120
+      }
+    },
+    {
+      "id": "frost_salve",
+      "name": "Frost Salve",
+      "kind": "SALVE",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#7fb6d9",
+      "toxicity": "NONE",
+      "cooldown": 600,
+      "discovery": "EXPERIMENT",
+      "description": "A greasy balm of iceleaf and glacier lotus. Rubbed into the skin it turns the cold aside.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "cold_ward",
+          "duration": 3600
+        },
+        {
+          "type": "TEMP",
+          "warmth": 30
+        },
+        {
+          "type": "HYDRATE",
+          "amount": 1
+        }
+      ],
+      "craft": {
+        "base": "salve_base",
+        "herb": "iceleaf",
+        "form": "powder",
+        "extract": "glacier_lotus",
+        "time": 200
+      }
+    },
+    {
+      "id": "ember_salve",
+      "name": "Ember Salve",
+      "kind": "SALVE",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#d97a3a",
+      "toxicity": "LOW",
+      "cooldown": 600,
+      "discovery": "EXPERIMENT",
+      "description": "Emberroot and fire sage worked into wax. It does not make the wearer fireproof, only harder to burn.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "fire_ward",
+          "duration": 3600
+        },
+        {
+          "type": "TEMP",
+          "warmth": 20
+        }
+      ],
+      "craft": {
+        "base": "salve_base",
+        "herb": "emberroot",
+        "form": "powder",
+        "extract": "fire_sage",
+        "time": 200
+      }
+    },
+    {
+      "id": "burn_salve",
+      "name": "Burn Salve",
+      "kind": "SALVE",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#c96f52",
+      "toxicity": "NONE",
+      "cooldown": 300,
+      "discovery": "TRADE",
+      "description": "Witch hazel and lavender for cooked skin. Extinguishes the burn and cools what is left.",
+      "effects": [
+        {
+          "type": "EXTINGUISH"
+        },
+        {
+          "type": "CURE",
+          "effects": [
+            "minecraft:weakness"
+          ]
+        },
+        {
+          "type": "INSTANT_HEALTH",
+          "amount": 2
+        },
+        {
+          "type": "HERBAL",
+          "effect": "heat_ward",
+          "duration": 1200
+        }
+      ],
+      "craft": {
+        "base": "salve_base",
+        "herb": "witch_hazel",
+        "form": "powder",
+        "extract": "lavender",
+        "time": 180
+      }
+    },
+    {
+      "id": "antiseptic_salve",
+      "name": "Antiseptic Salve",
+      "kind": "SALVE",
+      "tier": 1,
+      "rarity": "COMMON",
+      "color": "#9fc46a",
+      "toxicity": "NONE",
+      "cooldown": 200,
+      "discovery": "EXPERIMENT",
+      "description": "A green balm of cleansage and silverleaf. The field dressing of every herbalist.",
+      "effects": [
+        {
+          "type": "CURE",
+          "effects": [
+            "minecraft:poison",
+            "minecraft:nausea"
+          ]
+        },
+        {
+          "type": "INSTANT_HEALTH",
+          "amount": 2
+        },
+        {
+          "type": "HERBAL",
+          "effect": "antiseptic",
+          "duration": 900
+        }
+      ],
+      "craft": {
+        "base": "salve_base",
+        "herb": "cleansage",
+        "form": "powder",
+        "extract": "silverleaf",
+        "time": 160
+      }
+    },
+    {
+      "id": "healing_salve",
+      "name": "Healing Salve",
+      "kind": "SALVE",
+      "tier": 1,
+      "rarity": "COMMON",
+      "color": "#b0564a",
+      "toxicity": "LOW",
+      "cooldown": 240,
+      "discovery": "EXPERIMENT",
+      "description": "Bloodroot and comfrey in a wax base. Ordinary, reliable, always worth carrying.",
+      "effects": [
+        {
+          "type": "INSTANT_HEALTH",
+          "amount": 3
+        },
+        {
+          "type": "CLEAR_BLEEDING"
+        },
+        {
+          "type": "HERBAL",
+          "effect": "hemostasis",
+          "duration": 600
+        }
+      ],
+      "craft": {
+        "base": "salve_base",
+        "herb": "bloodroot",
+        "form": "powder",
+        "extract": "comfrey",
+        "time": 160
+      }
+    },
+    {
+      "id": "ward_salve",
+      "name": "Ward Salve",
+      "kind": "SALVE",
+      "tier": 3,
+      "rarity": "RARE",
+      "color": "#8a9e5c",
+      "toxicity": "LOW",
+      "cooldown": 900,
+      "discovery": "JOURNAL",
+      "description": "Ironbark and wardroot, ground fine. Old herbalists paint it on before bad weather and bad roads.",
+      "effects": [
+        {
+          "type": "HERBAL",
+          "effect": "cold_ward",
+          "duration": 4800
+        },
+        {
+          "type": "HERBAL",
+          "effect": "heat_ward",
+          "duration": 4800
+        },
+        {
+          "type": "HERBAL",
+          "effect": "antiseptic",
+          "duration": 2400
+        }
+      ],
+      "craft": {
+        "base": "salve_base",
+        "herb": "ironbark",
+        "form": "powder",
+        "extract": "wardroot",
+        "catalyst": "frost_crystal",
+        "time": 260
+      }
+    },
+    {
+      "id": "toxic_oil",
+      "name": "Toxic Oil",
+      "kind": "OIL",
+      "tier": 1,
+      "rarity": "COMMON",
+      "color": "#4a6b2a",
+      "toxicity": "NONE",
+      "cooldown": 60,
+      "discovery": "EXPERIMENT",
+      "description": "Nightshade steeped in seed oil. Crude, cheap, and it works on anything with a blade.",
+      "effects": [],
+      "coating": {
+        "charges": 12,
+        "durationTicks": 2400,
+        "potency": 0.6,
+        "onHit": [
+          {
+            "type": "VANILLA",
+            "effect": "minecraft:poison",
+            "duration": 60,
+            "amplifier": 0
+          }
+        ]
+      },
+      "craft": {
+        "base": "herbal_oil",
+        "herb": "nightshade",
+        "form": "powder",
+        "time": 160
+      }
+    },
+    {
+      "id": "poison_extract",
+      "name": "Poison Extract",
+      "kind": "OIL",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#2f5c22",
+      "toxicity": "NONE",
+      "cooldown": 60,
+      "discovery": "EXPERIMENT",
+      "description": "Viperweed and deadly cap drawn into oil. Potent enough that the maker wears gloves.",
+      "effects": [],
+      "coating": {
+        "charges": 10,
+        "durationTicks": 3000,
+        "potency": 0.8,
+        "onHit": [
+          {
+            "type": "VANILLA",
+            "effect": "minecraft:poison",
+            "duration": 100,
+            "amplifier": 1
+          }
+        ]
+      },
+      "craft": {
+        "base": "herbal_oil",
+        "herb": "viperweed",
+        "form": "extract",
+        "extract": "deadly_cap",
+        "time": 220
+      }
+    },
+    {
+      "id": "bleeding_oil",
+      "name": "Bleeding Oil",
+      "kind": "OIL",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#7a1f24",
+      "toxicity": "NONE",
+      "cooldown": 60,
+      "discovery": "JOURNAL",
+      "description": "Blackthorn and yarrow, perversely combined. Cuts that keep bleeding.",
+      "effects": [],
+      "coating": {
+        "charges": 12,
+        "durationTicks": 2400,
+        "potency": 0.7,
+        "onHit": [
+          {
+            "type": "HERBAL",
+            "effect": "bleeding",
+            "duration": 120,
+            "amplifier": 0
+          }
+        ]
+      },
+      "craft": {
+        "base": "herbal_oil",
+        "herb": "blackthorn",
+        "form": "extract",
+        "extract": "yarrow",
+        "time": 200
+      }
+    },
+    {
+      "id": "weakening_oil",
+      "name": "Weakening Oil",
+      "kind": "OIL",
+      "tier": 3,
+      "rarity": "RARE",
+      "color": "#6a5a8a",
+      "toxicity": "NONE",
+      "cooldown": 60,
+      "discovery": "JOURNAL",
+      "description": "Wolfsbane, ground into grease. The struck limb forgets its strength.",
+      "effects": [],
+      "coating": {
+        "charges": 10,
+        "durationTicks": 2400,
+        "potency": 0.75,
+        "onHit": [
+          {
+            "type": "VANILLA",
+            "effect": "minecraft:weakness",
+            "duration": 200,
+            "amplifier": 1
+          }
+        ]
+      },
+      "craft": {
+        "base": "herbal_oil",
+        "herb": "wolfsbane",
+        "form": "extract",
+        "catalyst": "shadow_ichor",
+        "time": 260
+      }
+    },
+    {
+      "id": "slowing_oil",
+      "name": "Slowing Oil",
+      "kind": "OIL",
+      "tier": 2,
+      "rarity": "UNCOMMON",
+      "color": "#3f5c5c",
+      "toxicity": "NONE",
+      "cooldown": 60,
+      "discovery": "EXPERIMENT",
+      "description": "Hemlock and sleepwort. A numbing coat that makes every step an effort.",
+      "effects": [],
+      "coating": {
+        "charges": 10,
+        "durationTicks": 2400,
+        "potency": 0.7,
+        "onHit": [
+          {
+            "type": "VANILLA",
+            "effect": "minecraft:slowness",
+            "duration": 160,
+            "amplifier": 1
+          }
+        ]
+      },
+      "craft": {
+        "base": "herbal_oil",
+        "herb": "hemlock",
+        "form": "extract",
+        "extract": "sleepwort",
+        "time": 220
+      }
+    },
+    {
+      "id": "venom_oil",
+      "name": "Venom Oil",
+      "kind": "OIL",
+      "tier": 4,
+      "rarity": "VERY_RARE",
+      "color": "#1f4a1c",
+      "toxicity": "NONE",
+      "cooldown": 60,
+      "discovery": "LOOT",
+      "description": "Viperweed drawn a second time through shadow ichor. Almost nothing survives the wound.",
+      "effects": [],
+      "coating": {
+        "charges": 16,
+        "durationTicks": 3600,
+        "potency": 1.0,
+        "onHit": [
+          {
+            "type": "VANILLA",
+            "effect": "minecraft:poison",
+            "duration": 200,
+            "amplifier": 1
+          },
+          {
+            "type": "HERBAL",
+            "effect": "wasting",
+            "duration": 160,
+            "amplifier": 0
+          }
+        ]
+      },
+      "craft": {
+        "base": "moonwater",
+        "herb": "viperweed",
+        "form": "extract",
+        "catalyst": "shadow_ichor",
+        "time": 320
+      }
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "_comment": "SOURCE OF TRUTH for every herb in Herbalist's Craft. tools/generate.py reads this file and emits: item/block registration Java, item+block models, textures, blockstates, lang, loot, tags, worldgen (configured/placed feature + biome modifier), and the datapack herb definitions. Edit here, never edit generated files by hand.",
+  "_schema": {
+    "id": "snake_case id, also the item/block prefix",
+    "category": "HEALING|COOLING|WARMING|TOXIC|MEDICINAL|STIMULANT|SEDATIVE|PROTECTIVE (drives creative tab order, art palette family and journal grouping)",
+    "morphology": "ROOT|LEAF|FLOWER|GRASS|BERRY|MUSHROOM|BARK|VINE|BULB|MOSS|FUNGUS (drives art silhouette)",
+    "properties": "map of property -> potency 0.1..1.5",
+    "toxicity": "NONE|LOW|MEDIUM|HIGH|EXTREME",
+    "rarity": "COMMON|UNCOMMON|RARE|VERY_RARE (drives spawn weight, growth speed and art flourish)",
+    "seasons": "preferred seasons; growth x1.35 and spawn weight x1.25 in season, x0.45 growth out of season, winter blocks non WINTER/COLD herbs",
+    "biomes": "biome group names, see tools/gen/biome_groups.py",
+    "placement": "SURFACE|WETLAND|SHADED|UNDERGROUND|HIGH_ELEVATION|NETHER",
+    "soil": "DIRT|FARMLAND|SAND|MOSS|NETHERRACK|SOUL_SOIL|WATER_EDGE",
+    "light": "BRIGHT|DIM|DARK",
+    "forms": "subset of fresh, seed, dried, powder, extract (which items exist)",
+    "uses": "free-form tags used by the tooltip 'Used for:' section"
+  },
+  "herbs": [
+    {
+      "id": "bloodroot", "name": "Bloodroot", "category": "HEALING", "morphology": "ROOT",
+      "lore": "Torn from the ground it bleeds a crimson sap that closes wounds faster than any needle.",
+      "properties": {"HEALING": 1.0, "HEMOSTATIC": 0.7}, "toxicity": "LOW", "rarity": "COMMON",
+      "seasons": ["SPRING", "AUTUMN"], "biomes": ["plains", "forest"], "placement": "SURFACE", "soil": "DIRT",
+      "yield": [1, 3], "regrowChance": 0.65, "uses": ["healing tonic", "antiseptic salve", "hemostatic"]
+    },
+    {
+      "id": "heartleaf", "name": "Heartleaf", "category": "HEALING", "morphology": "LEAF",
+      "lore": "Its leaves are shaped like the organ they mend, and beat faintly when held.",
+      "properties": {"HEALING": 0.9, "REGENERATION": 0.45}, "toxicity": "NONE", "rarity": "UNCOMMON",
+      "seasons": ["SPRING"], "biomes": ["forest"], "placement": "SHADED", "soil": "DIRT", "light": "DIM",
+      "growthSpeed": 0.85, "yield": [1, 2], "regrowChance": 0.45, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["healing tonic", "recovery tea"]
+    },
+    {
+      "id": "red_clover", "name": "Red Clover", "category": "HEALING", "morphology": "FLOWER",
+      "lore": "A lucky flower of the open plains; its sweetness makes bitter medicine drinkable.",
+      "properties": {"HEALING": 0.4, "HYDRATION": 0.35, "ANTISEPTIC": 0.3}, "toxicity": "NONE", "rarity": "COMMON",
+      "seasons": ["SPRING", "SUMMER"], "biomes": ["plains"], "placement": "SURFACE", "soil": "DIRT",
+      "growthSpeed": 1.2, "yield": [1, 4], "regrowChance": 0.75, "uses": ["sweetener", "herbal tea"]
+    },
+    {
+      "id": "vitalis_root", "name": "Vitalis Root", "category": "HEALING", "morphology": "BULB",
+      "lore": "A fist-sized tuber humming with raw vitality. Jungles hide it beneath old buttress roots.",
+      "properties": {"HEALING": 1.3, "REGENERATION": 0.7, "ENERGY": 0.3}, "toxicity": "LOW", "rarity": "RARE",
+      "seasons": ["SUMMER"], "biomes": ["jungle"], "placement": "SHADED", "soil": "MOSS", "light": "DIM",
+      "growthSpeed": 0.6, "yield": [1, 1], "seedReturn": [0, 1], "regrowChance": 0.2,
+      "forms": ["fresh", "seed", "dried", "powder", "extract"], "uses": ["strong healing tonic", "life essence"]
+    },
+    {
+      "id": "yarrow", "name": "Yarrow", "category": "HEALING", "morphology": "GRASS",
+      "lore": "Soldiers of old packed its feathered leaves into wounds to stop the bleeding.",
+      "properties": {"HEMOSTATIC": 1.0, "ANTISEPTIC": 0.5}, "toxicity": "LOW", "rarity": "COMMON",
+      "seasons": ["SUMMER"], "biomes": ["plains", "mountains"], "placement": "SURFACE", "soil": "DIRT",
+      "yield": [1, 3], "regrowChance": 0.7, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["hemostatic tonic", "antiseptic salve"]
+    },
+    {
+      "id": "comfrey", "name": "Comfrey", "category": "HEALING", "morphology": "LEAF",
+      "lore": "Knits bone and skin alike. The older herbalists call it knitbone and hoard it.",
+      "properties": {"HEALING": 0.7, "HEMOSTATIC": 0.5}, "toxicity": "LOW", "rarity": "COMMON",
+      "seasons": ["SPRING", "SUMMER"], "biomes": ["forest", "swamp"], "placement": "WETLAND", "soil": "DIRT",
+      "yield": [1, 3], "regrowChance": 0.6, "forms": ["fresh", "seed", "dried", "powder"],
+      "uses": ["healing tonic", "healing salve"]
+    },
+    {
+      "id": "silverleaf", "name": "Silverleaf", "category": "HEALING", "morphology": "LEAF",
+      "lore": "Moon-pale leaves that weep a clear, stinging juice. The finest field antiseptic there is.",
+      "properties": {"ANTISEPTIC": 0.9, "HEALING": 0.5, "COOLING": 0.3}, "toxicity": "NONE", "rarity": "UNCOMMON",
+      "seasons": ["SPRING", "AUTUMN"], "biomes": ["forest"], "placement": "SHADED", "soil": "DIRT", "light": "DIM",
+      "growthSpeed": 0.9, "yield": [1, 2], "regrowChance": 0.45,
+      "forms": ["fresh", "seed", "dried", "powder", "extract"], "uses": ["antiseptic tonic", "antiseptic salve"]
+    },
+
+    {
+      "id": "frostmint", "name": "Frostmint", "category": "COOLING", "morphology": "GRASS",
+      "lore": "Chewing a single leaf feels like swallowing a snowflake. Grows where the air bites.",
+      "properties": {"COOLING": 1.0, "HYDRATION": 0.45}, "toxicity": "NONE", "rarity": "COMMON",
+      "seasons": ["WINTER", "AUTUMN"], "biomes": ["taiga", "snowy"], "placement": "SURFACE", "soil": "DIRT",
+      "growthSpeed": 1.1, "yield": [1, 4], "regrowChance": 0.75, "uses": ["cooling tea", "hydration"]
+    },
+    {
+      "id": "snowbell", "name": "Snowbell", "category": "COOLING", "morphology": "FLOWER",
+      "lore": "White bells that ring silently under snowfall, lulling fever and wakefulness alike.",
+      "properties": {"COOLING": 0.9, "SEDATIVE": 0.35}, "toxicity": "LOW", "rarity": "UNCOMMON",
+      "seasons": ["WINTER"], "biomes": ["snowy"], "placement": "SURFACE", "soil": "DIRT",
+      "growthSpeed": 0.8, "yield": [1, 2], "regrowChance": 0.4, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["sleep tea", "cooling tea"]
+    },
+    {
+      "id": "iceleaf", "name": "Iceleaf", "category": "COOLING", "morphology": "LEAF",
+      "lore": "Its veins crystallise into true ice. Wrapped in cloth, it survives long enough to be useful.",
+      "properties": {"COOLING": 1.2, "COLD_PROTECTION": 0.6}, "toxicity": "LOW", "rarity": "RARE",
+      "seasons": ["WINTER"], "biomes": ["snowy", "mountains"], "placement": "HIGH_ELEVATION", "soil": "DIRT",
+      "growthSpeed": 0.55, "yield": [1, 1], "regrowChance": 0.2, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["frost salve", "frost lung tonic"]
+    },
+    {
+      "id": "winter_sage", "name": "Winter Sage", "category": "COOLING", "morphology": "LEAF",
+      "lore": "A grey-green survivor of the long dark. It keeps the lungs clear when the cold settles in.",
+      "properties": {"COOLING": 0.6, "ANTISEPTIC": 0.4, "COLD_PROTECTION": 0.4, "RESPIRATORY": 0.4},
+      "toxicity": "NONE", "rarity": "COMMON", "seasons": ["WINTER", "AUTUMN"], "biomes": ["taiga", "mountains"],
+      "placement": "SURFACE", "soil": "DIRT", "yield": [1, 3], "regrowChance": 0.65,
+      "forms": ["fresh", "seed", "dried", "powder", "extract"], "uses": ["frost lung tonic", "warming tonic"]
+    },
+    {
+      "id": "glacier_lotus", "name": "Glacier Lotus", "category": "COOLING", "morphology": "FLOWER",
+      "lore": "It blooms on meltwater pools that refreeze each night. Few herbalists ever see one.",
+      "properties": {"COOLING": 1.1, "REGENERATION": 0.5, "COLD_PROTECTION": 0.7}, "toxicity": "LOW", "rarity": "VERY_RARE",
+      "seasons": ["WINTER"], "biomes": ["snowy"], "placement": "WETLAND", "soil": "WATER_EDGE",
+      "growthSpeed": 0.4, "yield": [1, 1], "seedReturn": [0, 1], "regrowChance": 0.1,
+      "forms": ["fresh", "seed", "dried", "extract"], "uses": ["frost salve", "vitalis tonic"]
+    },
+    {
+      "id": "moonfrost_berry", "name": "Moonfrost Berry", "category": "COOLING", "morphology": "BERRY",
+      "lore": "Frozen berries that burst with cold, clean meltwater when bitten.",
+      "properties": {"COOLING": 0.7, "HYDRATION": 0.6}, "toxicity": "NONE", "rarity": "UNCOMMON",
+      "seasons": ["WINTER"], "biomes": ["taiga", "snowy"], "placement": "SURFACE", "soil": "MOSS",
+      "growthSpeed": 0.9, "yield": [2, 4], "regrowChance": 0.55, "forms": ["fresh", "seed", "dried", "extract"],
+      "uses": ["sweet berry tea", "hydration"]
+    },
+
+    {
+      "id": "emberroot", "name": "Emberroot", "category": "WARMING", "morphology": "ROOT",
+      "lore": "It grows only where the ground itself burns, storing that heat in a black, coal-like tuber.",
+      "properties": {"WARMING": 1.0, "FIRE_PROTECTION": 0.5}, "toxicity": "LOW", "rarity": "COMMON",
+      "seasons": ["AUTUMN", "WINTER"], "biomes": ["nether"], "placement": "NETHER", "soil": "NETHERRACK", "light": "DIM",
+      "growthSpeed": 0.9, "yield": [1, 3], "regrowChance": 0.6, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["warming tea", "ember salve"]
+    },
+    {
+      "id": "sunleaf", "name": "Sunleaf", "category": "WARMING", "morphology": "LEAF",
+      "lore": "Broad and gold-veined, it tracks the sun and radiates that memory long after dusk.",
+      "properties": {"WARMING": 0.9, "ENERGY": 0.4}, "toxicity": "NONE", "rarity": "COMMON",
+      "seasons": ["SUMMER"], "biomes": ["desert", "badlands"], "placement": "SURFACE", "soil": "SAND",
+      "growthSpeed": 1.05, "yield": [1, 3], "regrowChance": 0.6, "uses": ["warming tea", "sun tea"]
+    },
+    {
+      "id": "cinnamon_bark", "name": "Cinnamon Bark", "category": "WARMING", "morphology": "BARK",
+      "lore": "Peeled in curls from a jungle tree, sweet and searing at once. Helps the breath come easy.",
+      "properties": {"WARMING": 0.8, "RESPIRATORY": 0.35, "ENERGY": 0.2}, "toxicity": "NONE", "rarity": "UNCOMMON",
+      "seasons": ["AUTUMN"], "biomes": ["jungle"], "placement": "SHADED", "soil": "MOSS", "light": "DIM",
+      "growthSpeed": 0.7, "yield": [1, 2], "regrowChance": 0.35, "forms": ["fresh", "seed", "dried", "powder"],
+      "uses": ["warming tea", "respiratory tonic"]
+    },
+    {
+      "id": "fire_sage", "name": "Fire Sage", "category": "WARMING", "morphology": "LEAF",
+      "lore": "Red-tipped and resinous; burned in a hut it keeps the chill, and worse things, outside.",
+      "properties": {"WARMING": 0.7, "FIRE_PROTECTION": 0.6}, "toxicity": "LOW", "rarity": "UNCOMMON",
+      "seasons": ["SUMMER"], "biomes": ["badlands", "savanna"], "placement": "SURFACE", "soil": "DIRT",
+      "growthSpeed": 0.9, "yield": [1, 2], "regrowChance": 0.45, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["ember salve", "ward salve"]
+    },
+    {
+      "id": "blaze_pepper", "name": "Blaze Pepper", "category": "WARMING", "morphology": "BERRY",
+      "lore": "A pod that pops with heat. Nether travelers chew it to stay awake and stay warm.",
+      "properties": {"WARMING": 1.2, "STIMULANT": 0.5, "ENERGY": 0.4}, "toxicity": "MEDIUM", "rarity": "RARE",
+      "seasons": ["SUMMER", "AUTUMN"], "biomes": ["nether"], "placement": "NETHER", "soil": "SOUL_SOIL", "light": "DIM",
+      "growthSpeed": 0.65, "yield": [1, 2], "regrowChance": 0.3, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["stamina tonic", "warming tea"]
+    },
+    {
+      "id": "cinder_bloom", "name": "Cinder Bloom", "category": "WARMING", "morphology": "FLOWER",
+      "lore": "Petals of ember and ash; it opens only when something nearby is burning.",
+      "properties": {"WARMING": 1.1, "FIRE_PROTECTION": 0.8}, "toxicity": "LOW", "rarity": "RARE",
+      "seasons": ["SUMMER"], "biomes": ["nether"], "placement": "NETHER", "soil": "NETHERRACK", "light": "DIM",
+      "growthSpeed": 0.55, "yield": [1, 1], "regrowChance": 0.2, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["fire salve", "ember tonic"]
+    },
+
+    {
+      "id": "nightshade", "name": "Nightshade", "category": "TOXIC", "morphology": "BERRY",
+      "lore": "Purple flowers, black berries, and a reputation. Handle it with gloves and intent.",
+      "properties": {"TOXIC": 1.0, "SEDATIVE": 0.3}, "toxicity": "HIGH", "rarity": "COMMON",
+      "seasons": ["SUMMER"], "biomes": ["swamp", "dark_forest"], "placement": "SHADED", "soil": "DIRT", "light": "DIM",
+      "yield": [1, 3], "regrowChance": 0.6, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["toxic oil", "poison extract"]
+    },
+    {
+      "id": "viperweed", "name": "Viperweed", "category": "TOXIC", "morphology": "VINE",
+      "lore": "Its sap numbs the skin where it touches. Marsh hunters learn to respect the green coils.",
+      "properties": {"TOXIC": 1.1, "HEMOSTATIC": 0.2}, "toxicity": "HIGH", "rarity": "UNCOMMON",
+      "seasons": ["SUMMER"], "biomes": ["swamp"], "placement": "WETLAND", "soil": "MOSS", "light": "DIM",
+      "growthSpeed": 0.85, "yield": [1, 2], "regrowChance": 0.45, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["poison extract", "venom oil"]
+    },
+    {
+      "id": "blackthorn", "name": "Blackthorn", "category": "TOXIC", "morphology": "BARK",
+      "lore": "A thorned scrub of the deep woods. Its bark stains the fingers and slows the blood.",
+      "properties": {"TOXIC": 0.8, "HEMOSTATIC": 0.4}, "toxicity": "MEDIUM", "rarity": "UNCOMMON",
+      "seasons": ["AUTUMN"], "biomes": ["dark_forest"], "placement": "SHADED", "soil": "DIRT", "light": "DARK",
+      "growthSpeed": 0.8, "yield": [1, 2], "regrowChance": 0.4, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["bleeding oil", "weakening oil"]
+    },
+    {
+      "id": "deadly_cap", "name": "Deadly Cap", "category": "TOXIC", "morphology": "MUSHROOM",
+      "lore": "One cap will drop a boar. Two will drop the hunter. It glows faintly in the dark.",
+      "properties": {"TOXIC": 1.4, "SEDATIVE": 0.5}, "toxicity": "EXTREME", "rarity": "RARE",
+      "seasons": ["AUTUMN"], "biomes": ["dark_forest", "cave"], "placement": "UNDERGROUND", "soil": "MOSS", "light": "DARK",
+      "growthSpeed": 0.5, "yield": [1, 1], "regrowChance": 0.15, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["shadow ichor", "poison extract"]
+    },
+    {
+      "id": "wolfsbane", "name": "Wolfsbane", "category": "TOXIC", "morphology": "FLOWER",
+      "lore": "Blue hooded flowers grown on high slopes. Hunters say it keeps wolves, and worse, at bay.",
+      "properties": {"TOXIC": 1.3, "RESPIRATORY": 0.3, "SEDATIVE": 0.2}, "toxicity": "EXTREME", "rarity": "RARE",
+      "seasons": ["WINTER"], "biomes": ["mountains", "taiga"], "placement": "HIGH_ELEVATION", "soil": "DIRT",
+      "growthSpeed": 0.5, "yield": [1, 1], "regrowChance": 0.15, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["weakening oil", "venom oil"]
+    },
+    {
+      "id": "hemlock", "name": "Hemlock", "category": "TOXIC", "morphology": "GRASS",
+      "lore": "Fine-cut leaves that smell of mice and regret. The classic poison of impatient nobles.",
+      "properties": {"TOXIC": 1.2, "SEDATIVE": 0.6}, "toxicity": "EXTREME", "rarity": "UNCOMMON",
+      "seasons": ["SPRING"], "biomes": ["swamp"], "placement": "WETLAND", "soil": "MOSS", "light": "DIM",
+      "growthSpeed": 0.85, "yield": [1, 2], "regrowChance": 0.4, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["slowing oil", "poison extract"]
+    },
+    {
+      "id": "grave_moss", "name": "Grave Moss", "category": "TOXIC", "morphology": "MOSS",
+      "lore": "It feeds on what the earth took. Regrowth gathered from it is potent, and unclean.",
+      "properties": {"TOXIC": 0.9, "REGENERATION": 0.4, "COOLING": 0.2}, "toxicity": "MEDIUM", "rarity": "RARE",
+      "seasons": ["AUTUMN", "WINTER"], "biomes": ["cave"], "placement": "UNDERGROUND", "soil": "MOSS", "light": "DARK",
+      "growthSpeed": 0.6, "yield": [1, 2], "regrowChance": 0.25, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["recuperation tonic", "shadow ichor"]
+    },
+
+    {
+      "id": "cleansage", "name": "Cleansage", "category": "MEDICINAL", "morphology": "LEAF",
+      "lore": "Burned or brewed, it drives rot out of a wound and out of a room.",
+      "properties": {"ANTISEPTIC": 1.0, "RESPIRATORY": 0.6}, "toxicity": "NONE", "rarity": "COMMON",
+      "seasons": ["SPRING", "SUMMER"], "biomes": ["plains", "badlands"], "placement": "SURFACE", "soil": "DIRT",
+      "growthSpeed": 1.05, "yield": [1, 3], "regrowChance": 0.65, "uses": ["antiseptic tonic", "antiseptic salve"]
+    },
+    {
+      "id": "bitterroot", "name": "Bitterroot", "category": "MEDICINAL", "morphology": "ROOT",
+      "lore": "So bitter it makes the jaw ache, but it clears the lungs and the head with it.",
+      "properties": {"ANTISEPTIC": 0.6, "RESPIRATORY": 0.45, "TOXIC": 0.3}, "toxicity": "MEDIUM", "rarity": "COMMON",
+      "seasons": ["SUMMER"], "biomes": ["desert", "badlands"], "placement": "SURFACE", "soil": "SAND",
+      "growthSpeed": 0.95, "yield": [1, 3], "regrowChance": 0.6, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["respiratory tonic", "bitter tea"]
+    },
+    {
+      "id": "golden_chamomile", "name": "Golden Chamomile", "category": "MEDICINAL", "morphology": "FLOWER",
+      "lore": "The smell of a calm evening in a cup. Every herbalist starts here.",
+      "properties": {"SEDATIVE": 0.5, "HEALING": 0.35, "HYDRATION": 0.25}, "toxicity": "NONE", "rarity": "COMMON",
+      "seasons": ["SPRING"], "biomes": ["plains"], "placement": "SURFACE", "soil": "DIRT",
+      "growthSpeed": 1.25, "yield": [1, 4], "regrowChance": 0.8, "uses": ["herbal tea", "sleep tea"]
+    },
+    {
+      "id": "marshroot", "name": "Marshroot", "category": "MEDICINAL", "morphology": "ROOT",
+      "lore": "A reed-like root that filters swamp water, and swamp air, into something breathable.",
+      "properties": {"RESPIRATORY": 0.7, "ANTISEPTIC": 0.4, "HYDRATION": 0.35}, "toxicity": "LOW", "rarity": "COMMON",
+      "seasons": ["SUMMER"], "biomes": ["swamp"], "placement": "WETLAND", "soil": "WATER_EDGE",
+      "growthSpeed": 1.0, "yield": [1, 3], "regrowChance": 0.6, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["respiratory tonic", "herbal tea"]
+    },
+    {
+      "id": "witch_hazel", "name": "Witch Hazel", "category": "MEDICINAL", "morphology": "BARK",
+      "lore": "A stringy bark that pulls inflammation out of a bruise like a poultice pulls pus.",
+      "properties": {"ANTISEPTIC": 0.8, "HEMOSTATIC": 0.4, "HEALING": 0.3}, "toxicity": "NONE", "rarity": "UNCOMMON",
+      "seasons": ["AUTUMN"], "biomes": ["forest", "swamp"], "placement": "SHADED", "soil": "DIRT", "light": "DIM",
+      "growthSpeed": 0.8, "yield": [1, 2], "regrowChance": 0.4, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["antiseptic tonic", "burn salve"]
+    },
+    {
+      "id": "feverfew", "name": "Feverfew", "category": "MEDICINAL", "morphology": "FLOWER",
+      "lore": "Small white flowers that break a fever by degrees. Never enough, always welcome.",
+      "properties": {"COOLING": 0.55, "HEALING": 0.4, "SEDATIVE": 0.3}, "toxicity": "LOW", "rarity": "UNCOMMON",
+      "seasons": ["SUMMER"], "biomes": ["plains", "mountains"], "placement": "SURFACE", "soil": "DIRT",
+      "growthSpeed": 1.0, "yield": [1, 3], "regrowChance": 0.6, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["cooling tea", "recovery tea"]
+    },
+    {
+      "id": "lungwort", "name": "Lungwort", "category": "MEDICINAL", "morphology": "MOSS",
+      "lore": "Spotted leaves that look like the lungs they clear. The doctrine of signatures, proven right.",
+      "properties": {"RESPIRATORY": 1.0, "HEALING": 0.4}, "toxicity": "NONE", "rarity": "UNCOMMON",
+      "seasons": ["SPRING"], "biomes": ["forest"], "placement": "SHADED", "soil": "MOSS", "light": "DIM",
+      "growthSpeed": 0.75, "yield": [1, 2], "regrowChance": 0.35, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["respiratory tonic", "frost lung tonic"]
+    },
+    {
+      "id": "spiritwood", "name": "Spiritwood", "category": "MEDICINAL", "morphology": "BARK",
+      "lore": "Pale wood from a tree struck by lightning and left standing. It hums when medicine is near.",
+      "properties": {"ANTISEPTIC": 0.7, "REGENERATION": 0.35, "ENERGY": 0.2}, "toxicity": "LOW", "rarity": "RARE",
+      "seasons": ["AUTUMN", "WINTER"], "biomes": ["forest", "taiga"], "placement": "SHADED", "soil": "DIRT", "light": "DIM",
+      "growthSpeed": 0.6, "yield": [1, 2], "regrowChance": 0.25, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["detox tonic", "life essence"]
+    },
+
+    {
+      "id": "stormherb", "name": "Stormherb", "category": "STIMULANT", "morphology": "GRASS",
+      "lore": "It grows on ridges where lightning strikes. The taste is ozone and urgency.",
+      "properties": {"STIMULANT": 1.0, "ENERGY": 0.6}, "toxicity": "MEDIUM", "rarity": "UNCOMMON",
+      "seasons": ["SUMMER", "AUTUMN"], "biomes": ["mountains"], "placement": "HIGH_ELEVATION", "soil": "DIRT",
+      "growthSpeed": 0.85, "yield": [1, 2], "regrowChance": 0.45, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["stamina tonic", "focus tonic"]
+    },
+    {
+      "id": "wild_ginseng", "name": "Wild Ginseng", "category": "STIMULANT", "morphology": "ROOT",
+      "lore": "A root with legs and a face, dug from old forest soil. Worth more than gold to the right buyer.",
+      "properties": {"STIMULANT": 0.8, "ENERGY": 0.5, "REGENERATION": 0.35}, "toxicity": "LOW", "rarity": "RARE",
+      "seasons": ["AUTUMN"], "biomes": ["forest", "jungle"], "placement": "SHADED", "soil": "MOSS", "light": "DIM",
+      "growthSpeed": 0.55, "yield": [1, 1], "regrowChance": 0.2, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["stamina tonic", "life essence"]
+    },
+    {
+      "id": "swiftleaf", "name": "Swiftleaf", "category": "STIMULANT", "morphology": "LEAF",
+      "lore": "Plains runners chew it before a long chase. It makes the legs forget they are tired.",
+      "properties": {"STIMULANT": 0.7, "ENERGY": 0.7}, "toxicity": "LOW", "rarity": "COMMON",
+      "seasons": ["SUMMER"], "biomes": ["plains", "savanna"], "placement": "SURFACE", "soil": "DIRT",
+      "growthSpeed": 1.15, "yield": [1, 3], "regrowChance": 0.7, "uses": ["stamina tonic", "herbal tea"]
+    },
+    {
+      "id": "dawnbloom", "name": "Dawnbloom", "category": "STIMULANT", "morphology": "FLOWER",
+      "lore": "Opens exactly at first light and closes at dusk. Brewed, it gives a night back to the sleepless.",
+      "properties": {"STIMULANT": 0.9, "ENERGY": 0.5, "WARMING": 0.2}, "toxicity": "LOW", "rarity": "UNCOMMON",
+      "seasons": ["SPRING"], "biomes": ["jungle"], "placement": "SHADED", "soil": "MOSS", "light": "DIM",
+      "growthSpeed": 0.75, "yield": [1, 2], "regrowChance": 0.4, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["focus tonic", "focus tea"]
+    },
+    {
+      "id": "thunder_thistle", "name": "Thunder Thistle", "category": "STIMULANT", "morphology": "GRASS",
+      "lore": "A spined thistle that crackles when stroked. Handle it with leather between you and it.",
+      "properties": {"STIMULANT": 0.8, "FIRE_PROTECTION": 0.3, "ENERGY": 0.4}, "toxicity": "MEDIUM", "rarity": "RARE",
+      "seasons": ["SUMMER"], "biomes": ["mountains", "savanna"], "placement": "HIGH_ELEVATION", "soil": "DIRT",
+      "growthSpeed": 0.7, "yield": [1, 2], "regrowChance": 0.3, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["focus tonic", "ember tonic"]
+    },
+
+    {
+      "id": "dreamcap", "name": "Dreamcap", "category": "SEDATIVE", "morphology": "MUSHROOM",
+      "lore": "A cave mushroom that smells of warm milk and old songs. Sleep follows it closely.",
+      "properties": {"SEDATIVE": 1.0, "REGENERATION": 0.3}, "toxicity": "MEDIUM", "rarity": "UNCOMMON",
+      "seasons": ["AUTUMN", "WINTER"], "biomes": ["cave"], "placement": "UNDERGROUND", "soil": "MOSS", "light": "DARK",
+      "growthSpeed": 0.7, "yield": [1, 2], "regrowChance": 0.4, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["sleep tea", "recuperation tonic"]
+    },
+    {
+      "id": "moonflower", "name": "Moonflower", "category": "SEDATIVE", "morphology": "FLOWER",
+      "lore": "It opens only under moonlight and closes at dawn, as if the day were an intrusion.",
+      "properties": {"SEDATIVE": 0.9, "COOLING": 0.3}, "toxicity": "MEDIUM", "rarity": "UNCOMMON",
+      "seasons": ["AUTUMN"], "biomes": ["dark_forest"], "placement": "SHADED", "soil": "DIRT", "light": "DARK",
+      "growthSpeed": 0.7, "yield": [1, 2], "regrowChance": 0.35, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["sleep tea", "focus tea"]
+    },
+    {
+      "id": "lavender", "name": "Lavender", "category": "SEDATIVE", "morphology": "FLOWER",
+      "lore": "A cloud of violet on the hillside. Put a sprig in a wound and in a pillow alike.",
+      "properties": {"SEDATIVE": 0.6, "ANTISEPTIC": 0.35, "HYDRATION": 0.15}, "toxicity": "NONE", "rarity": "COMMON",
+      "seasons": ["SUMMER"], "biomes": ["plains", "forest"], "placement": "SURFACE", "soil": "DIRT",
+      "growthSpeed": 1.1, "yield": [1, 4], "regrowChance": 0.75, "uses": ["sleep tea", "antiseptic salve"]
+    },
+    {
+      "id": "sleepwort", "name": "Sleepwort", "category": "SEDATIVE", "morphology": "LEAF",
+      "lore": "Marsh-dwellers say a single leaf ends an argument. A second leaf ends the conversation.",
+      "properties": {"SEDATIVE": 1.1, "TOXIC": 0.4}, "toxicity": "HIGH", "rarity": "RARE",
+      "seasons": ["AUTUMN"], "biomes": ["swamp"], "placement": "WETLAND", "soil": "MOSS", "light": "DIM",
+      "growthSpeed": 0.6, "yield": [1, 2], "regrowChance": 0.25, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["deep sleep tea", "slowing oil"]
+    },
+    {
+      "id": "velvet_bell", "name": "Velvet Bell", "category": "SEDATIVE", "morphology": "FLOWER",
+      "lore": "Soft, dark blue bells under the pines. Their scent calms a racing heart within a minute.",
+      "properties": {"SEDATIVE": 0.7, "HEALING": 0.3}, "toxicity": "LOW", "rarity": "UNCOMMON",
+      "seasons": ["WINTER"], "biomes": ["taiga"], "placement": "SHADED", "soil": "DIRT", "light": "DIM",
+      "growthSpeed": 0.75, "yield": [1, 2], "regrowChance": 0.4, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["sleep tea", "recovery tea"]
+    },
+
+    {
+      "id": "ironbark", "name": "Ironbark", "category": "PROTECTIVE", "morphology": "BARK",
+      "lore": "Bark dense enough to turn a blade. Chewed, it turns a little heat as well.",
+      "properties": {"FIRE_PROTECTION": 0.8, "ANTISEPTIC": 0.3}, "toxicity": "LOW", "rarity": "UNCOMMON",
+      "seasons": ["AUTUMN", "WINTER"], "biomes": ["mountains", "jungle"], "placement": "HIGH_ELEVATION", "soil": "DIRT",
+      "growthSpeed": 0.55, "yield": [1, 2], "regrowChance": 0.2, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["ward salve", "fire salve"]
+    },
+    {
+      "id": "ashleaf", "name": "Ashleaf", "category": "PROTECTIVE", "morphology": "LEAF",
+      "lore": "Grey leaves that smoulder rather than burn. Nether locals brew them against the heat.",
+      "properties": {"FIRE_PROTECTION": 0.9, "WARMING": 0.4}, "toxicity": "LOW", "rarity": "COMMON",
+      "seasons": ["SUMMER", "AUTUMN"], "biomes": ["nether"], "placement": "NETHER", "soil": "NETHERRACK", "light": "DIM",
+      "growthSpeed": 0.8, "yield": [1, 3], "regrowChance": 0.5, "uses": ["fire salve", "ember ash"]
+    },
+    {
+      "id": "dragonscale_herb", "name": "Dragonscale Herb", "category": "PROTECTIVE", "morphology": "LEAF",
+      "lore": "Its leaves flake like scales and refuse every flame. The old texts call it the ward of wyrms.",
+      "properties": {"FIRE_PROTECTION": 1.2, "HEALING": 0.5, "WARMING": 0.3}, "toxicity": "MEDIUM", "rarity": "VERY_RARE",
+      "seasons": ["SUMMER", "AUTUMN"], "biomes": ["mountains", "nether"], "placement": "HIGH_ELEVATION", "soil": "DIRT",
+      "growthSpeed": 0.4, "yield": [1, 1], "seedReturn": [0, 1], "regrowChance": 0.1,
+      "forms": ["fresh", "seed", "dried", "powder", "extract"], "uses": ["fire salve", "dragonscale draught"]
+    },
+    {
+      "id": "wardroot", "name": "Wardroot", "category": "PROTECTIVE", "morphology": "ROOT",
+      "lore": "Twisted roots buried at thresholds against frost and ill intent. Brew them for the same reason.",
+      "properties": {"COLD_PROTECTION": 0.6, "ANTISEPTIC": 0.7, "WARMING": 0.2}, "toxicity": "LOW", "rarity": "RARE",
+      "seasons": ["WINTER"], "biomes": ["taiga", "mountains"], "placement": "HIGH_ELEVATION", "soil": "DIRT",
+      "growthSpeed": 0.55, "yield": [1, 2], "regrowChance": 0.25, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["ward salve", "frost salve"]
+    },
+    {
+      "id": "sunpetal", "name": "Sunpetal", "category": "PROTECTIVE", "morphology": "FLOWER",
+      "lore": "Flat gold flowers that face the sun all day and hold a little of it for the night.",
+      "properties": {"WARMING": 0.6, "FIRE_PROTECTION": 0.5, "HEALING": 0.4}, "toxicity": "NONE", "rarity": "UNCOMMON",
+      "seasons": ["SUMMER"], "biomes": ["savanna", "desert"], "placement": "SURFACE", "soil": "SAND",
+      "growthSpeed": 1.0, "yield": [1, 3], "regrowChance": 0.55, "forms": ["fresh", "seed", "dried", "powder", "extract"],
+      "uses": ["ember salve", "warming tea"]
+    }
+  ]
+}

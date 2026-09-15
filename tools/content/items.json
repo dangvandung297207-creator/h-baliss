@@ -1,0 +1,62 @@
+{
+  "_comment": "SOURCE OF TRUTH for every non-herb, non-medicine item. tools/generate.py emits registration Java, models, textures and lang for all of these.",
+  "items": [
+    {"id": "glass_vial", "name": "Glass Vial", "kind": "MATERIAL", "art": "vial_empty",
+     "lore": "Thin-blown glass. Everything an apothecary makes ends up in one of these."},
+    {"id": "clay_cup", "name": "Clay Cup", "kind": "MATERIAL", "art": "cup_empty",
+     "lore": "A fired clay cup. Teas taste of earth and are better for it."},
+
+    {"id": "water_vial", "name": "Vial of Spring Water", "kind": "BASE", "art": "vial_filled", "color": "#5f8fc9",
+     "lore": "Clean water, stoppered. The base of most tonics."},
+    {"id": "spring_water_cup", "name": "Cup of Spring Water", "kind": "BASE", "art": "cup_filled", "color": "#6f9fd9",
+     "lore": "A cup of clean water waiting for herbs."},
+    {"id": "herbal_oil", "name": "Herbal Oil", "kind": "BASE", "art": "vial_filled", "color": "#d8b94a",
+     "lore": "Pressed from seeds. Carries poisons into metal better than anything else."},
+    {"id": "herbal_alcohol", "name": "Herbal Spirits", "kind": "BASE", "art": "vial_filled", "color": "#e0dcd0",
+     "lore": "Sharp spirits distilled for dissolving stubborn resins."},
+    {"id": "salve_base", "name": "Salve Base", "kind": "BASE", "art": "jar_filled", "color": "#eadcbe",
+     "lore": "Beeswax and oil worked together. Holds a medicine against the skin."},
+    {"id": "moonwater", "name": "Moonwater", "kind": "BASE", "art": "vial_filled", "color": "#9fc4e8",
+     "lore": "Water that has held moonlight - or so the old apothecaries insist. Rarely made, never wasted."},
+
+    {"id": "purity_salt", "name": "Salt of Purity", "kind": "CATALYST", "art": "powder_pile", "color": "#f2f2ea",
+     "lore": "A white salt that pulls impurities out of a brew and leaves it clean."},
+    {"id": "ember_ash", "name": "Ember Ash", "kind": "CATALYST", "art": "powder_pile", "color": "#7a4020",
+     "lore": "Ash that stays warm for hours. Wakes up any warming recipe."},
+    {"id": "frost_crystal", "name": "Frost Crystal", "kind": "CATALYST", "art": "crystal_shard", "color": "#a8dcf0",
+     "lore": "A shard of unnatural ice that never melts in the hand."},
+    {"id": "life_essence", "name": "Essence of Life", "kind": "CATALYST", "art": "vial_filled", "color": "#7fe08a",
+     "lore": "A green light trapped in liquid. It makes medicine take hold faster and deeper."},
+    {"id": "shadow_ichor", "name": "Shadow Ichor", "kind": "CATALYST", "art": "vial_filled", "color": "#4a3a5a",
+     "lore": "Thick, dark and cold. Poisons made with it are not survivable by accident."},
+
+    {"id": "pruning_shears", "name": "Pruning Shears", "kind": "TOOL", "art": "shears",
+     "lore": "Cut stems cleanly and the plant lives to grow again."},
+    {"id": "seed_pouch", "name": "Seed Pouch", "kind": "TOOL", "art": "pouch",
+     "lore": "Keeps seeds dry and sorted. Worn at the belt, it never fails to catch a few extra."},
+    {"id": "herbalists_journal", "name": "Herbalist's Journal", "kind": "KNOWLEDGE", "art": "journal",
+     "lore": "Half field guide, half recipe book, entirely your own."},
+
+    {"id": "journal_page_herbal", "name": "Journal Page: Field Notes", "kind": "KNOWLEDGE", "art": "page",
+     "lore": "Someone's careful notes on gathering wild herbs."},
+    {"id": "journal_page_medicinal", "name": "Journal Page: Medicines", "kind": "KNOWLEDGE", "art": "page",
+     "lore": "A folded page of tonic recipes, stained with old spills."},
+    {"id": "journal_page_toxic", "name": "Journal Page: Poisons", "kind": "KNOWLEDGE", "art": "page",
+     "lore": "The handwriting here is small and very precise."},
+    {"id": "journal_page_ancient", "name": "Journal Page: Ancient Apothecary", "kind": "KNOWLEDGE", "art": "page_ancient",
+     "lore": "Parchment from an apothecary older than any village you have visited."},
+
+    {"id": "mortar_and_pestle", "name": "Mortar and Pestle", "kind": "BLOCK", "block": "mortar_and_pestle", "art": "mortar"},
+    {"id": "herbal_mill", "name": "Herbal Mill", "kind": "BLOCK", "block": "herbal_mill", "art": "mill"},
+    {"id": "herbalists_table", "name": "Herbalist's Table", "kind": "BLOCK", "block": "herbalists_table", "art": "table"},
+    {"id": "drying_rack", "name": "Drying Rack", "kind": "BLOCK", "block": "drying_rack", "art": "rack"}
+  ],
+  "experimental": [
+    {"id": "experimental_tonic", "name": "Experimental Tonic", "art": "vial_filled", "color": "#8f7f5f",
+     "lore": "A muddy, unnamed brew. It does something. Whether it is what you wanted is another matter."},
+    {"id": "experimental_tea", "name": "Experimental Tea", "art": "cup_filled", "color": "#8f7f5f",
+     "lore": "A cup of something herbal and unlabelled."},
+    {"id": "failed_mixture", "name": "Failed Mixture", "art": "vial_filled", "color": "#3a3a30",
+     "lore": "The mixture curdled. Drinking it would be an act of pure optimism."}
+  ]
+}

@@ -1,0 +1,33 @@
+# Gradle
+.gradle/
+build/
+out/
+repo/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+bin/
+
+# Minecraft run directories (never commit worlds/logs)
+run/
+runs/
+run-data/
+logs/
+crash-reports/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python tooling
+__pycache__/
+*.pyc
+.venv/
+venv/
