@@ -1,215 +1,47 @@
 # Herbalist's Craft build log
 
-- commit: 00afb2b0169df9e6f0923d1dcef7e24e611e8d74
+- commit: 546f13f36e39c7e9fcd6cd0b6d6de1577fdd7f4d
 - branch: arena/01a0a294-h-baliss
-- recorded: 2026-09-15T12:55:42Z
+- recorded: 2026-09-15T12:59:39Z
 - result: failure
 
 ## Errors
 ```
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineUse.java:68: error: cannot find symbol
-    public static void appendTooltip(ItemStack stack, TooltipContext context, List<Component> tooltip,
-                                                      ^
-  symbol:   class TooltipContext
-  location: class MedicineUse
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:32: error: no suitable method found for get(ResourceLocation)
-                .flatMap(lookup -> lookup.get(id))
-                                         ^
-    method HolderGetter.get(ResourceKey<MedicineDefinition>) is not applicable
-      (argument mismatch; ResourceLocation cannot be converted to ResourceKey<MedicineDefinition>)
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:153: error: no suitable method found for composite(StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::base,StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::herb,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]tract,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]alyst,StreamCodec<RegistryFriendlyByteBuf,ItemStack>,(recipe)->[...]esult,StreamCodec<ByteBuf,Integer>,TableRecip[...]wTime,TableRecipe::new)
+        private static final StreamCodec<RegistryFriendlyByteBuf, TableRecipe> STREAM_CODEC = StreamCodec.composite(
+                                                                                                         ^
+    method StreamCodec.<B#1,C#1,T1#1>composite(StreamCodec<? super B#1,T1#1>,Function<C#1,T1#1>,Function<T1#1,C#1>) is not applicable
+      (cannot infer type-variable(s) B#1,C#1,T1#1
 --
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:33: error: cannot find symbol
-                .map(holder -> holder.value());
-                                     ^
-  symbol:   method value()
-  location: variable holder of type Object
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:59: error: cannot find symbol
-                    tea ? ModSounds.SIP.get() : ModSounds.POUR.get(), SoundSource.PLAYERS, 0.7F, 1.0F);
-                    ^
-  symbol:   variable tea
-  location: class MedicineApplier
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: cannot find symbol
-                Ingredient.OPTIONAL_CONTENTS_STREAM_CODEC, TableRecipe::catalyst,
-                          ^
-  symbol:   variable OPTIONAL_CONTENTS_STREAM_CODEC
-  location: class Ingredient
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:24: error: cannot find symbol
-                    Entry.CODEC.codec().listOf().fieldOf("entries").forGetter(modifier -> modifier.entries),
-                                                                                                  ^
-  symbol:   variable entries
-  location: variable modifier of type Object
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:25: error: cannot find symbol
-                    Codec.intRange(0, 8).optionalFieldOf("rolls", 1).forGetter(modifier -> modifier.rolls),
-                    ^
-  symbol:   variable Codec
-  location: class HerbLootModifier
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:26: error: cannot find symbol
-                    Codec.floatRange(0.0F, 1.0F).optionalFieldOf("chance", 0.6F).forGetter(modifier -> modifier.chance)
-                    ^
-  symbol:   variable Codec
-  location: class HerbLootModifier
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:85: error: cannot find symbol
-                Codec.intRange(1, 1000).optionalFieldOf("weight", 1).forGetter(Entry::weight),
-                ^
-  symbol:   variable Codec
-  location: class Entry
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:86: error: cannot find symbol
-                Codec.intRange(1, 64).optionalFieldOf("min_count", 1).forGetter(Entry::minCount),
-                ^
-  symbol:   variable Codec
-  location: class Entry
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:87: error: cannot find symbol
-                Codec.intRange(1, 64).optionalFieldOf("max_count", 1).forGetter(Entry::maxCount)
-                ^
-  symbol:   variable Codec
-  location: class Entry
---
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:231: error: method does not override or implement a method from a supertype
-    @Override
-    ^
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
             "herbalist", () -> new VillagerProfession("herbalist",
                                ^
   required: String,Predicate<Holder<PoiType>>,Predicate<Holder<PoiType>>,ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
-  found:    String,(poi)->poi[...]ey()),ImmutableSet<Object>,ImmutableSet<HerbalistTableBlock>,SoundEvent
+  found:    String,(poi)->poi[...]ey()),ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
 --
   /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
               "herbalist", () -> new VillagerProfession("herbalist",
                                  ^
     required: String,Predicate<Holder<PoiType>>,Predicate<Holder<PoiType>>,ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
-    found:    String,(poi)->poi[...]ey()),ImmutableSet<Object>,ImmutableSet<HerbalistTableBlock>,SoundEvent
+    found:    String,(poi)->poi[...]ey()),ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
 --
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:32: error: no suitable method found for get(ResourceLocation)
-                  .flatMap(lookup -> lookup.get(id))
-                                           ^
-      method HolderGetter.get(ResourceKey<MedicineDefinition>) is not applicable
-        (argument mismatch; ResourceLocation cannot be converted to ResourceKey<MedicineDefinition>)
---
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineUse.java:68: error: cannot find symbol
-      public static void appendTooltip(ItemStack stack, TooltipContext context, List<Component> tooltip,
-                                                        ^
-    symbol:   class TooltipContext
-    location: class MedicineUse
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:59: error: cannot find symbol
-                      tea ? ModSounds.SIP.get() : ModSounds.POUR.get(), SoundSource.PLAYERS, 0.7F, 1.0F);
-                      ^
-    symbol:   variable tea
-    location: class MedicineApplier
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: cannot find symbol
-                  Ingredient.OPTIONAL_CONTENTS_STREAM_CODEC, TableRecipe::catalyst,
-                            ^
-    symbol:   variable OPTIONAL_CONTENTS_STREAM_CODEC
-    location: class Ingredient
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:24: error: cannot find symbol
-                      Entry.CODEC.codec().listOf().fieldOf("entries").forGetter(modifier -> modifier.entries),
-                                                                                                    ^
-    symbol:   variable entries
-    location: variable modifier of type Object
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:25: error: cannot find symbol
-                      Codec.intRange(0, 8).optionalFieldOf("rolls", 1).forGetter(modifier -> modifier.rolls),
-                      ^
-    symbol:   variable Codec
-    location: class HerbLootModifier
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:26: error: cannot find symbol
-                      Codec.floatRange(0.0F, 1.0F).optionalFieldOf("chance", 0.6F).forGetter(modifier -> modifier.chance)
-                      ^
-    symbol:   variable Codec
-    location: class HerbLootModifier
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:85: error: cannot find symbol
-                  Codec.intRange(1, 1000).optionalFieldOf("weight", 1).forGetter(Entry::weight),
-                  ^
-    symbol:   variable Codec
-    location: class Entry
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:86: error: cannot find symbol
-                  Codec.intRange(1, 64).optionalFieldOf("min_count", 1).forGetter(Entry::minCount),
-                  ^
-    symbol:   variable Codec
-    location: class Entry
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:87: error: cannot find symbol
-                  Codec.intRange(1, 64).optionalFieldOf("max_count", 1).forGetter(Entry::maxCount)
-                  ^
-    symbol:   variable Codec
-    location: class Entry
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:231: error: method does not override or implement a method from a supertype
-      @Override
-      ^
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/ClientSetup.java:19: warning: [removal] bus() in EventBusSubscriber has been deprecated and marked for removal
-  @EventBusSubscriber(modid = HerbalistsCraft.MODID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
---
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:33: error: cannot find symbol
-                  .map(holder -> holder.value());
-                                       ^
-    symbol:   method value()
-    location: variable holder of type Object
+  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:153: error: no suitable method found for composite(StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::base,StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::herb,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]tract,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]alyst,StreamCodec<RegistryFriendlyByteBuf,ItemStack>,(recipe)->[...]esult,StreamCodec<ByteBuf,Integer>,TableRecip[...]wTime,TableRecipe::new)
+          private static final StreamCodec<RegistryFriendlyByteBuf, TableRecipe> STREAM_CODEC = StreamCodec.composite(
+                                                                                                           ^
+      method StreamCodec.<B#1,C#1,T1#1>composite(StreamCodec<? super B#1,T1#1>,Function<C#1,T1#1>,Function<T1#1,C#1>) is not applicable
+        (cannot infer type-variable(s) B#1,C#1,T1#1
 --
 /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/registry/ModVillagers.java:23: error: constructor VillagerProfession in record VillagerProfession cannot be applied to given types;
             "herbalist", () -> new VillagerProfession("herbalist",
                                ^
   required: String,Predicate<Holder<PoiType>>,Predicate<Holder<PoiType>>,ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
-  found:    String,(poi)->poi[...]ey()),ImmutableSet<Object>,ImmutableSet<HerbalistTableBlock>,SoundEvent
+  found:    String,(poi)->poi[...]ey()),ImmutableSet<Item>,ImmutableSet<Block>,SoundEvent
 --
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:32: error: no suitable method found for get(ResourceLocation)
-                .flatMap(lookup -> lookup.get(id))
-                                         ^
-    method HolderGetter.get(ResourceKey<MedicineDefinition>) is not applicable
-      (argument mismatch; ResourceLocation cannot be converted to ResourceKey<MedicineDefinition>)
---
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineUse.java:68: error: cannot find symbol
-    public static void appendTooltip(ItemStack stack, TooltipContext context, List<Component> tooltip,
-                                                      ^
-  symbol:   class TooltipContext
-  location: class MedicineUse
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:59: error: cannot find symbol
-                    tea ? ModSounds.SIP.get() : ModSounds.POUR.get(), SoundSource.PLAYERS, 0.7F, 1.0F);
-                    ^
-  symbol:   variable tea
-  location: class MedicineApplier
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: cannot find symbol
-                Ingredient.OPTIONAL_CONTENTS_STREAM_CODEC, TableRecipe::catalyst,
-                          ^
-  symbol:   variable OPTIONAL_CONTENTS_STREAM_CODEC
-  location: class Ingredient
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:24: error: cannot find symbol
-                    Entry.CODEC.codec().listOf().fieldOf("entries").forGetter(modifier -> modifier.entries),
-                                                                                                  ^
-  symbol:   variable entries
-  location: variable modifier of type Object
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:25: error: cannot find symbol
-                    Codec.intRange(0, 8).optionalFieldOf("rolls", 1).forGetter(modifier -> modifier.rolls),
-                    ^
-  symbol:   variable Codec
-  location: class HerbLootModifier
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:26: error: cannot find symbol
-                    Codec.floatRange(0.0F, 1.0F).optionalFieldOf("chance", 0.6F).forGetter(modifier -> modifier.chance)
-                    ^
-  symbol:   variable Codec
-  location: class HerbLootModifier
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:85: error: cannot find symbol
-                Codec.intRange(1, 1000).optionalFieldOf("weight", 1).forGetter(Entry::weight),
-                ^
-  symbol:   variable Codec
-  location: class Entry
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:86: error: cannot find symbol
-                Codec.intRange(1, 64).optionalFieldOf("min_count", 1).forGetter(Entry::minCount),
-                ^
-  symbol:   variable Codec
-  location: class Entry
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/loot/HerbLootModifier.java:87: error: cannot find symbol
-                Codec.intRange(1, 64).optionalFieldOf("max_count", 1).forGetter(Entry::maxCount)
-                ^
-  symbol:   variable Codec
-  location: class Entry
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java:231: error: method does not override or implement a method from a supertype
-    @Override
-    ^
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/client/ClientSetup.java:19: warning: [removal] bus() in EventBusSubscriber has been deprecated and marked for removal
-@EventBusSubscriber(modid = HerbalistsCraft.MODID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
---
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/medicine/MedicineApplier.java:33: error: cannot find symbol
-                .map(holder -> holder.value());
-                                     ^
-  symbol:   method value()
-  location: variable holder of type Object
+/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:153: error: no suitable method found for composite(StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::base,StreamCodec<RegistryFriendlyByteBuf,Ingredient>,TableRecipe::herb,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]tract,StreamCodec<RegistryFriendlyByteBuf,Optional<Ingredient>>,TableRecip[...]alyst,StreamCodec<RegistryFriendlyByteBuf,ItemStack>,(recipe)->[...]esult,StreamCodec<ByteBuf,Integer>,TableRecip[...]wTime,TableRecipe::new)
+        private static final StreamCodec<RegistryFriendlyByteBuf, TableRecipe> STREAM_CODEC = StreamCodec.composite(
+                                                                                                         ^
+    method StreamCodec.<B#1,C#1,T1#1>composite(StreamCodec<? super B#1,T1#1>,Function<C#1,T1#1>,Function<T1#1,C#1>) is not applicable
+      (cannot infer type-variable(s) B#1,C#1,T1#1
 ```
 ## Tail
 ```
@@ -251,6 +83,6 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 18s
+BUILD FAILED in 26s
 2 actionable tasks: 2 executed
 ```
