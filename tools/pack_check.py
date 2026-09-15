@@ -341,6 +341,23 @@ def check_item_models() -> None:
             problem(f"models: no item model for {item}")
 
 
+def check_metadata() -> None:
+    """The mod metadata names a logo: an absent file means a broken entry in the mod list."""
+    template = REPO / "src/main/templates/META-INF/neoforge.mods.toml"
+    if not template.exists():
+        problem("mod metadata template is missing")
+        return
+    import re as _re
+
+    match = _re.search(r'logoFile\s*=\s*"([^"]+)"', template.read_text())
+    if match and not (MAIN / match.group(1)).exists():
+        problem(f"metadata: logoFile {match.group(1)} is not in src/main/resources")
+    keys = set(_re.findall(r'^([a-z_]+)=', (REPO / "gradle.properties").read_text(), _re.M))
+    for required in ("mod_id", "mod_name", "mod_license", "mod_authors", "mod_version"):
+        if required not in keys:
+            problem(f"gradle.properties: missing {required}")
+
+
 def check_sounds() -> None:
     path = MAIN / "assets" / MODID / "sounds.json"
     if not path.exists():
@@ -362,6 +379,7 @@ def main() -> int:
     check_lang()
     check_assets(ids)
     check_item_models()
+    check_metadata()
     check_sounds()
     if PROBLEMS:
         print(f"{len(PROBLEMS)} problem(s):")

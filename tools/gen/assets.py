@@ -233,6 +233,9 @@ def generate(root: pathlib.Path, herbs: list, medicines: list, items: list, expe
     # ---- block textures ------------------------------------------------------
     _block_textures(assets)
 
+    # ---- the logo the mod metadata points at ---------------------------------
+    write_png(res / "herbalistscraft.png", art.mod_logo())
+
     # ---- workstation block models + blockstates ------------------------------
     block_models = {
         "mortar_and_pestle": mortar_model(),

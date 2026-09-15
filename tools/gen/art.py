@@ -1079,3 +1079,31 @@ def particle_sprite(name: str) -> Image:
     else:
         img.rect(2, 2, 5, 5, (200, 200, 200, 255))
     return img
+
+def scaled(img: Image, factor: int) -> Image:
+    """Nearest-neighbour upscale, so 16x16 pixel art stays pixel art at 128x128."""
+    out = Image(img.width * factor, img.height * factor)
+    for y in range(img.height):
+        for x in range(img.width):
+            colour = img.get(x, y)
+            if colour[3] == 0:
+                continue
+            out.rect(x * factor, y * factor, x * factor + factor - 1, y * factor + factor - 1, colour)
+    return out
+
+
+def mod_logo() -> Image:
+    """The mod-list logo: the mortar and pestle emblem on a herbal green tile."""
+    emblem = Image(16, 16)
+    emblem.fill((32, 58, 42, 255))
+    emblem.frame(0, 0, 15, 15, (201, 162, 39, 255))
+    for corner in ((0, 0), (1, 0), (0, 1), (15, 0), (14, 0), (15, 1),
+                   (0, 15), (1, 15), (0, 14), (15, 15), (14, 15), (15, 14)):
+        emblem.set(corner[0], corner[1], (0, 0, 0, 0))
+    mortar = mortar_icon()
+    for y in range(16):
+        for x in range(16):
+            colour = mortar.get(x, y)
+            if colour[3] > 0:
+                emblem.set(x, y, colour)
+    return scaled(emblem, 8)
