@@ -39,8 +39,30 @@ jobs:
       - name: Make the wrapper executable
         run: chmod +x ./gradlew
 
+      # The build log is echoed back as check annotations so compile errors are visible
+      # from the run summary without downloading artifacts.
       - name: Build
-        run: ./gradlew build --no-daemon --stacktrace
+        run: |
+          set +e -o pipefail
+          ./gradlew build --no-daemon --stacktrace 2>&1 | tee build.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            grep -E "\.java:[0-9]+: (error|warning):" build.log | head -60 | while IFS= read -r line; do
+              echo "::error::$line"
+            done
+            grep -E "^(FAILURE|\* What went wrong|Execution failed|Cannot|error:)" build.log | head -20 | while IFS= read -r line; do
+              echo "::error::$line"
+            done
+          fi
+          exit "$status"
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build.log
+          if-no-files-found: ignore
 
       - name: Collect jar
         id: jar
