@@ -1,101 +1,46 @@
 # Herbalist's Craft build log
 
-- commit: edb16fa61f8c7e47e80a02b93175bad2eb3eef22
+- commit: 22c69f1b56da7813edcb3d537d3598aa408aa995
 - branch: arena/01a0a294-h-baliss
-- recorded: 2026-09-15T13:04:03Z
-- result: failure
+- recorded: 2026-09-15T13:08:30Z
+- result: success
 
 ## Errors
 ```
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:167: error: illegal forward reference
-                        OPTIONAL_INGREDIENT.decode(buffer),
-                        ^
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:168: error: illegal forward reference
-                        OPTIONAL_INGREDIENT.decode(buffer),
-                        ^
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: illegal forward reference
-                    OPTIONAL_INGREDIENT.encode(buffer, recipe.extract());
-                    ^
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:158: error: illegal forward reference
-                    OPTIONAL_INGREDIENT.encode(buffer, recipe.catalyst());
-                    ^
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:159: error: cannot find symbol
-                    ItemStack.STREAM_CODEC.encode(buffer, recipe.result());
-                                                                ^
-  symbol:   method result()
-  location: variable recipe of type TableRecipe
---
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:167: error: illegal forward reference
-                          OPTIONAL_INGREDIENT.decode(buffer),
-                          ^
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:168: error: illegal forward reference
-                          OPTIONAL_INGREDIENT.decode(buffer),
-                          ^
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: illegal forward reference
-                      OPTIONAL_INGREDIENT.encode(buffer, recipe.extract());
-                      ^
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:158: error: illegal forward reference
-                      OPTIONAL_INGREDIENT.encode(buffer, recipe.catalyst());
-                      ^
-  Note: Recompile with -Xlint:deprecation for details.
-  /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:159: error: cannot find symbol
-                      ItemStack.STREAM_CODEC.encode(buffer, recipe.result());
-                                                                  ^
-    symbol:   method result()
-    location: variable recipe of type TableRecipe
---
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:167: error: illegal forward reference
-                        OPTIONAL_INGREDIENT.decode(buffer),
-                        ^
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:168: error: illegal forward reference
-                        OPTIONAL_INGREDIENT.decode(buffer),
-                        ^
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:157: error: illegal forward reference
-                    OPTIONAL_INGREDIENT.encode(buffer, recipe.extract());
-                    ^
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:158: error: illegal forward reference
-                    OPTIONAL_INGREDIENT.encode(buffer, recipe.catalyst());
-                    ^
-Note: Recompile with -Xlint:deprecation for details.
-/home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/recipe/TableRecipe.java:159: error: cannot find symbol
-                    ItemStack.STREAM_CODEC.encode(buffer, recipe.result());
-                                                                ^
-  symbol:   method result()
-  location: variable recipe of type TableRecipe
 ```
 ## Tail
 ```
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
-	at org.gradle.api.internal.tasks.execution.ProblemsTaskPathTrackingTaskExecuter.execute(ProblemsTaskPathTrackingTaskExecuter.java:41)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+ [1m[92m♻[0m Used cache of [4mtransformSources[0m in 0.00s
+[1m*** Started working on [4mrecompile[0m[0m
+ [1m[92m♻[0m Used cache of [4mrecompile[0m in 0.00s
+[1m*** Started working on [4msourcesWithNeoForge[0m[0m
+ [1m[92m♻[0m Used cache of [4msourcesWithNeoForge[0m in 0.00s
+[1m*** Started working on [4mcompiledWithNeoForge[0m[0m
+ [1m[92m♻[0m Used cache of [4mcompiledWithNeoForge[0m in 0.00s
+[1m*** Started working on [4msourcesAndCompiledWithNeoForge[0m[0m
+ [1m[92m♻[0m Used cache of [4msourcesAndCompiledWithNeoForge[0m in 0.00s
+Total runtime: 2.29s
 
+
+> Task :compileJava
+Note: /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :generateModMetadata
+> Task :processResources
+> Task :classes
+> Task :jarJar NO-SOURCE
+> Task :jar
+> Task :assemble
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :check UP-TO-DATE
+> Task :build
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1789477680752.json
+
+[Incubating] Problems report is available at: file:///home/runner/work/h-baliss/h-baliss/build/reports/problems/problems-report.html
 
 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
 
@@ -103,6 +48,6 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 18s
-2 actionable tasks: 2 executed
+BUILD SUCCESSFUL in 35s
+5 actionable tasks: 5 executed
 ```
