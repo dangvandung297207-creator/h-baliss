@@ -1,8 +1,8 @@
 # Herbalist's Craft build log
 
-- commit: dfb279dc9ff3c6f46133dceb6cc2374c96c911f7
+- commit: 1d891ef939e580d3351d9fd01b428e9a2b3bd3c5
 - branch: arena/01a0a294-h-baliss
-- recorded: 2026-09-15T13:25:48Z
+- recorded: 2026-09-15T13:30:14Z
 - result: success
 
 ## Errors
@@ -10,6 +10,9 @@
 ```
 ## Tail
 ```
+[1m*** Started working on [4mapplyNeoforgePatches[0m[0m
+ [1m[92m♻[0m Used cache of [4mapplyNeoforgePatches[0m in 0.00s
+[1m*** Started working on [4mtransformSources[0m[0m
  [1m[92m♻[0m Used cache of [4mtransformSources[0m in 0.00s
 [1m*** Started working on [4mrecompile[0m[0m
  [1m[92m♻[0m Used cache of [4mrecompile[0m in 0.00s
@@ -19,13 +22,10 @@
  [1m[92m♻[0m Used cache of [4mcompiledWithNeoForge[0m in 0.00s
 [1m*** Started working on [4msourcesAndCompiledWithNeoForge[0m[0m
  [1m[92m♻[0m Used cache of [4msourcesAndCompiledWithNeoForge[0m in 0.00s
-Total runtime: 1.06s
+Total runtime: 1.53s
 
 
-> Task :compileJava
-Note: /home/runner/work/h-baliss/h-baliss/src/main/java/com/herbalistscraft/herb/HerbCropBlock.java uses or overrides a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-
+> Task :compileJava FROM-CACHE
 > Task :generateModMetadata
 > Task :processResources
 > Task :classes
@@ -38,7 +38,7 @@ Note: Recompile with -Xlint:deprecation for details.
 > Task :test NO-SOURCE
 > Task :check UP-TO-DATE
 > Task :build
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1789478731021.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1789479000532.json
 
 [Incubating] Problems report is available at: file:///home/runner/work/h-baliss/h-baliss/build/reports/problems/problems-report.html
 
@@ -48,6 +48,6 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD SUCCESSFUL in 17s
-5 actionable tasks: 5 executed
+BUILD SUCCESSFUL in 16s
+5 actionable tasks: 4 executed, 1 from cache
 ```
