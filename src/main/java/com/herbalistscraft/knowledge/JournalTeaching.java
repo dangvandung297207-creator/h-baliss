@@ -15,8 +15,10 @@ public final class JournalTeaching {
 
     public static int teach(ServerPlayer player, JournalPageKind kind) {
         List<ResourceLocation> candidates = new ArrayList<>();
-        ModMedicines.registryOf(player.server.registryAccess()).forEach(id -> {
-            if (matches(kind, id)) {
+        var registry = player.server.registryAccess().registryOrThrow(ModMedicines.REGISTRY);
+        registry.forEach(definition -> {
+            ResourceLocation id = registry.getKey(definition);
+            if (id != null && matches(kind, id)) {
                 candidates.add(id);
             }
         });

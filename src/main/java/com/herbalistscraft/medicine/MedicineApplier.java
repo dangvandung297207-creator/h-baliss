@@ -9,7 +9,7 @@ import com.herbalistscraft.registry.ModSounds;
 import java.util.List;
 import java.util.Optional;
 import net.minecraft.core.Holder;
-import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -27,8 +27,10 @@ import net.minecraft.world.entity.player.Player;
 public final class MedicineApplier {
     private MedicineApplier() {}
 
-    public static Optional<MedicineDefinition> lookup(RegistryAccess access, ResourceLocation id) {
-        return access.registry(ModMedicines.REGISTRY).flatMap(registry -> registry.getOptional(id));
+    public static Optional<MedicineDefinition> lookup(HolderLookup.Provider provider, ResourceLocation id) {
+        return provider.lookup(ModMedicines.REGISTRY)
+                .flatMap(lookup -> lookup.get(id))
+                .map(holder -> holder.value());
     }
 
     public static void drink(ServerPlayer player, ResourceLocation id, boolean tea) {

@@ -115,7 +115,10 @@ public class MortarRecipe implements Recipe<SingleRecipeInput> {
     }
 
     public static List<MortarRecipe> all(Level level) {
-        return level.getRecipeManager().getAllRecipesFor(ModRecipes.MORTAR_TYPE.get());
+        return level.getRecipeManager().getAllRecipesFor(ModRecipes.MORTAR_TYPE.get())
+                .stream()
+                .map(net.minecraft.world.item.crafting.RecipeHolder::value)
+                .toList();
     }
 
     public static MortarRecipe find(Level level, ItemStack stack) {

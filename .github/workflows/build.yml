@@ -50,7 +50,7 @@ jobs:
             {
               echo "## Compile errors"
               echo '```'
-              grep -E "error:" build.log | head -400
+              grep -A 4 -E "error:" build.log | head -600
               echo '```'
               echo "## Failure"
               echo '```'
@@ -107,7 +107,7 @@ jobs:
             echo
             echo "## Errors"
             echo '```'
-            grep -E "error:" build.log | head -400
+            grep -A 4 -E "error:" build.log | head -600
             echo '```'
             echo "## Tail"
             echo '```'

@@ -48,6 +48,10 @@ public class HerbCropBlock extends BushBlock {
             Block.box(2.0D, 0.0D, 2.0D, 14.0D, 14.0D, 14.0D),
     };
 
+    /** Codec for the block; the herb key comes from the registered block, not from JSON. */
+    public static final com.mojang.serialization.MapCodec<HerbCropBlock> CODEC = simpleCodec(
+            properties -> new HerbCropBlock(properties, ModHerbs.BLOODROOT));
+
     private final ResourceKey<HerbDefinition> herb;
 
     public HerbCropBlock(Properties properties, ResourceKey<HerbDefinition> herb) {
@@ -62,6 +66,11 @@ public class HerbCropBlock extends BushBlock {
 
     public static ResourceKey<HerbDefinition> herbOf(Block block) {
         return block instanceof HerbCropBlock crop ? crop.herbKey() : ModHerbs.BLOODROOT;
+    }
+
+    @Override
+    protected com.mojang.serialization.MapCodec<? extends BushBlock> codec() {
+        return CODEC;
     }
 
     @Override
@@ -220,7 +229,8 @@ public class HerbCropBlock extends BushBlock {
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
+    public ItemStack getCloneItemStack(net.minecraft.world.phys.HitResult target, BlockGetter level, BlockPos pos,
+                                       Player player) {
         return new ItemStack(HerbForms.seed(herb));
     }
 

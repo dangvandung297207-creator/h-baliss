@@ -80,8 +80,9 @@ public class HerbalParticle extends TextureSheetParticle {
 
         @Override
         public HerbalParticle createParticle(SimpleParticleType type, ClientLevel level, double x, double y, double z,
-                                             double vx, double vy, double vz, RandomSource random) {
+                                             double vx, double vy, double vz) {
             double spread = kind == Kind.TOXIC ? 0.02D : 0.05D;
+            RandomSource random = level.random;
             return new HerbalParticle(level, x, y, z,
                     vx + (random.nextDouble() - 0.5D) * spread,
                     vy + (random.nextDouble() - 0.5D) * spread,

@@ -117,7 +117,7 @@ public class MillRecipe implements Recipe<MillRecipe.Input> {
 
         private static final StreamCodec<RegistryFriendlyByteBuf, MillRecipe> STREAM_CODEC = StreamCodec.composite(
                 Ingredient.CONTENTS_STREAM_CODEC, MillRecipe::ingredient,
-                Ingredient.OPTIONAL_CONTENTS_STREAM_CODEC, MillRecipe::additive,
+                ByteBufCodecs.optional(Ingredient.CONTENTS_STREAM_CODEC), MillRecipe::additive,
                 ItemStack.STREAM_CODEC, MillRecipe::result,
                 ByteBufCodecs.VAR_INT, MillRecipe::processingTime,
                 MillRecipe::new);
@@ -134,7 +134,10 @@ public class MillRecipe implements Recipe<MillRecipe.Input> {
     }
 
     public static List<MillRecipe> all(Level level) {
-        return level.getRecipeManager().getAllRecipesFor(ModRecipes.MILL_TYPE.get());
+        return level.getRecipeManager().getAllRecipesFor(ModRecipes.MILL_TYPE.get())
+                .stream()
+                .map(net.minecraft.world.item.crafting.RecipeHolder::value)
+                .toList();
     }
 
     public static MillRecipe find(Level level, ItemStack main, ItemStack additive) {

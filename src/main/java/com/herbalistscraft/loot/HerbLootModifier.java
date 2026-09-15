@@ -21,7 +21,7 @@ import net.neoforged.neoforge.common.loot.LootModifier;
 public class HerbLootModifier extends LootModifier {
     public static final MapCodec<HerbLootModifier> CODEC = RecordCodecBuilder.mapCodec(instance ->
             codecStart(instance).and(instance.group(
-                    Entry.CODEC.listOf().fieldOf("entries").forGetter(modifier -> modifier.entries),
+                    Entry.CODEC.codec().listOf().fieldOf("entries").forGetter(modifier -> modifier.entries),
                     Codec.intRange(0, 8).optionalFieldOf("rolls", 1).forGetter(modifier -> modifier.rolls),
                     Codec.floatRange(0.0F, 1.0F).optionalFieldOf("chance", 0.6F).forGetter(modifier -> modifier.chance)
             )).apply(instance, HerbLootModifier::new));

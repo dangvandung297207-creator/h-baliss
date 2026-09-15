@@ -153,7 +153,7 @@ public class TableRecipe implements Recipe<TableRecipe.Input> {
         private static final StreamCodec<RegistryFriendlyByteBuf, TableRecipe> STREAM_CODEC = StreamCodec.composite(
                 Ingredient.CONTENTS_STREAM_CODEC, TableRecipe::base,
                 Ingredient.CONTENTS_STREAM_CODEC, TableRecipe::herb,
-                Ingredient.OPTIONAL_CONTENTS_STREAM_CODEC, TableRecipe::extract,
+                ByteBufCodecs.optional(Ingredient.CONTENTS_STREAM_CODEC), TableRecipe::extract,
                 Ingredient.OPTIONAL_CONTENTS_STREAM_CODEC, TableRecipe::catalyst,
                 ItemStack.STREAM_CODEC, recipe -> recipe.result,
                 ByteBufCodecs.VAR_INT, TableRecipe::brewTime,
@@ -171,7 +171,10 @@ public class TableRecipe implements Recipe<TableRecipe.Input> {
     }
 
     public static List<TableRecipe> all(Level level) {
-        return level.getRecipeManager().getAllRecipesFor(ModRecipes.TABLE_TYPE.get());
+        return level.getRecipeManager().getAllRecipesFor(ModRecipes.TABLE_TYPE.get())
+                .stream()
+                .map(net.minecraft.world.item.crafting.RecipeHolder::value)
+                .toList();
     }
 
     public static TableRecipe find(Level level, ItemStack base, ItemStack herb, ItemStack extract, ItemStack catalyst) {

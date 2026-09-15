@@ -19,17 +19,19 @@
   "placement": "SURFACE",
   "soil": "DIRT",
   "light": "BRIGHT",
-  "growth_speed": 1.2,
-  "yield": {
-    "min": 1,
-    "max": 4
+  "growth": {
+    "speed": 1.2,
+    "yield": {
+      "min": 1,
+      "max": 4
+    },
+    "seed_return": {
+      "min": 1,
+      "max": 1
+    },
+    "regrow_chance": 0.75,
+    "fresh_days": 4
   },
-  "seed_return": {
-    "min": 1,
-    "max": 1
-  },
-  "regrow_chance": 0.75,
-  "fresh_days": 4,
   "forms": [
     "fresh",
     "seed"

@@ -17,7 +17,7 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import net.neoforged.neoforge.event.village.TradeWithVillagerEvent;
+import net.neoforged.neoforge.event.entity.player.TradeWithVillagerEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 
 /** Gameplay events that belong to the server: trades, toxin decay and villager stock. */
@@ -34,11 +34,11 @@ public final class CommonEvents {
 
     @SubscribeEvent
     public static void onTrade(TradeWithVillagerEvent event) {
-        if (!(event.getPlayer() instanceof ServerPlayer player)) {
+        if (!(event.getEntity() instanceof ServerPlayer player)) {
             return;
         }
         Discovery.onTrade(player);
-        if (event.getMerchant() instanceof Villager villager
+        if (event.getAbstractVillager() instanceof Villager villager
                 && villager.getVillagerData().getProfession() == ModVillagers.HERBALIST.get()
                 && player.level() instanceof ServerLevel level) {
             BiomeTrades.seed(villager, level);

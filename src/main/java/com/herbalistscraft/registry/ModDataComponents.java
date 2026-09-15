@@ -2,7 +2,6 @@ package com.herbalistscraft.registry;
 
 import com.herbalistscraft.HerbalistsCraft;
 import com.herbalistscraft.medicine.CoatingData;
-import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.codec.ByteBufCodecs;
@@ -36,7 +35,4 @@ public final class ModDataComponents {
 
     private ModDataComponents() {}
 
-    public static Registry<DataComponentType<?>> registry() {
-        return DATA_COMPONENTS.getRegistry().orElseThrow();
-    }
 }

@@ -210,7 +210,7 @@ public class JournalScreen extends Screen {
                         Math.min(selected, HerbProperty.VALUES.length - 1)];
                 lines.add(property.displayName().copy().withStyle(ChatFormatting.BOLD));
                 if (knowledge.knowsProperty(property)) {
-                    lines.add(Component.translatable(property.hintKey()));
+                    lines.add(property.hint());
                 } else {
                     lines.add(Component.translatable("tooltip.herbalistscraft.property.unknown"));
                 }

@@ -68,8 +68,8 @@ public class DryingRackBlockEntity extends BlockEntity {
             return;
         }
         progress++;
-        if (progress % 60 == 0) {
-            level.sendParticles(net.minecraft.core.particles.ParticleTypes.CLOUD, pos.getX() + 0.5D,
+        if (progress % 60 == 0 && level instanceof net.minecraft.server.level.ServerLevel serverLevel) {
+            serverLevel.sendParticles(net.minecraft.core.particles.ParticleTypes.CLOUD, pos.getX() + 0.5D,
                     pos.getY() + 1.1D, pos.getZ() + 0.5D, 1, 0.2D, 0.05D, 0.2D, 0.0D);
         }
         if (progress >= total) {

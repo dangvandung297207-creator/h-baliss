@@ -97,6 +97,11 @@ public class HerbalistTableMenu extends AbstractContainerMenu {
         return data.get(HerbalistTableBlockEntity.DATA_POTENCY);
     }
 
+    /** True while the current brew is an unnamed experiment rather than a written recipe. */
+    public boolean isExperiment() {
+        return (flags() & HerbalistTableBlockEntity.FLAG_EXPERIMENT) != 0;
+    }
+
     /** The preview shown in the knowledge panel. The screen decides what the player may see. */
     public MixingResult preview(net.minecraft.world.level.Level level, Knowledge knowledge) {
         return com.herbalistscraft.mixing.MixingCalculator.calculate(level, container.getItem(0),

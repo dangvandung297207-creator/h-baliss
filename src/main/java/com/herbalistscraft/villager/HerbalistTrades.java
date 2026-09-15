@@ -77,7 +77,7 @@ public final class HerbalistTrades {
         list.add(sell(26, ModItems.FROST_CRYSTAL.get(), 2, 16));
         list.add(sell(26, ModItems.EMBER_ASH.get(), 2, 16));
         list.add(sell(28, ModItems.JOURNAL_PAGE_MEDICINAL.get(), 1, 20));
-        list.add(sell(30, ModItems.STAMINA_TEA.get(), 2, 18));
+        list.add(sell(30, ModItems.RECOVERY_TEA.get(), 2, 18));
         for (ItemStack herb : herbsOf(HerbRarity.RARE, 2)) {
             list.add(new BasicItemListing(new ItemStack(Items.EMERALD, 16), herb, 4, 20, 1.0F));
         }

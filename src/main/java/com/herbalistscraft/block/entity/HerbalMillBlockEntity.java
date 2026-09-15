@@ -28,7 +28,7 @@ import net.minecraft.world.phys.AABB;
  * steadily. Nothing here ticks inventories it does not own, and the recipe lookup only runs
  * when the inputs change.
  */
-public class HerbalMillBlockEntity extends BlockEntity implements Container {
+public class HerbalMillBlockEntity extends BlockEntity implements Container, net.minecraft.world.inventory.ContainerData {
     public static final int SLOT_INPUT = 0;
     public static final int SLOT_ADDITIVE = 1;
     public static final int SLOT_OUTPUT = 2;
@@ -191,6 +191,27 @@ public class HerbalMillBlockEntity extends BlockEntity implements Container {
             }
         }
         setChanged();
+    }
+
+    // ---- container data (menu sync) -----------------------------------------
+
+    @Override
+    public int get(int index) {
+        return index == 0 ? progress : maxProgress;
+    }
+
+    @Override
+    public void set(int index, int value) {
+        if (index == 0) {
+            progress = value;
+        } else {
+            maxProgress = value;
+        }
+    }
+
+    @Override
+    public int getCount() {
+        return 2;
     }
 
     // ---- persistence --------------------------------------------------------

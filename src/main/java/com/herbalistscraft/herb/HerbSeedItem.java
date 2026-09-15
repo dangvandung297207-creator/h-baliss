@@ -66,8 +66,6 @@ public class HerbSeedItem extends Item {
 
     /** Kept for the crop class, which needs the block to exist before seeds are used. */
     public Block cropBlock() {
-        return ModBlocks.BLOCKS.getRegistry()
-                .map(registry -> registry.get(cropId()))
-                .orElse(null);
+        return net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(cropId());
     }
 }

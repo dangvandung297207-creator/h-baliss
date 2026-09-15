@@ -10,7 +10,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -123,8 +122,9 @@ public class DryingRackBlock extends BaseEntityBlock {
 
     @Override
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        if (!state.is(newState.getBlock()) && level.getBlockEntity(pos) instanceof DryingRackBlockEntity rack) {
-            Containers.dropContents(level, pos, rack);
+        if (!state.is(newState.getBlock()) && level.getBlockEntity(pos) instanceof DryingRackBlockEntity rack
+                && !rack.isEmpty()) {
+            Block.popResource(level, pos, rack.take());
         }
         super.onRemove(state, level, pos, newState, movedByPiston);
     }

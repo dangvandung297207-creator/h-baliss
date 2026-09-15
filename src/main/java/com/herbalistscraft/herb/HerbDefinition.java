@@ -40,18 +40,16 @@ public record HerbDefinition(
             HerbPlacement.CODEC.optionalFieldOf("placement", HerbPlacement.SURFACE).forGetter(HerbDefinition::placement),
             HerbSoil.CODEC.optionalFieldOf("soil", HerbSoil.DIRT).forGetter(HerbDefinition::soil),
             HerbLight.CODEC.optionalFieldOf("light", HerbLight.BRIGHT).forGetter(HerbDefinition::light),
-            Growth.CODEC.forGetter(HerbDefinition::growth),
+            Growth.CODEC.fieldOf("growth").forGetter(HerbDefinition::growth),
             HerbForm.CODEC.listOf().optionalFieldOf("forms", List.of(HerbForm.FRESH, HerbForm.SEED))
                     .forGetter(HerbDefinition::forms),
             Codec.STRING.listOf().optionalFieldOf("uses", List.of()).forGetter(HerbDefinition::uses)
     ).apply(instance, HerbDefinition::new));
 
-    /** Growth behaviour: speed, harvest size, seed return, regrowth and shelf life.
-     *  Written flat by the toolchain ({@code growth_speed}, {@code yield}, {@code seed_return},
-     *  {@code regrow_chance}, {@code fresh_days}) so a herb file reads like a herb, not like a tree. */
+    /** Growth behaviour: speed, harvest size, seed return, regrowth and shelf life. */
     public record Growth(float speed, Range produce, Range seeds, float regrowChance, int freshDays) {
         public static final Codec<Growth> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-                Codec.FLOAT.optionalFieldOf("growth_speed", 1.0F).forGetter(Growth::speed),
+                Codec.FLOAT.optionalFieldOf("speed", 1.0F).forGetter(Growth::speed),
                 Range.CODEC.optionalFieldOf("yield", new Range(1, 1)).forGetter(Growth::produce),
                 Range.CODEC.optionalFieldOf("seed_return", new Range(1, 1)).forGetter(Growth::seeds),
                 Codec.floatRange(0.0F, 1.0F).optionalFieldOf("regrow_chance", 0.0F).forGetter(Growth::regrowChance),

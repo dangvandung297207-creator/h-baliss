@@ -17,17 +17,19 @@
   "placement": "SHADED",
   "soil": "DIRT",
   "light": "DARK",
-  "growth_speed": 0.7,
-  "yield": {
-    "min": 1,
-    "max": 2
+  "growth": {
+    "speed": 0.7,
+    "yield": {
+      "min": 1,
+      "max": 2
+    },
+    "seed_return": {
+      "min": 1,
+      "max": 1
+    },
+    "regrow_chance": 0.35,
+    "fresh_days": 4
   },
-  "seed_return": {
-    "min": 1,
-    "max": 1
-  },
-  "regrow_chance": 0.35,
-  "fresh_days": 4,
   "forms": [
     "fresh",
     "seed",

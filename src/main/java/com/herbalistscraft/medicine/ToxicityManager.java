@@ -143,7 +143,7 @@ public final class ToxicityManager {
             apply(player, MobEffects.HUNGER, 200, 0);
         }
         if (load >= DIZZINESS) {
-            apply(player, MobEffects.NAUSEA, 200, 0);
+            apply(player, MobEffects.CONFUSION, 200, 0);
         }
         AttributeInstance maxHealth = player.getAttribute(Attributes.MAX_HEALTH);
         if (maxHealth != null) {
