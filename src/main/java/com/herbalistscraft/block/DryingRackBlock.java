@@ -7,7 +7,6 @@ import com.mojang.serialization.MapCodec;
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
@@ -114,10 +113,9 @@ public class DryingRackBlock extends BaseEntityBlock {
 
     @Override
     protected List<ItemStack> getDrops(BlockState state, LootParams.Builder params) {
-        ServerLevel level = params.getLevel();
-        if (level.getBlockEntity(params.getOptionalParameter(
-                net.minecraft.world.level.storage.loot.parameters.LootContextParams.ORIGIN) instanceof DryingRackBlockEntity rack
-                && !rack.isEmpty()) {
+        BlockPos pos = BlockPos.containing(params.getParameter(
+                net.minecraft.world.level.storage.loot.parameters.LootContextParams.ORIGIN));
+        if (params.getLevel().getBlockEntity(pos) instanceof DryingRackBlockEntity rack && !rack.isEmpty()) {
             return List.of(new ItemStack(this.asItem()), rack.stored());
         }
         return List.of(new ItemStack(this.asItem()));

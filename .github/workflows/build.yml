@@ -47,10 +47,17 @@ jobs:
           ./gradlew build --no-daemon --stacktrace 2>&1 | tee build.log
           status=${PIPESTATUS[0]}
           if [ "$status" -ne 0 ]; then
-            grep -E "\.java:[0-9]+: (error|warning):" build.log | head -60 | while IFS= read -r line; do
-              echo "::error::$line"
-            done
-            grep -E "^(FAILURE|\* What went wrong|Execution failed|Cannot|error:)" build.log | head -20 | while IFS= read -r line; do
+            {
+              echo "## Compile errors"
+              echo '```'
+              grep -E "error:" build.log | head -400
+              echo '```'
+              echo "## Failure"
+              echo '```'
+              grep -E "^(FAILURE|\* What went wrong|Execution failed|Cannot|Could not|error:)" build.log | head -40
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            grep -E "\.java:[0-9]+: error:" build.log | head -10 | while IFS= read -r line; do
               echo "::error::$line"
             done
           fi

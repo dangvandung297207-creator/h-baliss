@@ -586,9 +586,9 @@ public final class ModItems {
 
     // ---- materials, containers, tools and knowledge ---------------------------
     public static final DeferredItem<Item> GLASS_VIAL = ITEMS.registerItem("glass_vial",
-            p -> new FillableContainerItem(p, FillTarget.WATER_VIAL)(p), new Item.Properties().stacksTo(16));
+            p -> new FillableContainerItem(p, FillTarget.WATER_VIAL), new Item.Properties().stacksTo(16));
     public static final DeferredItem<Item> CLAY_CUP = ITEMS.registerItem("clay_cup",
-            p -> new FillableContainerItem(p, FillTarget.SPRING_WATER_CUP)(p), new Item.Properties().stacksTo(16));
+            p -> new FillableContainerItem(p, FillTarget.SPRING_WATER_CUP), new Item.Properties().stacksTo(16));
     public static final DeferredItem<Item> WATER_VIAL = ITEMS.registerItem("water_vial",
             p -> new Item(p), new Item.Properties().stacksTo(16));
     public static final DeferredItem<Item> SPRING_WATER_CUP = ITEMS.registerItem("spring_water_cup",
@@ -612,19 +612,19 @@ public final class ModItems {
     public static final DeferredItem<Item> SHADOW_ICHOR = ITEMS.registerItem("shadow_ichor",
             p -> new Item(p), new Item.Properties().stacksTo(16).rarity(Rarity.RARE));
     public static final DeferredItem<Item> PRUNING_SHEARS = ITEMS.registerItem("pruning_shears",
-            p -> new PruningShearsItem(p.durability(238))(p), new Item.Properties().stacksTo(1));
+            p -> new PruningShearsItem(p.durability(238)), new Item.Properties().stacksTo(1));
     public static final DeferredItem<Item> SEED_POUCH = ITEMS.registerItem("seed_pouch",
-            p -> new SeedPouchItem(p)(p), new Item.Properties().stacksTo(1));
+            p -> new SeedPouchItem(p), new Item.Properties().stacksTo(1));
     public static final DeferredItem<Item> HERBALISTS_JOURNAL = ITEMS.registerItem("herbalists_journal",
-            p -> new JournalItem(p)(p), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
+            p -> new JournalItem(p), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
     public static final DeferredItem<Item> JOURNAL_PAGE_HERBAL = ITEMS.registerItem("journal_page_herbal",
-            p -> new JournalPageItem(p, JournalPageKind.HERBAL)(p), new Item.Properties().stacksTo(1));
+            p -> new JournalPageItem(p, JournalPageKind.HERBAL), new Item.Properties().stacksTo(1));
     public static final DeferredItem<Item> JOURNAL_PAGE_MEDICINAL = ITEMS.registerItem("journal_page_medicinal",
-            p -> new JournalPageItem(p, JournalPageKind.MEDICINAL)(p), new Item.Properties().stacksTo(1));
+            p -> new JournalPageItem(p, JournalPageKind.MEDICINAL), new Item.Properties().stacksTo(1));
     public static final DeferredItem<Item> JOURNAL_PAGE_TOXIC = ITEMS.registerItem("journal_page_toxic",
-            p -> new JournalPageItem(p, JournalPageKind.TOXIC)(p), new Item.Properties().stacksTo(1));
+            p -> new JournalPageItem(p, JournalPageKind.TOXIC), new Item.Properties().stacksTo(1));
     public static final DeferredItem<Item> JOURNAL_PAGE_ANCIENT = ITEMS.registerItem("journal_page_ancient",
-            p -> new JournalPageItem(p, JournalPageKind.ANCIENT)(p), new Item.Properties().stacksTo(1));
+            p -> new JournalPageItem(p, JournalPageKind.ANCIENT), new Item.Properties().stacksTo(1));
 
     // ---- outputs of failed or unknown experiments -----------------------------
     public static final DeferredItem<Item> EXPERIMENTAL_TONIC = ITEMS.registerItem("experimental_tonic",

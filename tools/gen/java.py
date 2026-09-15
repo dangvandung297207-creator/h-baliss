@@ -239,8 +239,9 @@ public final class ModItems {
         if item_id in ITEM_RARITY:
             properties = f"new Item.Properties().stacksTo({stacks}).rarity({ITEM_RARITY[item_id]})"
         ctor = ITEM_SPECIAL.get(item_id, "new Item")
+        call = ctor if ctor.endswith(")") else f"{ctor}(p)"
         out.append(f'    public static final DeferredItem<Item> {const} = ITEMS.registerItem("{item_id}",\n'
-                   f'            p -> {ctor}(p), {properties});\n')
+                   f'            p -> {call}, {properties});\n')
 
     out.append("\n    // ---- outputs of failed or unknown experiments -----------------------------\n")
     for entry in experimental:
