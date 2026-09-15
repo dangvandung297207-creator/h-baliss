@@ -1,5 +1,6 @@
 package com.herbalistscraft.client;
 
+import com.herbalistscraft.Config;
 import com.herbalistscraft.HerbalistsCraft;
 import com.herbalistscraft.herb.HerbDefinition;
 import com.herbalistscraft.herb.HerbProperty;
@@ -51,10 +52,14 @@ public class JournalScreen extends Screen {
             ResourceLocation.fromNamespaceAndPath(HerbalistsCraft.MODID, "textures/gui/journal.png");
     private static final int TEXT = 0x2F2A22;
 
+    private static final int PAGE_TURN_TICKS = 6;
+
     private final Tab initialTab;
     private Tab tab;
     private int selected;
     private int scroll;
+    /** Ticks left of the page-turn slide, only ever non-zero while it is animating. */
+    private int pageTicks;
 
     public JournalScreen(Tab initialTab) {
         super(Component.translatable("gui.herbalistscraft.journal.title"));
@@ -70,11 +75,30 @@ public class JournalScreen extends Screen {
             Tab candidate = Tab.values()[index];
             int y = top + GuiLayout.Journal.TAB_Y + index * GuiLayout.Journal.TAB_GAP;
             addRenderableWidget(Button.builder(Component.translatable(candidate.shortKey()), button -> {
+                if (Config.journalAnimations() && candidate != tab) {
+                    pageTicks = PAGE_TURN_TICKS;
+                }
                 tab = candidate;
                 selected = 0;
                 scroll = 0;
             }).bounds(left + GuiLayout.Journal.TAB_X, y, GuiLayout.Journal.TAB_W, GuiLayout.Journal.TAB_H).build());
         }
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        if (pageTicks > 0) {
+            pageTicks--;
+        }
+    }
+
+    /** Horizontal offset of the freshly turned page: 0 once the slide has finished. */
+    private int pageOffset() {
+        if (pageTicks <= 0 || !Config.journalAnimations()) {
+            return 0;
+        }
+        return -(pageTicks * 6) / PAGE_TURN_TICKS;
     }
 
     @Override
@@ -96,6 +120,7 @@ public class JournalScreen extends Screen {
         List<Component> rows = rows();
         int x = left + GuiLayout.Journal.LIST_X0;
         int y = top + GuiLayout.Journal.LIST_Y0;
+        x += pageOffset();
         for (int index = scroll; index < Math.min(rows.size(), scroll + GuiLayout.Journal.ROWS_VISIBLE); index++) {
             int colour = index == selected ? 0x6B4A1E : TEXT;
             graphics.drawString(font, rows.get(index), x, y, colour, false);
@@ -108,7 +133,7 @@ public class JournalScreen extends Screen {
     }
 
     private void renderDetail(GuiGraphics graphics, int left, int top) {
-        int x = left + GuiLayout.Journal.DETAIL_X0;
+        int x = left + GuiLayout.Journal.DETAIL_X0 + pageOffset();
         int y = top + GuiLayout.Journal.DETAIL_Y0;
         for (Component line : detail()) {
             graphics.drawString(font, line, x, y, TEXT, false);

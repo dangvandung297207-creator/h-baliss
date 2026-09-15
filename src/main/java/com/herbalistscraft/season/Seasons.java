@@ -2,6 +2,7 @@ package com.herbalistscraft.season;
 
 import com.herbalistscraft.Config;
 import com.herbalistscraft.herb.HerbSeason;
+import com.herbalistscraft.integration.serene.SereneSeasonsIntegration;
 import com.herbalistscraft.integration.tan.TanIntegration;
 import java.util.Optional;
 import net.minecraft.world.level.Level;
@@ -43,11 +44,18 @@ public final class Seasons {
         if (source == Config.SeasonSource.INTERNAL) {
             return Optional.empty();
         }
-        if (TanIntegration.isLoaded() && Config.toughAsNailsSeasons()
-                && (source == Config.SeasonSource.AUTO || source == Config.SeasonSource.TOUGH_AS_NAILS)) {
-            Optional<HerbSeason> tan = TanIntegration.season(level);
-            if (tan.isPresent()) {
-                return tan;
+        if (source == Config.SeasonSource.AUTO || source == Config.SeasonSource.TOUGH_AS_NAILS) {
+            if (TanIntegration.isLoaded() && Config.toughAsNailsSeasons()) {
+                Optional<HerbSeason> tan = TanIntegration.season(level);
+                if (tan.isPresent()) {
+                    return tan;
+                }
+            }
+        }
+        if (source == Config.SeasonSource.AUTO || source == Config.SeasonSource.SERENE_SEASONS) {
+            Optional<HerbSeason> serene = SereneSeasonsIntegration.season(level);
+            if (serene.isPresent()) {
+                return serene;
             }
         }
         return Optional.empty();

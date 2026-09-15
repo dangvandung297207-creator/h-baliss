@@ -70,9 +70,6 @@ public final class Config {
         public final ModConfigSpec.DoubleValue coatingDuration;
         public final ModConfigSpec.DoubleValue experimentToxinScale;
         // structures
-        public final ModConfigSpec.BooleanValue structuresEnabled;
-        public final ModConfigSpec.IntValue hutSpacing;
-        public final ModConfigSpec.DoubleValue apothecaryRarity;
         // villagers
         public final ModConfigSpec.BooleanValue villagersEnabled;
         public final ModConfigSpec.BooleanValue biomeTrades;
@@ -140,14 +137,6 @@ public final class Config {
                     .defineInRange("coating_duration", 1.0D, 0.1D, 4.0D);
             experimentToxinScale = builder.comment("How dangerous failed experiments are.")
                     .defineInRange("experiment_toxin_scale", 1.0D, 0.0D, 4.0D);
-            builder.pop();
-
-            builder.comment("Herbalist huts and the ancient apothecary.").push("structures");
-            structuresEnabled = builder.comment("Generate herbalist huts and apothecaries.")
-                    .define("enabled", true);
-            hutSpacing = builder.comment("Herbalist hut spacing in chunks.").defineInRange("hut_spacing", 34, 9, 200);
-            apothecaryRarity = builder.comment("Ancient apothecary rarity (higher is rarer).")
-                    .defineInRange("apothecary_rarity", 1.0D, 0.1D, 8.0D);
             builder.pop();
 
             builder.comment("The Herbalist villager.").push("villagers");
@@ -283,18 +272,6 @@ public final class Config {
 
     public static double experimentToxinScale() {
         return number(COMMON.experimentToxinScale, 1.0D);
-    }
-
-    public static boolean structuresEnabled() {
-        return bool(COMMON.structuresEnabled, true);
-    }
-
-    public static int hutSpacing() {
-        return integer(COMMON.hutSpacing, 34);
-    }
-
-    public static double apothecaryRarity() {
-        return number(COMMON.apothecaryRarity, 1.0D);
     }
 
     public static boolean villagersEnabled() {
