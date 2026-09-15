@@ -1,6 +1,7 @@
 package com.herbalistscraft.loot;
 
 import com.herbalistscraft.Config;
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;

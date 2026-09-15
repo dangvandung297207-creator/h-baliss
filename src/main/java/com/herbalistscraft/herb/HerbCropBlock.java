@@ -229,8 +229,7 @@ public class HerbCropBlock extends BushBlock {
     }
 
     @Override
-    public ItemStack getCloneItemStack(net.minecraft.world.phys.HitResult target, BlockGetter level, BlockPos pos,
-                                       Player player) {
+    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
         return new ItemStack(HerbForms.seed(herb));
     }
 

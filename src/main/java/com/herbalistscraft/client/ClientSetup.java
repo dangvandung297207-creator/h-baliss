@@ -16,7 +16,7 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 
 /** Every client-only registration lives here, on the mod event bus. */
-@EventBusSubscriber(modid = HerbalistsCraft.MODID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = HerbalistsCraft.MODID, value = Dist.CLIENT)
 public final class ClientSetup {
     private ClientSetup() {}
 

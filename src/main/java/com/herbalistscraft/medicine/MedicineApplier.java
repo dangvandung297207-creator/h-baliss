@@ -29,15 +29,20 @@ public final class MedicineApplier {
 
     public static Optional<MedicineDefinition> lookup(HolderLookup.Provider provider, ResourceLocation id) {
         return provider.lookup(ModMedicines.REGISTRY)
-                .flatMap(lookup -> lookup.get(id))
+                .flatMap(lookup -> lookup.get(net.minecraft.resources.ResourceKey.create(ModMedicines.REGISTRY, id)))
                 .map(holder -> holder.value());
     }
 
     public static void drink(ServerPlayer player, ResourceLocation id, boolean tea) {
-        apply(player, id, false, true);
+        apply(player, id, false, true, tea);
     }
 
     public static void apply(ServerPlayer player, ResourceLocation id, boolean sideEffectsOnly, boolean playSound) {
+        apply(player, id, sideEffectsOnly, playSound, false);
+    }
+
+    public static void apply(ServerPlayer player, ResourceLocation id, boolean sideEffectsOnly, boolean playSound,
+                             boolean tea) {
         MedicineDefinition definition = lookup(player.server.registryAccess(), id).orElse(null);
         if (definition == null) {
             return;

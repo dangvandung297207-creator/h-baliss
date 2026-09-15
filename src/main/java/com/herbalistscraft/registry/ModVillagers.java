@@ -22,8 +22,8 @@ public final class ModVillagers {
     public static final DeferredHolder<VillagerProfession, VillagerProfession> HERBALIST = PROFESSIONS.register(
             "herbalist", () -> new VillagerProfession("herbalist",
                     poi -> poi.is(HERBALIST_TABLE.getKey()),
-                    ImmutableSet.of(),
-                    ImmutableSet.of(ModBlocks.HERBALISTS_TABLE.get()),
+                    ImmutableSet.<net.minecraft.world.item.Item>of(),
+                    ImmutableSet.<net.minecraft.world.level.block.Block>of(ModBlocks.HERBALISTS_TABLE.get()),
                     ModSounds.MILL.get()));
 
     private ModVillagers() {}

@@ -154,7 +154,7 @@ public class TableRecipe implements Recipe<TableRecipe.Input> {
                 Ingredient.CONTENTS_STREAM_CODEC, TableRecipe::base,
                 Ingredient.CONTENTS_STREAM_CODEC, TableRecipe::herb,
                 ByteBufCodecs.optional(Ingredient.CONTENTS_STREAM_CODEC), TableRecipe::extract,
-                Ingredient.OPTIONAL_CONTENTS_STREAM_CODEC, TableRecipe::catalyst,
+                ByteBufCodecs.optional(Ingredient.CONTENTS_STREAM_CODEC), TableRecipe::catalyst,
                 ItemStack.STREAM_CODEC, recipe -> recipe.result,
                 ByteBufCodecs.VAR_INT, TableRecipe::brewTime,
                 TableRecipe::new);
