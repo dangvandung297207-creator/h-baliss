@@ -1,0 +1,45 @@
+{
+  "kind": "TONIC",
+  "tier": 3,
+  "rarity": "RARE",
+  "color": "#7a1f1c",
+  "toxicity": "MEDIUM",
+  "toxin_points": 14,
+  "cooldown": 400,
+  "description": "Vitalis root distilled through heartleaf. A battlefield medicine, and a costly one.",
+  "discovery": "JOURNAL",
+  "effects": [
+    {
+      "type": "INSTANT_HEALTH",
+      "amount": 10,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "VANILLA",
+      "effect": "minecraft:regeneration",
+      "duration": 160,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HUNGER",
+      "amount": -2,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TOXIN",
+      "amount": 6,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:strong_healing_tonic",
+  "herb_count": 2
+}

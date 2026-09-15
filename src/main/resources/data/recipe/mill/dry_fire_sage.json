@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:fire_sage"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_fire_sage",
+    "count": 1
+  },
+  "processing_time": 240
+}

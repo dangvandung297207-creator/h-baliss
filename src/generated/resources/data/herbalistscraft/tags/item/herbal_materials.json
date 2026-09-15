@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#herbalistscraft:herbs",
+    "#herbalistscraft:herb_powders",
+    "#herbalistscraft:herb_extracts",
+    "#herbalistscraft:dried_herbs"
+  ]
+}

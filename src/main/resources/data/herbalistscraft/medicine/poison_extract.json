@@ -1,0 +1,30 @@
+{
+  "kind": "OIL",
+  "tier": 2,
+  "rarity": "UNCOMMON",
+  "color": "#2f5c22",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 60,
+  "description": "Viperweed and deadly cap drawn into oil. Potent enough that the maker wears gloves.",
+  "discovery": "EXPERIMENT",
+  "effects": [],
+  "side_effects": [],
+  "item": "herbalistscraft:poison_extract",
+  "herb_count": 2,
+  "coating": {
+    "charges": 10,
+    "duration_ticks": 3000,
+    "potency": 0.8,
+    "on_hit": [
+      {
+        "type": "VANILLA",
+        "effect": "minecraft:poison",
+        "duration": 100,
+        "amplifier": 1,
+        "amount": 0,
+        "chance": 1.0
+      }
+    ]
+  }
+}

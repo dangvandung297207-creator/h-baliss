@@ -1,0 +1,34 @@
+{
+  "kind": "TONIC",
+  "tier": 2,
+  "rarity": "UNCOMMON",
+  "color": "#6f9e4c",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 240,
+  "description": "Marshroot boiled with purifying salt. Strips venom from the blood.",
+  "discovery": "EXPERIMENT",
+  "effects": [
+    {
+      "type": "CURE",
+      "targets": [
+        "minecraft:poison",
+        "minecraft:nausea"
+      ],
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TOXIN_CLEAR",
+      "amount": 24,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:antidote_tonic",
+  "herb_count": 2
+}

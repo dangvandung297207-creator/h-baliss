@@ -12,6 +12,8 @@ from .art import LAYOUT
 
 MODID = "herbalistscraft"
 PACKAGE = "com.herbalistscraft"
+# The package name is also the on-disk path below src/main/java.
+PACKAGE_PATH = pathlib.Path(*PACKAGE.split("."))
 
 HEADER = """/*
  * GENERATED FILE - do not edit by hand.
@@ -30,6 +32,31 @@ FORM_ITEM = {"fresh": "{herb}", "seed": "{herb}_seeds", "dried": "dried_{herb}",
 FORM_STACK = {"fresh": 64, "seed": 64, "dried": 64, "powder": 64, "extract": 16}
 FORM_QUALITY = {"fresh": 1.0, "dried": 0.8, "powder": 1.0, "extract": 1.5, "seed": 1.0}
 
+# Default stack size per item kind, with per-id overrides, and the behaviour class for the
+# handful of items that do more than sit in an inventory.
+ITEM_STACK = {"MATERIAL": 64, "BASE": 16, "CATALYST": 64, "TOOL": 1, "KNOWLEDGE": 1,
+              "glass_vial": 16, "clay_cup": 16, "moonwater": 8, "frost_crystal": 32,
+              "life_essence": 16, "shadow_ichor": 16}
+ITEM_RARITY = {"moonwater": "Rarity.UNCOMMON", "frost_crystal": "Rarity.UNCOMMON",
+               "life_essence": "Rarity.RARE", "shadow_ichor": "Rarity.RARE",
+               "herbalists_journal": "Rarity.UNCOMMON"}
+ITEM_SPECIAL = {
+    "glass_vial": "new FillableContainerItem(p, FillTarget.WATER_VIAL)",
+    "clay_cup": "new FillableContainerItem(p, FillTarget.SPRING_WATER_CUP)",
+    "pruning_shears": "new PruningShearsItem(p.durability(238))",
+    "seed_pouch": "new SeedPouchItem(p)",
+    "herbalists_journal": "new JournalItem(p)",
+    "journal_page_herbal": "new JournalPageItem(p, JournalPageKind.HERBAL)",
+    "journal_page_medicinal": "new JournalPageItem(p, JournalPageKind.MEDICINAL)",
+    "journal_page_toxic": "new JournalPageItem(p, JournalPageKind.TOXIC)",
+    "journal_page_ancient": "new JournalPageItem(p, JournalPageKind.ANCIENT)",
+}
+EXPERIMENTAL_SPECIAL = {
+    "experimental_tonic": "new ExperimentalTonicItem",
+    "experimental_tea": "new ExperimentalTeaItem",
+    "failed_mixture": "new FailedMixtureItem",
+}
+
 
 def _const(name: str) -> str:
     return name.upper().replace("-", "_")
@@ -41,7 +68,7 @@ def _write(path: pathlib.Path, body: str) -> None:
 
 
 def generate(root: pathlib.Path, herbs: list, medicines: list, items: list, experimental: list, log=print) -> None:
-    src = root / "src/main/java" / PACKAGE
+    src = root / "src/main/java" / PACKAGE_PATH
     _mod_herbs(src, herbs)
     _mod_medicines(src, medicines)
     _mod_items(src, herbs, medicines, items, experimental)
@@ -134,6 +161,8 @@ public final class ModMedicines {
 
 
 def _mod_items(src: pathlib.Path, herbs: list, medicines: list, items: list, experimental: list) -> None:
+    """Non-herb items come straight from items.json: kind decides stacking, a small
+    special-case table decides which behaviour class an id gets."""
     out = [HEADER.format(package=f"{PACKAGE}.registry")]
     out.append("""import com.herbalistscraft.HerbalistsCraft;
 import com.herbalistscraft.herb.HerbForm;
@@ -142,12 +171,15 @@ import com.herbalistscraft.herb.HerbSeedItem;
 import com.herbalistscraft.knowledge.JournalItem;
 import com.herbalistscraft.knowledge.JournalPageItem;
 import com.herbalistscraft.knowledge.JournalPageKind;
+import com.herbalistscraft.medicine.ExperimentalTeaItem;
+import com.herbalistscraft.medicine.ExperimentalTonicItem;
+import com.herbalistscraft.medicine.FailedMixtureItem;
 import com.herbalistscraft.medicine.SalveItem;
 import com.herbalistscraft.medicine.TeaItem;
 import com.herbalistscraft.medicine.TonicItem;
 import com.herbalistscraft.medicine.WeaponOilItem;
-import com.herbalistscraft.tool.FillableContainerItem;
 import com.herbalistscraft.tool.FillTarget;
+import com.herbalistscraft.tool.FillableContainerItem;
 import com.herbalistscraft.tool.PruningShearsItem;
 import com.herbalistscraft.tool.SeedPouchItem;
 import net.minecraft.world.item.Item;
@@ -172,9 +204,10 @@ public final class ModItems {
             else:
                 props = f"new Item.Properties().stacksTo({FORM_STACK[form]})"
             if form == "seed":
-                ctor = f'new HerbSeedItem(p, "{herb["id"]}_crop")'
+                ctor = f"new HerbSeedItem(p, ModHerbs.{_const(herb['id'])})"
             else:
-                ctor = f'new HerbItem(p, ModHerbs.{_const(herb["id"])}, HerbForm.{FORM_CONSTANT[form]}, {FORM_QUALITY[form]}f)'
+                ctor = (f"new HerbItem(p, ModHerbs.{_const(herb['id'])}, "
+                        f"HerbForm.{FORM_CONSTANT[form]}, {FORM_QUALITY[form]}f)")
             out.append(f'    public static final DeferredItem<Item> {const} = ITEMS.registerItem("{item_id}",\n'
                        f'            p -> {ctor}, {props});\n')
         out.append("\n")
@@ -192,60 +225,31 @@ public final class ModItems {
         out.append(f'    public static final DeferredItem<Item> {const} = ITEMS.registerItem("{med["id"]}",\n'
                    f'            p -> {ctor}(p, ModMedicines.{const}), {props});\n')
 
-    out.append("""
-    // ---- materials, containers and tools -------------------------------------
-    public static final DeferredItem<Item> GLASS_VIAL = ITEMS.registerItem("glass_vial",
-            p -> new FillableContainerItem(p, FillTarget.WATER_VIAL, p.stacksTo(16)));
-    public static final DeferredItem<Item> CLAY_CUP = ITEMS.registerItem("clay_cup",
-            p -> new FillableContainerItem(p, FillTarget.SPRING_WATER_CUP, p.stacksTo(16)));
-    public static final DeferredItem<Item> WATER_VIAL = ITEMS.registerItem("water_vial",
-            p -> new Item(p.stacksTo(16)));
-    public static final DeferredItem<Item> SPRING_WATER_CUP = ITEMS.registerItem("spring_water_cup",
-            p -> new Item(p.stacksTo(16)));
-    public static final DeferredItem<Item> HERBAL_OIL = ITEMS.registerItem("herbal_oil",
-            p -> new Item(p.stacksTo(16)));
-    public static final DeferredItem<Item> HERBAL_ALCOHOL = ITEMS.registerItem("herbal_alcohol",
-            p -> new Item(p.stacksTo(16)));
-    public static final DeferredItem<Item> SALVE_BASE = ITEMS.registerItem("salve_base",
-            p -> new Item(p.stacksTo(16)));
-    public static final DeferredItem<Item> MOONWATER = ITEMS.registerItem("moonwater",
-            p -> new Item(p.rarity(Rarity.UNCOMMON).stacksTo(8)));
-    public static final DeferredItem<Item> PURITY_SALT = ITEMS.registerItem("purity_salt",
-            p -> new Item(p.stacksTo(64)));
-    public static final DeferredItem<Item> EMBER_ASH = ITEMS.registerItem("ember_ash",
-            p -> new Item(p.stacksTo(64)));
-    public static final DeferredItem<Item> FROST_CRYSTAL = ITEMS.registerItem("frost_crystal",
-            p -> new Item(p.rarity(Rarity.UNCOMMON).stacksTo(32)));
-    public static final DeferredItem<Item> LIFE_ESSENCE = ITEMS.registerItem("life_essence",
-            p -> new Item(p.rarity(Rarity.RARE).stacksTo(16)));
-    public static final DeferredItem<Item> SHADOW_ICHOR = ITEMS.registerItem("shadow_ichor",
-            p -> new Item(p.rarity(Rarity.RARE).stacksTo(16)));
+    out.append("\n    // ---- materials, containers, tools and knowledge ---------------------------\n")
+    for entry in items:
+        kind = entry["kind"]
+        if kind == "BLOCK":
+            continue  # block items are registered next to their blocks in ModBlocks
+        item_id = entry["id"]
+        const = _const(item_id)
+        stacks = ITEM_STACK.get(kind, 64)
+        if item_id in ITEM_STACK:
+            stacks = ITEM_STACK[item_id]
+        properties = f"new Item.Properties().stacksTo({stacks})"
+        if item_id in ITEM_RARITY:
+            properties = f"new Item.Properties().stacksTo({stacks}).rarity({ITEM_RARITY[item_id]})"
+        ctor = ITEM_SPECIAL.get(item_id, "new Item")
+        out.append(f'    public static final DeferredItem<Item> {const} = ITEMS.registerItem("{item_id}",\n'
+                   f'            p -> {ctor}(p), {properties});\n')
 
-    public static final DeferredItem<Item> PRUNING_SHEARS = ITEMS.registerItem("pruning_shears",
-            p -> new PruningShearsItem(p.durability(238)));
-    public static final DeferredItem<Item> SEED_POUCH = ITEMS.registerItem("seed_pouch",
-            p -> new SeedPouchItem(p.stacksTo(1)));
-
-    public static final DeferredItem<Item> HERBALISTS_JOURNAL = ITEMS.registerItem("herbalists_journal",
-            p -> new JournalItem(p.stacksTo(1).rarity(Rarity.UNCOMMON)));
-    public static final DeferredItem<Item> JOURNAL_PAGE_HERBAL = ITEMS.registerItem("journal_page_herbal",
-            p -> new JournalPageItem(p, JournalPageKind.HERBAL));
-    public static final DeferredItem<Item> JOURNAL_PAGE_MEDICINAL = ITEMS.registerItem("journal_page_medicinal",
-            p -> new JournalPageItem(p, JournalPageKind.MEDICINAL));
-    public static final DeferredItem<Item> JOURNAL_PAGE_TOXIC = ITEMS.registerItem("journal_page_toxic",
-            p -> new JournalPageItem(p, JournalPageKind.TOXIC));
-    public static final DeferredItem<Item> JOURNAL_PAGE_ANCIENT = ITEMS.registerItem("journal_page_ancient",
-            p -> new JournalPageItem(p, JournalPageKind.ANCIENT));
-
-    // ---- outputs of failed or unknown experiments -----------------------------
-    public static final DeferredItem<Item> EXPERIMENTAL_TONIC = ITEMS.registerItem("experimental_tonic",
-            p -> new TonicItem(p.stacksTo(8), null));
-    public static final DeferredItem<Item> EXPERIMENTAL_TEA = ITEMS.registerItem("experimental_tea",
-            p -> new TeaItem(p.stacksTo(8), null));
-    public static final DeferredItem<Item> FAILED_MIXTURE = ITEMS.registerItem("failed_mixture",
-            p -> new Item(p.stacksTo(8)));
-}
-""")
+    out.append("\n    // ---- outputs of failed or unknown experiments -----------------------------\n")
+    for entry in experimental:
+        item_id = entry["id"]
+        const = _const(item_id)
+        ctor = EXPERIMENTAL_SPECIAL[item_id]
+        out.append(f'    public static final DeferredItem<Item> {const} = ITEMS.registerItem("{item_id}",\n'
+                   f'            p -> {ctor}(p), new Item.Properties().stacksTo(8));\n')
+    out.append("}\n")
     _write(src / "registry/ModItems.java", "".join(out))
 
 
@@ -305,13 +309,16 @@ public final class ModBlocks {
             p -> new DryingRackBlock(p), BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD).strength(1.2F, 3.0F).sound(SoundType.WOOD).noOcclusion());
 
-    public static final DeferredItem<BlockItem> MORTAR_AND_PESTLE_ITEM = ModItems.ITEMS.registerSimpleBlockItem(MORTAR_AND_PESTLE);
-    public static final DeferredItem<BlockItem> HERBAL_MILL_ITEM = ModItems.ITEMS.registerSimpleBlockItem(HERBAL_MILL);
-    public static final DeferredItem<BlockItem> HERBALISTS_TABLE_ITEM = ModItems.ITEMS.registerSimpleBlockItem(HERBALISTS_TABLE);
-    public static final DeferredItem<BlockItem> DRYING_RACK_ITEM = ModItems.ITEMS.registerSimpleBlockItem(DRYING_RACK);
+    public static final DeferredItem<BlockItem> MORTAR_AND_PESTLE_ITEM =
+            ModItems.ITEMS.registerSimpleBlockItem("mortar_and_pestle", MORTAR_AND_PESTLE);
+    public static final DeferredItem<BlockItem> HERBAL_MILL_ITEM =
+            ModItems.ITEMS.registerSimpleBlockItem("herbal_mill", HERBAL_MILL);
+    public static final DeferredItem<BlockItem> HERBALISTS_TABLE_ITEM =
+            ModItems.ITEMS.registerSimpleBlockItem("herbalists_table", HERBALISTS_TABLE);
+    public static final DeferredItem<BlockItem> DRYING_RACK_ITEM =
+            ModItems.ITEMS.registerSimpleBlockItem("drying_rack", DRYING_RACK);
 }
 """)
-    
     _write(src / "registry/ModBlocks.java", "".join(out))
 
 

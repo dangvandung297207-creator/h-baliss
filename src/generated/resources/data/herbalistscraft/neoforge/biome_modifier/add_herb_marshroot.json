@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/marshroot",
+    "features": "herbalistscraft:herb_marshroot",
+    "step": "vegetal_decoration"
+  }
+]

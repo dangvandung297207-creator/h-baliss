@@ -1,0 +1,21 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:water_vial"
+  },
+  "herb": {
+    "item": "herbalistscraft:vitalis_root_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:strong_healing_tonic",
+    "count": 1
+  },
+  "brew_time": 320,
+  "medicine": "herbalistscraft:strong_healing_tonic",
+  "extract": {
+    "item": "herbalistscraft:heartleaf_extract"
+  },
+  "catalyst": {
+    "item": "herbalistscraft:life_essence"
+  }
+}

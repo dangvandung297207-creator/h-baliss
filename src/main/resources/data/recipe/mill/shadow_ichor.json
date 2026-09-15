@@ -1,0 +1,14 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "minecraft:fermented_spider_eye"
+  },
+  "result": {
+    "id": "herbalistscraft:shadow_ichor",
+    "count": 1
+  },
+  "processing_time": 280,
+  "additive": {
+    "item": "herbalistscraft:deadly_cap_powder"
+  }
+}

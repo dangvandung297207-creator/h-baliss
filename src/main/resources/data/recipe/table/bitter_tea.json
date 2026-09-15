@@ -1,0 +1,18 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:spring_water_cup"
+  },
+  "herb": {
+    "item": "herbalistscraft:dried_bitterroot"
+  },
+  "result": {
+    "id": "herbalistscraft:bitter_tea",
+    "count": 1
+  },
+  "brew_time": 140,
+  "medicine": "herbalistscraft:bitter_tea",
+  "extract": {
+    "item": "herbalistscraft:marshroot_extract"
+  }
+}

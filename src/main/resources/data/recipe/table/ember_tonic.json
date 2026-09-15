@@ -1,0 +1,21 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:herbal_alcohol"
+  },
+  "herb": {
+    "item": "herbalistscraft:thunder_thistle_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:ember_tonic",
+    "count": 1
+  },
+  "brew_time": 300,
+  "medicine": "herbalistscraft:ember_tonic",
+  "extract": {
+    "item": "herbalistscraft:ashleaf_extract"
+  },
+  "catalyst": {
+    "item": "herbalistscraft:ember_ash"
+  }
+}

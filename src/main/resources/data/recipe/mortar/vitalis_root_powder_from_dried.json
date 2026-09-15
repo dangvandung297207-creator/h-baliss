@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:dried_vitalis_root"
+  },
+  "result": {
+    "id": "herbalistscraft:vitalis_root_powder",
+    "count": 2
+  },
+  "grind_time": 80,
+  "quality": 1.15
+}

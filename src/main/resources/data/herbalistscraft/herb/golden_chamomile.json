@@ -1,0 +1,43 @@
+{
+  "category": "MEDICINAL",
+  "morphology": "FLOWER",
+  "lore": "The smell of a calm evening in a cup. Every herbalist starts here.",
+  "properties": {
+    "SEDATIVE": 0.5,
+    "HEALING": 0.35,
+    "HYDRATION": 0.25
+  },
+  "toxicity": "NONE",
+  "rarity": "COMMON",
+  "seasons": [
+    "SPRING"
+  ],
+  "biome_groups": [
+    "plains"
+  ],
+  "placement": "SURFACE",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 1.25,
+  "yield": {
+    "min": 1,
+    "max": 4
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.8,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed"
+  ],
+  "uses": [
+    "herbal tea",
+    "sleep tea"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:golden_chamomile_crop",
+  "seed_item": ""
+}

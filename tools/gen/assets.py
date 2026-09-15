@@ -23,6 +23,19 @@ def _item_model(path: pathlib.Path, texture: str, layers: int = 1) -> None:
     _write_json(path, {"parent": "minecraft:item/generated", "textures": textures})
 
 
+
+def _cube_model(textures: dict, elements: list, ambient_occlusion: bool = True) -> dict:
+    """A block model built from explicit element boxes (never a plain cube)."""
+    particle = textures.get("side") or next(iter(textures.values()))
+    return {
+        "parent": "minecraft:block/block",
+        "textures": {"particle": f"{MODID}:block/{particle}",
+                     **{key: f"{MODID}:block/{name}" for key, name in textures.items()}},
+        "elements": elements,
+        "ambientocclusion": ambient_occlusion,
+    }
+
+
 # ---------------------------------------------------------------------------
 # block models
 # ---------------------------------------------------------------------------

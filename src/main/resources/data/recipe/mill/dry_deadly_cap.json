@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:deadly_cap"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_deadly_cap",
+    "count": 1
+  },
+  "processing_time": 240
+}

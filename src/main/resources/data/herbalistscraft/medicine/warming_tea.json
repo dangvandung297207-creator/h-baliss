@@ -1,0 +1,39 @@
+{
+  "kind": "TEA",
+  "tier": 1,
+  "rarity": "COMMON",
+  "color": "#c9772f",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 200,
+  "description": "Emberroot and sunpetal. The cup that keeps the cold from settling into the bones.",
+  "discovery": "EXPERIMENT",
+  "effects": [
+    {
+      "type": "TEMP",
+      "warmth": 25,
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HYDRATE",
+      "amount": 3,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HERBAL",
+      "effect": "cold_ward",
+      "duration": 1800,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:warming_tea",
+  "herb_count": 2
+}

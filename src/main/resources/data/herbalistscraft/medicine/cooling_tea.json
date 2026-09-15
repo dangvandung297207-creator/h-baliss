@@ -1,0 +1,39 @@
+{
+  "kind": "TEA",
+  "tier": 1,
+  "rarity": "COMMON",
+  "color": "#63a8c9",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 200,
+  "description": "Frostmint steeped with feverfew. For the long walk under a pitiless sun.",
+  "discovery": "EXPERIMENT",
+  "effects": [
+    {
+      "type": "TEMP",
+      "chill": 25,
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HYDRATE",
+      "amount": 5,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HERBAL",
+      "effect": "heat_ward",
+      "duration": 1800,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:cooling_tea",
+  "herb_count": 2
+}

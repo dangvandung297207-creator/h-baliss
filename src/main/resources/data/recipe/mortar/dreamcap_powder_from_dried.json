@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:dried_dreamcap"
+  },
+  "result": {
+    "id": "herbalistscraft:dreamcap_powder",
+    "count": 2
+  },
+  "grind_time": 80,
+  "quality": 1.15
+}

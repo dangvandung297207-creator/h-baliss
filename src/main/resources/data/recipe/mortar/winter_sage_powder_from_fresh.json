@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:winter_sage"
+  },
+  "result": {
+    "id": "herbalistscraft:winter_sage_powder",
+    "count": 1
+  },
+  "grind_time": 60,
+  "quality": 0.9
+}

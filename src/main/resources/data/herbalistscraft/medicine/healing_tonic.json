@@ -1,0 +1,38 @@
+{
+  "kind": "TONIC",
+  "tier": 2,
+  "rarity": "UNCOMMON",
+  "color": "#8e2f2a",
+  "toxicity": "LOW",
+  "toxin_points": 6,
+  "cooldown": 200,
+  "description": "Comfrey and bloodroot in equal measure. Knits flesh, thickens blood.",
+  "discovery": "EXPERIMENT",
+  "effects": [
+    {
+      "type": "INSTANT_HEALTH",
+      "amount": 6,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "CLEAR_BLEEDING",
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HERBAL",
+      "effect": "hemostasis",
+      "duration": 600,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:healing_tonic",
+  "herb_count": 2
+}

@@ -1,0 +1,47 @@
+{
+  "category": "STIMULANT",
+  "morphology": "ROOT",
+  "lore": "A root with legs and a face, dug from old forest soil. Worth more than gold to the right buyer.",
+  "properties": {
+    "STIMULANT": 0.8,
+    "ENERGY": 0.5,
+    "REGENERATION": 0.35
+  },
+  "toxicity": "LOW",
+  "rarity": "RARE",
+  "seasons": [
+    "AUTUMN"
+  ],
+  "biome_groups": [
+    "forest",
+    "jungle"
+  ],
+  "placement": "SHADED",
+  "soil": "MOSS",
+  "light": "DIM",
+  "growth_speed": 0.55,
+  "yield": {
+    "min": 1,
+    "max": 1
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.2,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "stamina tonic",
+    "life essence"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/moss",
+  "block": "herbalistscraft:wild_ginseng_crop",
+  "seed_item": "herbalistscraft:wild_ginseng_seeds"
+}

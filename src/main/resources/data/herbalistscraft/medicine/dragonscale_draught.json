@@ -1,0 +1,39 @@
+{
+  "kind": "TONIC",
+  "tier": 4,
+  "rarity": "VERY_RARE",
+  "color": "#b8351c",
+  "toxicity": "HIGH",
+  "toxin_points": 26,
+  "cooldown": 2400,
+  "description": "Dragonscale herb burnt with cinder bloom. Heavy, bitter, and worth the burns.",
+  "discovery": "LOOT",
+  "effects": [
+    {
+      "type": "HERBAL",
+      "effect": "fire_ward",
+      "duration": 3600,
+      "amplifier": 1,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TEMP",
+      "warmth": 60,
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TOXIN",
+      "amount": 12,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:dragonscale_draught",
+  "herb_count": 2
+}

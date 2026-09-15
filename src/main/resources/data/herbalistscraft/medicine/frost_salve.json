@@ -1,0 +1,39 @@
+{
+  "kind": "SALVE",
+  "tier": 2,
+  "rarity": "UNCOMMON",
+  "color": "#7fb6d9",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 600,
+  "description": "A greasy balm of iceleaf and glacier lotus. Rubbed into the skin it turns the cold aside.",
+  "discovery": "EXPERIMENT",
+  "effects": [
+    {
+      "type": "HERBAL",
+      "effect": "cold_ward",
+      "duration": 3600,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TEMP",
+      "warmth": 30,
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HYDRATE",
+      "amount": 1,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:frost_salve",
+  "herb_count": 2
+}

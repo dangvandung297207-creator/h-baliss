@@ -1,0 +1,18 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:water_vial"
+  },
+  "herb": {
+    "item": "herbalistscraft:yarrow_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:hemostatic_tonic",
+    "count": 1
+  },
+  "brew_time": 200,
+  "medicine": "herbalistscraft:hemostatic_tonic",
+  "extract": {
+    "item": "herbalistscraft:blackthorn_extract"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:nightshade"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_nightshade",
+    "count": 1
+  },
+  "processing_time": 240
+}

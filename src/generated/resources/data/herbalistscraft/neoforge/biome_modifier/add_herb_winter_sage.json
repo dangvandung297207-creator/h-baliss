@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/winter_sage",
+    "features": "herbalistscraft:herb_winter_sage",
+    "step": "vegetal_decoration"
+  }
+]

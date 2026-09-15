@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "LML",
+    "L L"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "L": {
+      "tag": "minecraft:logs"
+    },
+    "M": {
+      "item": "herbalistscraft:mortar_and_pestle"
+    }
+  },
+  "result": {
+    "id": "herbalistscraft:herbalists_table",
+    "count": 1
+  }
+}

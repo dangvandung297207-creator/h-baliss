@@ -1,0 +1,11 @@
+{
+  "entries": [
+    "herbalistscraft:village_herbs",
+    "herbalistscraft:dungeon_herbs",
+    "herbalistscraft:temple_herbs",
+    "herbalistscraft:swamp_witch_herbs",
+    "herbalistscraft:ancient_city_herbs",
+    "herbalistscraft:nether_herbs"
+  ],
+  "replace": false
+}

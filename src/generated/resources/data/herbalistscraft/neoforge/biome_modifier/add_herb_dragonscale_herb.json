@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/dragonscale_herb",
+    "features": "herbalistscraft:herb_dragonscale_herb",
+    "step": "vegetal_decoration"
+  }
+]

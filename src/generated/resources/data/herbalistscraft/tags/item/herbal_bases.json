@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "herbalistscraft:water_vial",
+    "herbalistscraft:spring_water_cup",
+    "herbalistscraft:herbal_oil",
+    "herbalistscraft:herbal_alcohol",
+    "herbalistscraft:salve_base",
+    "herbalistscraft:moonwater"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:water_vial"
+  },
+  "herb": {
+    "item": "herbalistscraft:marshroot_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:antidote_tonic",
+    "count": 1
+  },
+  "brew_time": 220,
+  "medicine": "herbalistscraft:antidote_tonic",
+  "extract": {
+    "item": "herbalistscraft:silverleaf_extract"
+  },
+  "catalyst": {
+    "item": "herbalistscraft:purity_salt"
+  }
+}

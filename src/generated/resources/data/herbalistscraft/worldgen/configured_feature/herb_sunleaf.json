@@ -1,0 +1,9 @@
+{
+  "type": "herbalistscraft:herb_patch",
+  "config": {
+    "herb": "herbalistscraft:sunleaf_crop",
+    "tries": 4,
+    "xz_spread": 5,
+    "y_spread": 1
+  }
+}

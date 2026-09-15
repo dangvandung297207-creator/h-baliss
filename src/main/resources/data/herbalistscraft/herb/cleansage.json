@@ -1,0 +1,44 @@
+{
+  "category": "MEDICINAL",
+  "morphology": "LEAF",
+  "lore": "Burned or brewed, it drives rot out of a wound and out of a room.",
+  "properties": {
+    "ANTISEPTIC": 1.0,
+    "RESPIRATORY": 0.6
+  },
+  "toxicity": "NONE",
+  "rarity": "COMMON",
+  "seasons": [
+    "SPRING",
+    "SUMMER"
+  ],
+  "biome_groups": [
+    "plains",
+    "badlands"
+  ],
+  "placement": "SURFACE",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 1.05,
+  "yield": {
+    "min": 1,
+    "max": 3
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.65,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed"
+  ],
+  "uses": [
+    "antiseptic tonic",
+    "antiseptic salve"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:cleansage_crop",
+  "seed_item": ""
+}

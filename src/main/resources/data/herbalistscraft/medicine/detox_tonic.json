@@ -1,0 +1,36 @@
+{
+  "kind": "TONIC",
+  "tier": 3,
+  "rarity": "RARE",
+  "color": "#7d8f6a",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 300,
+  "description": "Spiritwood and grave moss in strong spirits. It purges the toxin meter, and then some.",
+  "discovery": "JOURNAL",
+  "effects": [
+    {
+      "type": "TOXIN_CLEAR",
+      "amount": 60,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "CURE",
+      "targets": [
+        "minecraft:poison",
+        "minecraft:nausea",
+        "minecraft:weakness",
+        "minecraft:slowness"
+      ],
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:detox_tonic",
+  "herb_count": 2
+}

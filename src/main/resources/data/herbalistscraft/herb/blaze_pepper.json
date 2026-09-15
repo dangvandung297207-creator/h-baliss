@@ -1,0 +1,47 @@
+{
+  "category": "WARMING",
+  "morphology": "BERRY",
+  "lore": "A pod that pops with heat. Nether travelers chew it to stay awake and stay warm.",
+  "properties": {
+    "WARMING": 1.2,
+    "STIMULANT": 0.5,
+    "ENERGY": 0.4
+  },
+  "toxicity": "MEDIUM",
+  "rarity": "RARE",
+  "seasons": [
+    "SUMMER",
+    "AUTUMN"
+  ],
+  "biome_groups": [
+    "nether"
+  ],
+  "placement": "NETHER",
+  "soil": "SOUL_SOIL",
+  "light": "DIM",
+  "growth_speed": 0.65,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.3,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "stamina tonic",
+    "warming tea"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/soul_soil",
+  "block": "herbalistscraft:blaze_pepper_crop",
+  "seed_item": "herbalistscraft:blaze_pepper_seeds"
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/hemlock",
+    "features": "herbalistscraft:herb_hemlock",
+    "step": "vegetal_decoration"
+  }
+]

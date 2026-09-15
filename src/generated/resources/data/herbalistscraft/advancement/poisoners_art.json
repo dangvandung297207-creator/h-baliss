@@ -1,0 +1,23 @@
+{
+  "parent": "herbalistscraft:field_medicine",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "herbalistscraft:toxic_oil"
+    },
+    "title": {
+      "translate": "advancement.herbalistscraft.poisoners_art.title"
+    },
+    "description": {
+      "translate": "advancement.herbalistscraft.poisoners_art.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

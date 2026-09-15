@@ -1,0 +1,18 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:spring_water_cup"
+  },
+  "herb": {
+    "item": "herbalistscraft:dried_feverfew"
+  },
+  "result": {
+    "id": "herbalistscraft:recovery_tea",
+    "count": 1
+  },
+  "brew_time": 160,
+  "medicine": "herbalistscraft:recovery_tea",
+  "extract": {
+    "item": "herbalistscraft:velvet_bell_extract"
+  }
+}

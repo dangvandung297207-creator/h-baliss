@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:marshroot"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_marshroot",
+    "count": 1
+  },
+  "processing_time": 240
+}

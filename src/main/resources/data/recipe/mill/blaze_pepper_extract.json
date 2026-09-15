@@ -1,0 +1,14 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:blaze_pepper_powder"
+  },
+  "additive": {
+    "item": "herbalistscraft:water_vial"
+  },
+  "result": {
+    "id": "herbalistscraft:blaze_pepper_extract",
+    "count": 2
+  },
+  "processing_time": 320
+}

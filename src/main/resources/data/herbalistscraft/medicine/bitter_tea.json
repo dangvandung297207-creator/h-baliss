@@ -1,0 +1,38 @@
+{
+  "kind": "TEA",
+  "tier": 1,
+  "rarity": "COMMON",
+  "color": "#7a8a4a",
+  "toxicity": "LOW",
+  "toxin_points": 6,
+  "cooldown": 200,
+  "description": "Bitterroot and marshroot. Unpleasant, clearing, and it grows where nothing else will.",
+  "discovery": "EXPERIMENT",
+  "effects": [
+    {
+      "type": "HERBAL",
+      "effect": "respiratory",
+      "duration": 600,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TOXIN_CLEAR",
+      "amount": 8,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HYDRATE",
+      "amount": 2,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:bitter_tea",
+  "herb_count": 2
+}

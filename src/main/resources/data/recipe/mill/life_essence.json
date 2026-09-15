@@ -1,0 +1,14 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "minecraft:glowstone_dust"
+  },
+  "result": {
+    "id": "herbalistscraft:life_essence",
+    "count": 1
+  },
+  "processing_time": 280,
+  "additive": {
+    "item": "herbalistscraft:vitalis_root_powder"
+  }
+}

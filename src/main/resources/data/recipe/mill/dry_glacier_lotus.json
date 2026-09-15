@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:glacier_lotus"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_glacier_lotus",
+    "count": 1
+  },
+  "processing_time": 240
+}

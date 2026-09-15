@@ -1,0 +1,47 @@
+{
+  "category": "MEDICINAL",
+  "morphology": "ROOT",
+  "lore": "So bitter it makes the jaw ache, but it clears the lungs and the head with it.",
+  "properties": {
+    "ANTISEPTIC": 0.6,
+    "RESPIRATORY": 0.45,
+    "TOXIC": 0.3
+  },
+  "toxicity": "MEDIUM",
+  "rarity": "COMMON",
+  "seasons": [
+    "SUMMER"
+  ],
+  "biome_groups": [
+    "desert",
+    "badlands"
+  ],
+  "placement": "SURFACE",
+  "soil": "SAND",
+  "light": "BRIGHT",
+  "growth_speed": 0.95,
+  "yield": {
+    "min": 1,
+    "max": 3
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.6,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "respiratory tonic",
+    "bitter tea"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/sand",
+  "block": "herbalistscraft:bitterroot_crop",
+  "seed_item": "herbalistscraft:bitterroot_seeds"
+}

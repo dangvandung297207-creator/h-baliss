@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:snowbell"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_snowbell",
+    "count": 1
+  },
+  "processing_time": 240
+}

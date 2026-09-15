@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:velvet_bell"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_velvet_bell",
+    "count": 1
+  },
+  "processing_time": 240
+}

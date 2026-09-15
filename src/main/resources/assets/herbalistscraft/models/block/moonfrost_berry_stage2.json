@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "herbalistscraft:block/moonfrost_berry_stage2"
+  }
+}

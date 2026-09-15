@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/sunpetal",
+    "features": "herbalistscraft:herb_sunpetal",
+    "step": "vegetal_decoration"
+  }
+]

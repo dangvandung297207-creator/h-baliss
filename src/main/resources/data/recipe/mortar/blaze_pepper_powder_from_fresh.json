@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:blaze_pepper"
+  },
+  "result": {
+    "id": "herbalistscraft:blaze_pepper_powder",
+    "count": 1
+  },
+  "grind_time": 60,
+  "quality": 0.9
+}

@@ -1,0 +1,14 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "minecraft:sugar"
+  },
+  "result": {
+    "id": "herbalistscraft:purity_salt",
+    "count": 2
+  },
+  "processing_time": 160,
+  "additive": {
+    "item": "minecraft:charcoal"
+  }
+}

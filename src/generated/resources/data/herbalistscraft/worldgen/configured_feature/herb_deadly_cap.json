@@ -1,0 +1,9 @@
+{
+  "type": "herbalistscraft:herb_patch",
+  "config": {
+    "herb": "herbalistscraft:deadly_cap_crop",
+    "tries": 2,
+    "xz_spread": 3,
+    "y_spread": 3
+  }
+}

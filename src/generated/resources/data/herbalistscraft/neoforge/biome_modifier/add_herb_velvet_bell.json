@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/velvet_bell",
+    "features": "herbalistscraft:herb_velvet_bell",
+    "step": "vegetal_decoration"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "kind": "TONIC",
+  "tier": 3,
+  "rarity": "RARE",
+  "color": "#d4611f",
+  "toxicity": "MEDIUM",
+  "toxin_points": 14,
+  "cooldown": 480,
+  "description": "Thunder thistle and ashleaf. The drinker's blood runs hot against flame and frost alike.",
+  "discovery": "EXPERIMENT",
+  "effects": [
+    {
+      "type": "HERBAL",
+      "effect": "fire_ward",
+      "duration": 1800,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TEMP",
+      "warmth": 40,
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TOXIN",
+      "amount": 6,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:ember_tonic",
+  "herb_count": 2
+}

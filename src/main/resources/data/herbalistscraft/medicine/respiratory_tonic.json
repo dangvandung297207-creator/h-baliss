@@ -1,0 +1,42 @@
+{
+  "kind": "TONIC",
+  "tier": 2,
+  "rarity": "UNCOMMON",
+  "color": "#5f8f9c",
+  "toxicity": "LOW",
+  "toxin_points": 6,
+  "cooldown": 240,
+  "description": "Cinnamon bark and lungwort. It keeps the breath coming and holds back the dark water.",
+  "discovery": "EXPERIMENT",
+  "effects": [
+    {
+      "type": "CURE",
+      "targets": [
+        "minecraft:nausea",
+        "minecraft:hunger"
+      ],
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HERBAL",
+      "effect": "respiratory",
+      "duration": 1200,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HYDRATE",
+      "amount": 3,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:respiratory_tonic",
+  "herb_count": 2
+}

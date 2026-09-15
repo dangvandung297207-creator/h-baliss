@@ -1,0 +1,14 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:winter_sage_powder"
+  },
+  "additive": {
+    "item": "herbalistscraft:water_vial"
+  },
+  "result": {
+    "id": "herbalistscraft:winter_sage_extract",
+    "count": 2
+  },
+  "processing_time": 320
+}

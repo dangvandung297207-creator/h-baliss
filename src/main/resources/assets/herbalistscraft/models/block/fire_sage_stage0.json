@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "herbalistscraft:block/fire_sage_stage0"
+  }
+}

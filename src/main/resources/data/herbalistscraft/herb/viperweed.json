@@ -1,0 +1,45 @@
+{
+  "category": "TOXIC",
+  "morphology": "VINE",
+  "lore": "Its sap numbs the skin where it touches. Marsh hunters learn to respect the green coils.",
+  "properties": {
+    "TOXIC": 1.1,
+    "HEMOSTATIC": 0.2
+  },
+  "toxicity": "HIGH",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "SUMMER"
+  ],
+  "biome_groups": [
+    "swamp"
+  ],
+  "placement": "WETLAND",
+  "soil": "MOSS",
+  "light": "DIM",
+  "growth_speed": 0.85,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.45,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "poison extract",
+    "venom oil"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/moss",
+  "block": "herbalistscraft:viperweed_crop",
+  "seed_item": "herbalistscraft:viperweed_seeds"
+}

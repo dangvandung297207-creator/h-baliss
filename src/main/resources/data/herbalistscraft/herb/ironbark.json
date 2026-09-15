@@ -1,0 +1,47 @@
+{
+  "category": "PROTECTIVE",
+  "morphology": "BARK",
+  "lore": "Bark dense enough to turn a blade. Chewed, it turns a little heat as well.",
+  "properties": {
+    "FIRE_PROTECTION": 0.8,
+    "ANTISEPTIC": 0.3
+  },
+  "toxicity": "LOW",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "AUTUMN",
+    "WINTER"
+  ],
+  "biome_groups": [
+    "mountains",
+    "jungle"
+  ],
+  "placement": "HIGH_ELEVATION",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 0.55,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.2,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "ward salve",
+    "fire salve"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:ironbark_crop",
+  "seed_item": "herbalistscraft:ironbark_seeds"
+}

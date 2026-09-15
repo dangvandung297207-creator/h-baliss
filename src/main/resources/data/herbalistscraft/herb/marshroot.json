@@ -1,0 +1,46 @@
+{
+  "category": "MEDICINAL",
+  "morphology": "ROOT",
+  "lore": "A reed-like root that filters swamp water, and swamp air, into something breathable.",
+  "properties": {
+    "RESPIRATORY": 0.7,
+    "ANTISEPTIC": 0.4,
+    "HYDRATION": 0.35
+  },
+  "toxicity": "LOW",
+  "rarity": "COMMON",
+  "seasons": [
+    "SUMMER"
+  ],
+  "biome_groups": [
+    "swamp"
+  ],
+  "placement": "WETLAND",
+  "soil": "WATER_EDGE",
+  "light": "BRIGHT",
+  "growth_speed": 1.0,
+  "yield": {
+    "min": 1,
+    "max": 3
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.6,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "respiratory tonic",
+    "herbal tea"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/water_edge",
+  "block": "herbalistscraft:marshroot_crop",
+  "seed_item": "herbalistscraft:marshroot_seeds"
+}

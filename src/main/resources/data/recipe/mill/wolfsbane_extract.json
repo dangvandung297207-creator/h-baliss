@@ -1,0 +1,14 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:wolfsbane_powder"
+  },
+  "additive": {
+    "item": "herbalistscraft:water_vial"
+  },
+  "result": {
+    "id": "herbalistscraft:wolfsbane_extract",
+    "count": 2
+  },
+  "processing_time": 320
+}

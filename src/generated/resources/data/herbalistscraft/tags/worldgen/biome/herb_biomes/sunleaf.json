@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#herbalistscraft:herb_biomes/desert",
+    "#herbalistscraft:herb_biomes/badlands"
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/grave_moss",
+    "features": "herbalistscraft:herb_grave_moss",
+    "step": "vegetal_decoration"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "kind": "TEA",
+  "tier": 2,
+  "rarity": "UNCOMMON",
+  "color": "#9fae6a",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 300,
+  "description": "Feverfew and velvet bell. What you drink the morning after a bad night.",
+  "discovery": "TRADE",
+  "effects": [
+    {
+      "type": "CURE",
+      "targets": [
+        "minecraft:weakness",
+        "minecraft:slowness",
+        "minecraft:hunger"
+      ],
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "INSTANT_HEALTH",
+      "amount": 2,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HYDRATE",
+      "amount": 3,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:recovery_tea",
+  "herb_count": 2
+}

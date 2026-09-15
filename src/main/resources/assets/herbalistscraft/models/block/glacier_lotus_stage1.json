@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "herbalistscraft:block/glacier_lotus_stage1"
+  }
+}

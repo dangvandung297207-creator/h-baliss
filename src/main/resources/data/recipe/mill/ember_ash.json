@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "minecraft:blaze_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:ember_ash",
+    "count": 2
+  },
+  "processing_time": 160
+}

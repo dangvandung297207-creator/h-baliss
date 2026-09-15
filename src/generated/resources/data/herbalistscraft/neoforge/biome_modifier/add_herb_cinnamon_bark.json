@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/cinnamon_bark",
+    "features": "herbalistscraft:herb_cinnamon_bark",
+    "step": "vegetal_decoration"
+  }
+]

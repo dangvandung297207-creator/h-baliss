@@ -1,0 +1,9 @@
+{
+  "type": "herbalistscraft:herb_patch",
+  "config": {
+    "herb": "herbalistscraft:wardroot_crop",
+    "tries": 2,
+    "xz_spread": 3,
+    "y_spread": 1
+  }
+}

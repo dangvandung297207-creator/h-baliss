@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/yarrow",
+    "features": "herbalistscraft:herb_yarrow",
+    "step": "vegetal_decoration"
+  }
+]

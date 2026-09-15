@@ -1,0 +1,46 @@
+{
+  "category": "TOXIC",
+  "morphology": "BERRY",
+  "lore": "Purple flowers, black berries, and a reputation. Handle it with gloves and intent.",
+  "properties": {
+    "TOXIC": 1.0,
+    "SEDATIVE": 0.3
+  },
+  "toxicity": "HIGH",
+  "rarity": "COMMON",
+  "seasons": [
+    "SUMMER"
+  ],
+  "biome_groups": [
+    "swamp",
+    "dark_forest"
+  ],
+  "placement": "SHADED",
+  "soil": "DIRT",
+  "light": "DIM",
+  "growth_speed": 1.0,
+  "yield": {
+    "min": 1,
+    "max": 3
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.6,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "toxic oil",
+    "poison extract"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:nightshade_crop",
+  "seed_item": "herbalistscraft:nightshade_seeds"
+}

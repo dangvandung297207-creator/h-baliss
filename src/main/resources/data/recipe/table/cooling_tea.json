@@ -1,0 +1,18 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:spring_water_cup"
+  },
+  "herb": {
+    "item": "herbalistscraft:dried_frostmint"
+  },
+  "result": {
+    "id": "herbalistscraft:cooling_tea",
+    "count": 1
+  },
+  "brew_time": 140,
+  "medicine": "herbalistscraft:cooling_tea",
+  "extract": {
+    "item": "herbalistscraft:feverfew_extract"
+  }
+}

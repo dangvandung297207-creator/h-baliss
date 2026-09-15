@@ -1,0 +1,18 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:herbal_alcohol"
+  },
+  "herb": {
+    "item": "herbalistscraft:swiftleaf_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:stamina_tonic",
+    "count": 1
+  },
+  "brew_time": 260,
+  "medicine": "herbalistscraft:stamina_tonic",
+  "extract": {
+    "item": "herbalistscraft:blaze_pepper_extract"
+  }
+}

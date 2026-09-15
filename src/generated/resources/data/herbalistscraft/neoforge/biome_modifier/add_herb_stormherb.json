@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/stormherb",
+    "features": "herbalistscraft:herb_stormherb",
+    "step": "vegetal_decoration"
+  }
+]

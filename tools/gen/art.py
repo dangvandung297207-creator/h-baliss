@@ -30,6 +30,13 @@ def _hsv(h: float, s: float, v: float, a: int = 255):
     return (int(r * 255), int(g * 255), int(b * 255), a)
 
 
+def _c(value):
+    """Accept either an '#rrggbb' string or an RGBA tuple wherever a colour is expected."""
+    if value is None or isinstance(value, tuple):
+        return value
+    return parse_color(value)
+
+
 def _mix(c1, c2, t: float):
     return tuple(int(a + (b - a) * t) for a, b in zip(c1[:3], c2[:3])) + (c1[3] if len(c1) > 3 else 255,)
 
@@ -369,6 +376,7 @@ def seed_sprite(herb: dict) -> Image:
 # ---------------------------------------------------------------------------
 
 def vial_sprite(liquid=None, cracked: bool = False) -> Image:
+    liquid = _c(liquid)
     img = Image(16, 16)
     glass = (204, 224, 232, 220)
     glass_dark = (150, 176, 186, 230)
@@ -388,6 +396,7 @@ def vial_sprite(liquid=None, cracked: bool = False) -> Image:
 
 
 def cup_sprite(liquid=None) -> Image:
+    liquid = _c(liquid)
     img = Image(16, 16)
     clay = (176, 132, 104, 255)
     clay_dark = (126, 90, 68, 255)
@@ -405,6 +414,7 @@ def cup_sprite(liquid=None) -> Image:
 
 
 def jar_sprite(content=None) -> Image:
+    content = _c(content)
     img = Image(16, 16)
     glass = (208, 226, 232, 215)
     glass_dark = (150, 176, 186, 230)

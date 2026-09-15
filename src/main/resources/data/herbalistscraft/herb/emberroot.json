@@ -1,0 +1,46 @@
+{
+  "category": "WARMING",
+  "morphology": "ROOT",
+  "lore": "It grows only where the ground itself burns, storing that heat in a black, coal-like tuber.",
+  "properties": {
+    "WARMING": 1.0,
+    "FIRE_PROTECTION": 0.5
+  },
+  "toxicity": "LOW",
+  "rarity": "COMMON",
+  "seasons": [
+    "AUTUMN",
+    "WINTER"
+  ],
+  "biome_groups": [
+    "nether"
+  ],
+  "placement": "NETHER",
+  "soil": "NETHERRACK",
+  "light": "DIM",
+  "growth_speed": 0.9,
+  "yield": {
+    "min": 1,
+    "max": 3
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.6,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "warming tea",
+    "ember salve"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/netherrack",
+  "block": "herbalistscraft:emberroot_crop",
+  "seed_item": "herbalistscraft:emberroot_seeds"
+}

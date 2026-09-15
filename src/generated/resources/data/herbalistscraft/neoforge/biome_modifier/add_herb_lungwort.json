@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/lungwort",
+    "features": "herbalistscraft:herb_lungwort",
+    "step": "vegetal_decoration"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "kind": "TONIC",
+  "tier": 3,
+  "rarity": "RARE",
+  "color": "#c9b04a",
+  "toxicity": "MEDIUM",
+  "toxin_points": 14,
+  "cooldown": 600,
+  "description": "Dawnbloom drawn through stormherb. The world sharpens; sleep can wait.",
+  "discovery": "TRADE",
+  "effects": [
+    {
+      "type": "HERBAL",
+      "effect": "focus",
+      "duration": 2400,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "CURE",
+      "targets": [
+        "minecraft:nausea",
+        "minecraft:blindness"
+      ],
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TOXIN",
+      "amount": 5,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:focus_tonic",
+  "herb_count": 2
+}

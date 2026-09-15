@@ -1,0 +1,39 @@
+{
+  "kind": "TONIC",
+  "tier": 3,
+  "rarity": "RARE",
+  "color": "#8a6f9e",
+  "toxicity": "MEDIUM",
+  "toxin_points": 14,
+  "cooldown": 800,
+  "description": "Dreamcap and grave moss. Deep, healing sleep for the badly hurt - and a heavy head after.",
+  "discovery": "JOURNAL",
+  "effects": [
+    {
+      "type": "VANILLA",
+      "effect": "minecraft:regeneration",
+      "duration": 240,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HERBAL",
+      "effect": "sedation",
+      "duration": 300,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TOXIN",
+      "amount": 8,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:recuperation_tonic",
+  "herb_count": 2
+}

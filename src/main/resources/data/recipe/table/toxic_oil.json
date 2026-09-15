@@ -1,0 +1,15 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:herbal_oil"
+  },
+  "herb": {
+    "item": "herbalistscraft:nightshade_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:toxic_oil",
+    "count": 1
+  },
+  "brew_time": 160,
+  "medicine": "herbalistscraft:toxic_oil"
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/vitalis_root",
+    "features": "herbalistscraft:herb_vitalis_root",
+    "step": "vegetal_decoration"
+  }
+]

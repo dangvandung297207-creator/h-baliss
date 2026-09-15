@@ -1,0 +1,45 @@
+{
+  "category": "SEDATIVE",
+  "morphology": "FLOWER",
+  "lore": "Soft, dark blue bells under the pines. Their scent calms a racing heart within a minute.",
+  "properties": {
+    "SEDATIVE": 0.7,
+    "HEALING": 0.3
+  },
+  "toxicity": "LOW",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "WINTER"
+  ],
+  "biome_groups": [
+    "taiga"
+  ],
+  "placement": "SHADED",
+  "soil": "DIRT",
+  "light": "DIM",
+  "growth_speed": 0.75,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.4,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "sleep tea",
+    "recovery tea"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:velvet_bell_crop",
+  "seed_item": "herbalistscraft:velvet_bell_seeds"
+}

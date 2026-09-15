@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/ashleaf",
+    "features": "herbalistscraft:herb_ashleaf",
+    "step": "vegetal_decoration"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "minecraft:wheat"
+  },
+  "result": {
+    "id": "herbalistscraft:herbal_alcohol",
+    "count": 1
+  },
+  "processing_time": 220,
+  "additive": {
+    "item": "minecraft:sugar"
+  }
+}

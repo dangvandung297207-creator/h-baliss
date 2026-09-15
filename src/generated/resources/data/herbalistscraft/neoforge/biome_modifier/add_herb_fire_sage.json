@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/fire_sage",
+    "features": "herbalistscraft:herb_fire_sage",
+    "step": "vegetal_decoration"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:dreamcap"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_dreamcap",
+    "count": 1
+  },
+  "processing_time": 240
+}

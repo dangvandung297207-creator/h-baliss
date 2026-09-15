@@ -1,0 +1,47 @@
+{
+  "category": "TOXIC",
+  "morphology": "FLOWER",
+  "lore": "Blue hooded flowers grown on high slopes. Hunters say it keeps wolves, and worse, at bay.",
+  "properties": {
+    "TOXIC": 1.3,
+    "RESPIRATORY": 0.3,
+    "SEDATIVE": 0.2
+  },
+  "toxicity": "EXTREME",
+  "rarity": "RARE",
+  "seasons": [
+    "WINTER"
+  ],
+  "biome_groups": [
+    "mountains",
+    "taiga"
+  ],
+  "placement": "HIGH_ELEVATION",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 0.5,
+  "yield": {
+    "min": 1,
+    "max": 1
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.15,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "weakening oil",
+    "venom oil"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:wolfsbane_crop",
+  "seed_item": "herbalistscraft:wolfsbane_seeds"
+}

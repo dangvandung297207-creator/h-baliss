@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/emberroot",
+    "features": "herbalistscraft:herb_emberroot",
+    "step": "vegetal_decoration"
+  }
+]

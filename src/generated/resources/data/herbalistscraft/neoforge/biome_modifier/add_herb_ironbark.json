@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/ironbark",
+    "features": "herbalistscraft:herb_ironbark",
+    "step": "vegetal_decoration"
+  }
+]

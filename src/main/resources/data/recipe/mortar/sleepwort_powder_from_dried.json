@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:dried_sleepwort"
+  },
+  "result": {
+    "id": "herbalistscraft:sleepwort_powder",
+    "count": 2
+  },
+  "grind_time": 80,
+  "quality": 1.15
+}

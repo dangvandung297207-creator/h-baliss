@@ -1,0 +1,62 @@
+{
+  "type": "herbalistscraft:herb_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/ancient_city"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/ancient_city_ice_box"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/end_city_treasure"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "item": "herbalistscraft:journal_page_ancient",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:moonwater",
+      "weight": 2,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:grave_moss",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:venom_oil",
+      "weight": 1,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:vitalis_tonic",
+      "weight": 1,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:dragonscale_herb",
+      "weight": 1,
+      "min_count": 1,
+      "max_count": 1
+    }
+  ],
+  "rolls": 1,
+  "chance": 0.6
+}

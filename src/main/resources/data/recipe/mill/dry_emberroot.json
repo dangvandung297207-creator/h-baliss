@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:emberroot"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_emberroot",
+    "count": 1
+  },
+  "processing_time": 240
+}

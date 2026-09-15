@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:dried_dragonscale_herb"
+  },
+  "result": {
+    "id": "herbalistscraft:dragonscale_herb_powder",
+    "count": 2
+  },
+  "grind_time": 80,
+  "quality": 1.15
+}

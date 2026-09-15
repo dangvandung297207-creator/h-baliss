@@ -1,0 +1,47 @@
+{
+  "category": "STIMULANT",
+  "morphology": "GRASS",
+  "lore": "A spined thistle that crackles when stroked. Handle it with leather between you and it.",
+  "properties": {
+    "STIMULANT": 0.8,
+    "FIRE_PROTECTION": 0.3,
+    "ENERGY": 0.4
+  },
+  "toxicity": "MEDIUM",
+  "rarity": "RARE",
+  "seasons": [
+    "SUMMER"
+  ],
+  "biome_groups": [
+    "mountains",
+    "savanna"
+  ],
+  "placement": "HIGH_ELEVATION",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 0.7,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.3,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "focus tonic",
+    "ember tonic"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:thunder_thistle_crop",
+  "seed_item": "herbalistscraft:thunder_thistle_seeds"
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "TEA",
+  "tier": 1,
+  "rarity": "COMMON",
+  "color": "#e0a12c",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 140,
+  "description": "Sunleaf and its own petals, steeped until the cup glows faintly. A traveller's friend on cold roads.",
+  "discovery": "EXPERIMENT",
+  "effects": [
+    {
+      "type": "HYDRATE",
+      "amount": 4,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TEMP",
+      "warmth": 15,
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HERBAL",
+      "effect": "cold_ward",
+      "duration": 900,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:sun_tea",
+  "herb_count": 2
+}

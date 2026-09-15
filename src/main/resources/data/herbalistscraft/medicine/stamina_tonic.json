@@ -1,0 +1,47 @@
+{
+  "kind": "TONIC",
+  "tier": 2,
+  "rarity": "UNCOMMON",
+  "color": "#d08a2c",
+  "toxicity": "MEDIUM",
+  "toxin_points": 14,
+  "cooldown": 600,
+  "description": "Swiftleaf, ginseng and a bite of blaze pepper. Fast legs, and a hunger that follows.",
+  "discovery": "TRADE",
+  "effects": [
+    {
+      "type": "HERBAL",
+      "effect": "vigor",
+      "duration": 2400,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HYDRATE",
+      "amount": 2,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TOXIN",
+      "amount": 4,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [
+    {
+      "type": "VANILLA",
+      "effect": "minecraft:hunger",
+      "duration": 400,
+      "amplifier": 0,
+      "chance": 0.5,
+      "amount": 0
+    }
+  ],
+  "item": "herbalistscraft:stamina_tonic",
+  "herb_count": 2
+}

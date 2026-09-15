@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/frostmint",
+    "features": "herbalistscraft:herb_frostmint",
+    "step": "vegetal_decoration"
+  }
+]

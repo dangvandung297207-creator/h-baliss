@@ -1,0 +1,45 @@
+{
+  "category": "COOLING",
+  "morphology": "BERRY",
+  "lore": "Frozen berries that burst with cold, clean meltwater when bitten.",
+  "properties": {
+    "COOLING": 0.7,
+    "HYDRATION": 0.6
+  },
+  "toxicity": "NONE",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "WINTER"
+  ],
+  "biome_groups": [
+    "taiga",
+    "snowy"
+  ],
+  "placement": "SURFACE",
+  "soil": "MOSS",
+  "light": "BRIGHT",
+  "growth_speed": 0.9,
+  "yield": {
+    "min": 2,
+    "max": 4
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.55,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "extract"
+  ],
+  "uses": [
+    "sweet berry tea",
+    "hydration"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/moss",
+  "block": "herbalistscraft:moonfrost_berry_crop",
+  "seed_item": "herbalistscraft:moonfrost_berry_seeds"
+}

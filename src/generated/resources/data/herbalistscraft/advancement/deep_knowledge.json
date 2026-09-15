@@ -1,0 +1,23 @@
+{
+  "parent": "herbalistscraft:botanical_scholar",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "herbalistscraft:strong_healing_tonic"
+    },
+    "title": {
+      "translate": "advancement.herbalistscraft.deep_knowledge.title"
+    },
+    "description": {
+      "translate": "advancement.herbalistscraft.deep_knowledge.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

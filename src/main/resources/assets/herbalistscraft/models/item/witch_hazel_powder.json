@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "herbalistscraft:item/witch_hazel_powder"
+  }
+}

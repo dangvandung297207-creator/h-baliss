@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:witch_hazel"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_witch_hazel",
+    "count": 1
+  },
+  "processing_time": 240
+}

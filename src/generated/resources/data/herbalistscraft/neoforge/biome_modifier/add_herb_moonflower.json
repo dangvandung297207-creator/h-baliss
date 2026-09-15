@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/moonflower",
+    "features": "herbalistscraft:herb_moonflower",
+    "step": "vegetal_decoration"
+  }
+]

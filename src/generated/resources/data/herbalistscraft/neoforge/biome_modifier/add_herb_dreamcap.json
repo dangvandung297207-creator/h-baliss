@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/dreamcap",
+    "features": "herbalistscraft:herb_dreamcap",
+    "step": "vegetal_decoration"
+  }
+]

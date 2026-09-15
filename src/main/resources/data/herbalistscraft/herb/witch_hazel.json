@@ -1,0 +1,47 @@
+{
+  "category": "MEDICINAL",
+  "morphology": "BARK",
+  "lore": "A stringy bark that pulls inflammation out of a bruise like a poultice pulls pus.",
+  "properties": {
+    "ANTISEPTIC": 0.8,
+    "HEMOSTATIC": 0.4,
+    "HEALING": 0.3
+  },
+  "toxicity": "NONE",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "AUTUMN"
+  ],
+  "biome_groups": [
+    "forest",
+    "swamp"
+  ],
+  "placement": "SHADED",
+  "soil": "DIRT",
+  "light": "DIM",
+  "growth_speed": 0.8,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.4,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "antiseptic tonic",
+    "burn salve"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:witch_hazel_crop",
+  "seed_item": "herbalistscraft:witch_hazel_seeds"
+}

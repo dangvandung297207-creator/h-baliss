@@ -1,0 +1,30 @@
+{
+  "kind": "TEA",
+  "tier": 1,
+  "rarity": "COMMON",
+  "color": "#b5456a",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 120,
+  "description": "Moonfrost berries and red clover. Sweet, cold, and endlessly drinkable.",
+  "discovery": "STARTER",
+  "effects": [
+    {
+      "type": "HYDRATE",
+      "amount": 6,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TEMPERATURE_RELIEF",
+      "amount": 10,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:berry_tea",
+  "herb_count": 2
+}

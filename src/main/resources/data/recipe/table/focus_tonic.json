@@ -1,0 +1,21 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:herbal_alcohol"
+  },
+  "herb": {
+    "item": "herbalistscraft:dawnbloom_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:focus_tonic",
+    "count": 1
+  },
+  "brew_time": 300,
+  "medicine": "herbalistscraft:focus_tonic",
+  "extract": {
+    "item": "herbalistscraft:stormherb_extract"
+  },
+  "catalyst": {
+    "item": "herbalistscraft:purity_salt"
+  }
+}

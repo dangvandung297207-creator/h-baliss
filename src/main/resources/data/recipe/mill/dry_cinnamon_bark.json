@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:cinnamon_bark"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_cinnamon_bark",
+    "count": 1
+  },
+  "processing_time": 240
+}

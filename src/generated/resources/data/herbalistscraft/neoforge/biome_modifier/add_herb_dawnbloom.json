@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/dawnbloom",
+    "features": "herbalistscraft:herb_dawnbloom",
+    "step": "vegetal_decoration"
+  }
+]

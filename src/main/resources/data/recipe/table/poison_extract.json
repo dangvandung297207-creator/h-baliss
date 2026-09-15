@@ -1,0 +1,18 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:herbal_oil"
+  },
+  "herb": {
+    "item": "herbalistscraft:viperweed_extract"
+  },
+  "result": {
+    "id": "herbalistscraft:poison_extract",
+    "count": 1
+  },
+  "brew_time": 220,
+  "medicine": "herbalistscraft:poison_extract",
+  "extract": {
+    "item": "herbalistscraft:deadly_cap_extract"
+  }
+}

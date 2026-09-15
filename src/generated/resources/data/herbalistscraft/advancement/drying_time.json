@@ -1,0 +1,23 @@
+{
+  "parent": "herbalistscraft:bitter_beginning",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "herbalistscraft:drying_rack"
+    },
+    "title": {
+      "translate": "advancement.herbalistscraft.drying_time.title"
+    },
+    "description": {
+      "translate": "advancement.herbalistscraft.drying_time.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

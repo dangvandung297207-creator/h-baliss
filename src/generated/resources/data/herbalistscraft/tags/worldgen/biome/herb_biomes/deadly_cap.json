@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#herbalistscraft:herb_biomes/dark_forest",
+    "#herbalistscraft:herb_biomes/cave"
+  ]
+}

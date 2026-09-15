@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "herbalistscraft:purity_salt",
+    "herbalistscraft:ember_ash",
+    "herbalistscraft:frost_crystal",
+    "herbalistscraft:life_essence",
+    "herbalistscraft:shadow_ichor"
+  ]
+}

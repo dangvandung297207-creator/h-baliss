@@ -1,0 +1,46 @@
+{
+  "category": "WARMING",
+  "morphology": "LEAF",
+  "lore": "Red-tipped and resinous; burned in a hut it keeps the chill, and worse things, outside.",
+  "properties": {
+    "WARMING": 0.7,
+    "FIRE_PROTECTION": 0.6
+  },
+  "toxicity": "LOW",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "SUMMER"
+  ],
+  "biome_groups": [
+    "badlands",
+    "savanna"
+  ],
+  "placement": "SURFACE",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 0.9,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.45,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "ember salve",
+    "ward salve"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:fire_sage_crop",
+  "seed_item": "herbalistscraft:fire_sage_seeds"
+}

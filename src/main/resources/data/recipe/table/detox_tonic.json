@@ -1,0 +1,21 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:herbal_alcohol"
+  },
+  "herb": {
+    "item": "herbalistscraft:spiritwood_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:detox_tonic",
+    "count": 1
+  },
+  "brew_time": 300,
+  "medicine": "herbalistscraft:detox_tonic",
+  "extract": {
+    "item": "herbalistscraft:grave_moss_extract"
+  },
+  "catalyst": {
+    "item": "herbalistscraft:purity_salt"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "category": "TOXIC",
+  "morphology": "GRASS",
+  "lore": "Fine-cut leaves that smell of mice and regret. The classic poison of impatient nobles.",
+  "properties": {
+    "TOXIC": 1.2,
+    "SEDATIVE": 0.6
+  },
+  "toxicity": "EXTREME",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "SPRING"
+  ],
+  "biome_groups": [
+    "swamp"
+  ],
+  "placement": "WETLAND",
+  "soil": "MOSS",
+  "light": "DIM",
+  "growth_speed": 0.85,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.4,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "slowing oil",
+    "poison extract"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/moss",
+  "block": "herbalistscraft:hemlock_crop",
+  "seed_item": "herbalistscraft:hemlock_seeds"
+}

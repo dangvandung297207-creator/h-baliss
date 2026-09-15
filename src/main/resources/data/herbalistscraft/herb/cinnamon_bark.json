@@ -1,0 +1,45 @@
+{
+  "category": "WARMING",
+  "morphology": "BARK",
+  "lore": "Peeled in curls from a jungle tree, sweet and searing at once. Helps the breath come easy.",
+  "properties": {
+    "WARMING": 0.8,
+    "RESPIRATORY": 0.35,
+    "ENERGY": 0.2
+  },
+  "toxicity": "NONE",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "AUTUMN"
+  ],
+  "biome_groups": [
+    "jungle"
+  ],
+  "placement": "SHADED",
+  "soil": "MOSS",
+  "light": "DIM",
+  "growth_speed": 0.7,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.35,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder"
+  ],
+  "uses": [
+    "warming tea",
+    "respiratory tonic"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/moss",
+  "block": "herbalistscraft:cinnamon_bark_crop",
+  "seed_item": "herbalistscraft:cinnamon_bark_seeds"
+}

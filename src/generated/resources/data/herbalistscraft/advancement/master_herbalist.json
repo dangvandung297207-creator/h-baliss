@@ -1,0 +1,23 @@
+{
+  "parent": "herbalistscraft:botanical_scholar",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "herbalistscraft:golden_chamomile"
+    },
+    "title": {
+      "translate": "advancement.herbalistscraft.master_herbalist.title"
+    },
+    "description": {
+      "translate": "advancement.herbalistscraft.master_herbalist.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

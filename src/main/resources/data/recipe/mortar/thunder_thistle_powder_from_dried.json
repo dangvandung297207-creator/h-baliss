@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:dried_thunder_thistle"
+  },
+  "result": {
+    "id": "herbalistscraft:thunder_thistle_powder",
+    "count": 2
+  },
+  "grind_time": 80,
+  "quality": 1.15
+}

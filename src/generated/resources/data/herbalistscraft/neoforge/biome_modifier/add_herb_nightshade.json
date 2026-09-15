@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/nightshade",
+    "features": "herbalistscraft:herb_nightshade",
+    "step": "vegetal_decoration"
+  }
+]

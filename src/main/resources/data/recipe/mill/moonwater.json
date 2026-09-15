@@ -1,0 +1,14 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:water_vial"
+  },
+  "result": {
+    "id": "herbalistscraft:moonwater",
+    "count": 1
+  },
+  "processing_time": 320,
+  "additive": {
+    "item": "herbalistscraft:moonflower_powder"
+  }
+}

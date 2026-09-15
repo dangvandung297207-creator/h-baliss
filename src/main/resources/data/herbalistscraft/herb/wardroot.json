@@ -1,0 +1,47 @@
+{
+  "category": "PROTECTIVE",
+  "morphology": "ROOT",
+  "lore": "Twisted roots buried at thresholds against frost and ill intent. Brew them for the same reason.",
+  "properties": {
+    "COLD_PROTECTION": 0.6,
+    "ANTISEPTIC": 0.7,
+    "WARMING": 0.2
+  },
+  "toxicity": "LOW",
+  "rarity": "RARE",
+  "seasons": [
+    "WINTER"
+  ],
+  "biome_groups": [
+    "taiga",
+    "mountains"
+  ],
+  "placement": "HIGH_ELEVATION",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 0.55,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.25,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "ward salve",
+    "frost salve"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:wardroot_crop",
+  "seed_item": "herbalistscraft:wardroot_seeds"
+}

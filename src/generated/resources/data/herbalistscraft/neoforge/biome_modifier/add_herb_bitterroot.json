@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/bitterroot",
+    "features": "herbalistscraft:herb_bitterroot",
+    "step": "vegetal_decoration"
+  }
+]

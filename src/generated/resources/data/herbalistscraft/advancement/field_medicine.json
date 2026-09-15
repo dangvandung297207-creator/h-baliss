@@ -1,0 +1,23 @@
+{
+  "parent": "herbalistscraft:bitter_beginning",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "herbalistscraft:minor_healing_tonic"
+    },
+    "title": {
+      "translate": "advancement.herbalistscraft.field_medicine.title"
+    },
+    "description": {
+      "translate": "advancement.herbalistscraft.field_medicine.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

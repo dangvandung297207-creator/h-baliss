@@ -1,0 +1,23 @@
+{
+  "parent": "herbalistscraft:drying_time",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "herbalistscraft:herbal_mill"
+    },
+    "title": {
+      "translate": "advancement.herbalistscraft.millwright.title"
+    },
+    "description": {
+      "translate": "advancement.herbalistscraft.millwright.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

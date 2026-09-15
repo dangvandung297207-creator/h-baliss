@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "herbalistscraft:block/vitalis_root_stage3"
+  }
+}

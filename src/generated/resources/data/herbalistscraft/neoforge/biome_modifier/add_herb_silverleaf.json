@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/silverleaf",
+    "features": "herbalistscraft:herb_silverleaf",
+    "step": "vegetal_decoration"
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/cleansage",
+    "features": "herbalistscraft:herb_cleansage",
+    "step": "vegetal_decoration"
+  }
+]

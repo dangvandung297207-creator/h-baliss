@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/thunder_thistle",
+    "features": "herbalistscraft:herb_thunder_thistle",
+    "step": "vegetal_decoration"
+  }
+]

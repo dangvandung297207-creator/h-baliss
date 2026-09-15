@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/blaze_pepper",
+    "features": "herbalistscraft:herb_blaze_pepper",
+    "step": "vegetal_decoration"
+  }
+]

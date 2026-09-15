@@ -1,0 +1,44 @@
+{
+  "category": "SEDATIVE",
+  "morphology": "FLOWER",
+  "lore": "A cloud of violet on the hillside. Put a sprig in a wound and in a pillow alike.",
+  "properties": {
+    "SEDATIVE": 0.6,
+    "ANTISEPTIC": 0.35,
+    "HYDRATION": 0.15
+  },
+  "toxicity": "NONE",
+  "rarity": "COMMON",
+  "seasons": [
+    "SUMMER"
+  ],
+  "biome_groups": [
+    "plains",
+    "forest"
+  ],
+  "placement": "SURFACE",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 1.1,
+  "yield": {
+    "min": 1,
+    "max": 4
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.75,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed"
+  ],
+  "uses": [
+    "sleep tea",
+    "antiseptic salve"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:lavender_crop",
+  "seed_item": ""
+}

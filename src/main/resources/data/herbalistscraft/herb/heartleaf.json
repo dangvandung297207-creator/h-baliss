@@ -1,0 +1,45 @@
+{
+  "category": "HEALING",
+  "morphology": "LEAF",
+  "lore": "Its leaves are shaped like the organ they mend, and beat faintly when held.",
+  "properties": {
+    "HEALING": 0.9,
+    "REGENERATION": 0.45
+  },
+  "toxicity": "NONE",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "SPRING"
+  ],
+  "biome_groups": [
+    "forest"
+  ],
+  "placement": "SHADED",
+  "soil": "DIRT",
+  "light": "DIM",
+  "growth_speed": 0.85,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.45,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "healing tonic",
+    "recovery tea"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:heartleaf_crop",
+  "seed_item": "herbalistscraft:heartleaf_seeds"
+}

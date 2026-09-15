@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#herbalistscraft:herb_biomes/mountains",
+    "#herbalistscraft:herb_biomes/jungle"
+  ]
+}

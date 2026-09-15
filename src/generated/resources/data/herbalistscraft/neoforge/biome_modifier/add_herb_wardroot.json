@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/wardroot",
+    "features": "herbalistscraft:herb_wardroot",
+    "step": "vegetal_decoration"
+  }
+]

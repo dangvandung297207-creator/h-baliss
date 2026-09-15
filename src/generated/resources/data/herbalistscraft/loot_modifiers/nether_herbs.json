@@ -1,0 +1,74 @@
+{
+  "type": "herbalistscraft:herb_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/nether_bridge"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/bastion_treasure"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/bastion_other"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/bastion_bridge"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/bastion_hoglin_stable"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/ruined_portal"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "item": "herbalistscraft:emberroot",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:cinder_bloom",
+      "weight": 2,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:ashleaf",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:ember_ash",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 2
+    },
+    {
+      "item": "herbalistscraft:dragonscale_herb",
+      "weight": 1,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:blaze_pepper",
+      "weight": 2,
+      "min_count": 1,
+      "max_count": 1
+    }
+  ],
+  "rolls": 1,
+  "chance": 0.6
+}

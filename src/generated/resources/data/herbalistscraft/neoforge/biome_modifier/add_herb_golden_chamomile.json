@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/golden_chamomile",
+    "features": "herbalistscraft:herb_golden_chamomile",
+    "step": "vegetal_decoration"
+  }
+]

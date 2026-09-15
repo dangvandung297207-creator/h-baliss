@@ -1,0 +1,30 @@
+{
+  "kind": "OIL",
+  "tier": 2,
+  "rarity": "UNCOMMON",
+  "color": "#3f5c5c",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 60,
+  "description": "Hemlock and sleepwort. A numbing coat that makes every step an effort.",
+  "discovery": "EXPERIMENT",
+  "effects": [],
+  "side_effects": [],
+  "item": "herbalistscraft:slowing_oil",
+  "herb_count": 2,
+  "coating": {
+    "charges": 10,
+    "duration_ticks": 2400,
+    "potency": 0.7,
+    "on_hit": [
+      {
+        "type": "VANILLA",
+        "effect": "minecraft:slowness",
+        "duration": 160,
+        "amplifier": 1,
+        "amount": 0,
+        "chance": 1.0
+      }
+    ]
+  }
+}

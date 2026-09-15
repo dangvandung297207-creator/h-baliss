@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:blackthorn"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_blackthorn",
+    "count": 1
+  },
+  "processing_time": 240
+}

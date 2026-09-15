@@ -1,0 +1,21 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:salve_base"
+  },
+  "herb": {
+    "item": "herbalistscraft:ironbark_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:ward_salve",
+    "count": 1
+  },
+  "brew_time": 260,
+  "medicine": "herbalistscraft:ward_salve",
+  "extract": {
+    "item": "herbalistscraft:wardroot_extract"
+  },
+  "catalyst": {
+    "item": "herbalistscraft:frost_crystal"
+  }
+}

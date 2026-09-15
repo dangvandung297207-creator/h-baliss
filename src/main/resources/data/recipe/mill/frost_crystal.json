@@ -1,0 +1,14 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "minecraft:snowball"
+  },
+  "result": {
+    "id": "herbalistscraft:frost_crystal",
+    "count": 1
+  },
+  "processing_time": 200,
+  "additive": {
+    "item": "minecraft:amethyst_shard"
+  }
+}

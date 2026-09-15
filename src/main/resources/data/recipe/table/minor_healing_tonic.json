@@ -1,0 +1,15 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:water_vial"
+  },
+  "herb": {
+    "item": "herbalistscraft:bloodroot_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:minor_healing_tonic",
+    "count": 1
+  },
+  "brew_time": 160,
+  "medicine": "herbalistscraft:minor_healing_tonic"
+}

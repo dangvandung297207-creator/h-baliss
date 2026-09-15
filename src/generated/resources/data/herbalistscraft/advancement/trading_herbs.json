@@ -1,0 +1,23 @@
+{
+  "parent": "herbalistscraft:first_leaf",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "herbalistscraft:seed_pouch"
+    },
+    "title": {
+      "translate": "advancement.herbalistscraft.trading_herbs.title"
+    },
+    "description": {
+      "translate": "advancement.herbalistscraft.trading_herbs.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

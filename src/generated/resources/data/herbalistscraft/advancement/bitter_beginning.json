@@ -1,0 +1,23 @@
+{
+  "parent": "herbalistscraft:first_leaf",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "herbalistscraft:mortar_and_pestle"
+    },
+    "title": {
+      "translate": "advancement.herbalistscraft.bitter_beginning.title"
+    },
+    "description": {
+      "translate": "advancement.herbalistscraft.bitter_beginning.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

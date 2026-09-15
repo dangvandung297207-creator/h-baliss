@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "herbalistscraft:block/herbal_mill",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "herbalistscraft:block/herbal_mill",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "herbalistscraft:block/herbal_mill",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "herbalistscraft:block/herbal_mill",
+      "y": 270
+    }
+  }
+}

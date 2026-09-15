@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/deadly_cap",
+    "features": "herbalistscraft:herb_deadly_cap",
+    "step": "vegetal_decoration"
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "kind": "TEA",
+  "tier": 1,
+  "rarity": "COMMON",
+  "color": "#c9b473",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 120,
+  "description": "Chamomile, clover and a little lavender. The first cup every herbalist learns.",
+  "discovery": "STARTER",
+  "effects": [
+    {
+      "type": "HYDRATE",
+      "amount": 4,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "INSTANT_HEALTH",
+      "amount": 1,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HERBAL",
+      "effect": "antiseptic",
+      "duration": 400,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:herbal_tea",
+  "herb_count": 2
+}

@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:velvet_bell"
+  },
+  "result": {
+    "id": "herbalistscraft:velvet_bell_powder",
+    "count": 1
+  },
+  "grind_time": 60,
+  "quality": 0.9
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/blackthorn",
+    "features": "herbalistscraft:herb_blackthorn",
+    "step": "vegetal_decoration"
+  }
+]

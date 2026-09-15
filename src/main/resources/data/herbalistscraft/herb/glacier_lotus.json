@@ -1,0 +1,45 @@
+{
+  "category": "COOLING",
+  "morphology": "FLOWER",
+  "lore": "It blooms on meltwater pools that refreeze each night. Few herbalists ever see one.",
+  "properties": {
+    "COOLING": 1.1,
+    "REGENERATION": 0.5,
+    "COLD_PROTECTION": 0.7
+  },
+  "toxicity": "LOW",
+  "rarity": "VERY_RARE",
+  "seasons": [
+    "WINTER"
+  ],
+  "biome_groups": [
+    "snowy"
+  ],
+  "placement": "WETLAND",
+  "soil": "WATER_EDGE",
+  "light": "BRIGHT",
+  "growth_speed": 0.4,
+  "yield": {
+    "min": 1,
+    "max": 1
+  },
+  "seed_return": {
+    "min": 0,
+    "max": 1
+  },
+  "regrow_chance": 0.1,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "extract"
+  ],
+  "uses": [
+    "frost salve",
+    "vitalis tonic"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/water_edge",
+  "block": "herbalistscraft:glacier_lotus_crop",
+  "seed_item": "herbalistscraft:glacier_lotus_seeds"
+}

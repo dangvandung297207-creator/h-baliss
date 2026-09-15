@@ -1,0 +1,39 @@
+{
+  "kind": "TEA",
+  "tier": 3,
+  "rarity": "RARE",
+  "color": "#5d4d7a",
+  "toxicity": "MEDIUM",
+  "toxin_points": 14,
+  "cooldown": 900,
+  "description": "Sleepwort, taken carefully. The marsh keeps its own recipes and shares them grudgingly.",
+  "discovery": "JOURNAL",
+  "effects": [
+    {
+      "type": "HERBAL",
+      "effect": "sedation",
+      "duration": 2400,
+      "amplifier": 1,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "VANILLA",
+      "effect": "minecraft:regeneration",
+      "duration": 100,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TOXIN",
+      "amount": 6,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:hush_tea",
+  "herb_count": 2
+}

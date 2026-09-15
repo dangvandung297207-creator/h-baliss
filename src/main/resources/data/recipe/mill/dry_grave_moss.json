@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:grave_moss"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_grave_moss",
+    "count": 1
+  },
+  "processing_time": 240
+}

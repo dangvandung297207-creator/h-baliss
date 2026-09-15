@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/wild_ginseng",
+    "features": "herbalistscraft:herb_wild_ginseng",
+    "step": "vegetal_decoration"
+  }
+]

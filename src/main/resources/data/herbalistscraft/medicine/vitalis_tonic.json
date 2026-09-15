@@ -1,0 +1,38 @@
+{
+  "kind": "TONIC",
+  "tier": 4,
+  "rarity": "VERY_RARE",
+  "color": "#e0b03a",
+  "toxicity": "HIGH",
+  "toxin_points": 26,
+  "cooldown": 1200,
+  "description": "An old apothecary formula. For a time the drinker simply has more life in them.",
+  "discovery": "LOOT",
+  "effects": [
+    {
+      "type": "HERBAL",
+      "effect": "vitality",
+      "duration": 2400,
+      "amplifier": 1,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "INSTANT_HEALTH",
+      "amount": 4,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "TOXIN",
+      "amount": 15,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:vitalis_tonic",
+  "herb_count": 2
+}

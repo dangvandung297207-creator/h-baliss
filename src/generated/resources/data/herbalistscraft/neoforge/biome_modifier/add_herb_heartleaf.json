@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/heartleaf",
+    "features": "herbalistscraft:herb_heartleaf",
+    "step": "vegetal_decoration"
+  }
+]

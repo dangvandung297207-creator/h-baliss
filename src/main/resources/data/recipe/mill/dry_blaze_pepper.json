@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:blaze_pepper"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_blaze_pepper",
+    "count": 1
+  },
+  "processing_time": 240
+}

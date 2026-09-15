@@ -262,6 +262,8 @@ def _recipes(data: pathlib.Path, herbs: list, medicines: list, log=print) -> Non
 # ---------------------------------------------------------------------------
 
 def _tags(root: pathlib.Path, herbs: list, log=print) -> None:
+    # Everything below is machine-generated; keep it out of src/main/resources.
+    root = root / "src/generated/resources"
     tags = root / "data" / MODID / "tags"
     item_values = {
         "herbs": [f"{MODID}:{h['id']}" for h in herbs],
@@ -333,6 +335,8 @@ def _tags(root: pathlib.Path, herbs: list, log=print) -> None:
 # ---------------------------------------------------------------------------
 
 def _worldgen(root: pathlib.Path, herbs: list, log=print) -> None:
+    # Everything below is machine-generated; keep it out of src/main/resources.
+    root = root / "src/generated/resources"
     cfg = root / "data" / MODID / "worldgen/configured_feature"
     placed = root / "data" / MODID / "worldgen/placed_feature"
     modifiers = root / "data" / MODID / "neoforge/biome_modifier"
@@ -385,6 +389,8 @@ def _worldgen(root: pathlib.Path, herbs: list, log=print) -> None:
 # ---------------------------------------------------------------------------
 
 def _loot(root: pathlib.Path, herbs: list, log=print) -> None:
+    # Everything below is machine-generated; keep it out of src/main/resources.
+    root = root / "src/generated/resources"
     tables = root / "data" / MODID / "loot_table"
     by_rarity: dict[str, list] = {}
     for herb in herbs:
@@ -524,102 +530,48 @@ def _loot(root: pathlib.Path, herbs: list, log=print) -> None:
 # ---------------------------------------------------------------------------
 
 def _advancements(root: pathlib.Path, herbs: list, medicines: list, lang: dict, log=print) -> None:
+    # Everything below is machine-generated; keep it out of src/main/resources.
+    root = root / "src/generated/resources"
+    """All Herbalist's Craft advancements use the `minecraft:impossible` criterion and are
+    awarded from code by AdvancementGrants, which owns the real (data-driven) conditions."""
     adv = root / "data" / MODID / "advancement"
     common_herbs = [h for h in herbs if h.get("rarity") == "COMMON"]
     tier4 = [m for m in medicines if m.get("tier", 1) >= 4]
-    icon = "herbalistscraft:herbalists_journal"
+    criteria = {"granted": {"trigger": "minecraft:impossible"}}
 
-    def frame(name, parent, criteria, display, frame_type="task", hidden=False):
-        body = {"parent": parent, "criteria": criteria,
-                "display": {"icon": {"id": display["icon"]}, "title": {"translate": display["title"]},
-                            "description": {"translate": display["description"]},
-                            "frame": frame_type, "show_toast": True, "announce_to_chat": True,
-                            "background": display.get("background", "minecraft:textures/gui/advancements/backgrounds/husbandry.png"),
-                            "hidden": hidden}}
-        _write(adv / f"{name}.json", body)
+    def frame(name, parent, icon, frame_type="task", hidden=False, background=None):
+        display = {
+            "icon": {"id": icon},
+            "title": {"translate": f"advancement.{MODID}.{name}.title"},
+            "description": {"translate": f"advancement.{MODID}.{name}.description"},
+            "frame": frame_type,
+            "show_toast": True,
+            "announce_to_chat": True,
+            "hidden": hidden,
+        }
+        if name == "root":
+            display["background"] = background or "minecraft:textures/gui/advancements/backgrounds/husbandry.png"
+        _write(adv / f"{name}.json", {"parent": parent, "criteria": criteria, "display": display})
 
-    frame("root", "minecraft:husbandry/root",
-          {"has_herb": {"trigger": "minecraft:inventory_changed",
-                        "conditions": {"items": [{"items": "#herbalistscraft:herbs"}]}}},
-          {"icon": icon, "title": f"advancement.{MODID}.root.title",
-           "description": f"advancement.{MODID}.root.description"}, "task")
+    frame("root", "minecraft:husbandry/root", f"{MODID}:herbalists_journal")
+    frame("first_leaf", f"{MODID}:root", f"{MODID}:bloodroot")
+    frame("bitter_beginning", f"{MODID}:first_leaf", f"{MODID}:mortar_and_pestle")
+    frame("drying_time", f"{MODID}:bitter_beginning", f"{MODID}:drying_rack")
+    frame("millwright", f"{MODID}:drying_time", f"{MODID}:herbal_mill")
+    frame("field_medicine", f"{MODID}:bitter_beginning", f"{MODID}:minor_healing_tonic")
+    frame("poisoners_art", f"{MODID}:field_medicine", f"{MODID}:toxic_oil", "goal")
+    frame("botanical_scholar", f"{MODID}:field_medicine", f"{MODID}:herbalists_journal", "goal")
+    frame("master_herbalist", f"{MODID}:botanical_scholar", f"{MODID}:golden_chamomile", "challenge")
+    frame("deep_knowledge", f"{MODID}:botanical_scholar", f"{MODID}:strong_healing_tonic", "goal")
+    frame("four_seasons", f"{MODID}:botanical_scholar", f"{MODID}:sun_tea", "goal")
+    frame("wanderer", f"{MODID}:botanical_scholar", f"{MODID}:moonfrost_berry", "goal")
+    frame("toxin_survivor", f"{MODID}:field_medicine", f"{MODID}:detox_tonic", "goal")
+    frame("trading_herbs", f"{MODID}:first_leaf", f"{MODID}:seed_pouch")
+    frame("ancient_knowledge", f"{MODID}:deep_knowledge", f"{MODID}:dragonscale_draught", "challenge")
 
-    frame("first_leaf", f"{MODID}:root",
-          {"harvest": {"trigger": f"{MODID}:herbalist_event",
-                       "conditions": {"event": "harvest_herb", "count": 1}}},
-          {"icon": "herbalistscraft:bloodroot", "title": f"advancement.{MODID}.first_leaf.title",
-           "description": f"advancement.{MODID}.first_leaf.description"})
-
-    frame("bitter_beginning", f"{MODID}:first_leaf",
-          {"grind": {"trigger": f"{MODID}:herbalist_event", "conditions": {"event": "grind_herb", "count": 1}}},
-          {"icon": "herbalistscraft:mortar_and_pestle", "title": f"advancement.{MODID}.bitter_beginning.title",
-           "description": f"advancement.{MODID}.bitter_beginning.description"})
-
-    frame("drying_time", f"{MODID}:bitter_beginning",
-          {"dry": {"trigger": f"{MODID}:herbalist_event", "conditions": {"event": "dry_herb", "count": 3}}},
-          {"icon": "herbalistscraft:drying_rack", "title": f"advancement.{MODID}.drying_time.title",
-           "description": f"advancement.{MODID}.drying_time.description"})
-
-    frame("millwright", f"{MODID}:drying_time",
-          {"mill": {"trigger": f"{MODID}:herbalist_event", "conditions": {"event": "use_mill", "count": 1}}},
-          {"icon": "herbalistscraft:herbal_mill", "title": f"advancement.{MODID}.millwright.title",
-           "description": f"advancement.{MODID}.millwright.description"})
-
-    frame("field_medicine", f"{MODID}:bitter_beginning",
-          {"craft": {"trigger": f"{MODID}:herbalist_event", "conditions": {"event": "craft_medicine", "count": 1}}},
-          {"icon": "herbalistscraft:minor_healing_tonic", "title": f"advancement.{MODID}.field_medicine.title",
-           "description": f"advancement.{MODID}.field_medicine.description"})
-
-    frame("poisoners_art", f"{MODID}:field_medicine",
-          {"coat": {"trigger": f"{MODID}:herbalist_event", "conditions": {"event": "apply_coating", "count": 1}}},
-          {"icon": "herbalistscraft:toxic_oil", "title": f"advancement.{MODID}.poisoners_art.title",
-           "description": f"advancement.{MODID}.poisoners_art.description"}, "goal")
-
-    frame("botanical_scholar", f"{MODID}:field_medicine",
-          {"herbs": {"trigger": f"{MODID}:herbalist_event", "conditions": {"event": "discover_herb", "count": 20}}},
-          {"icon": "herbalistscraft:herbalists_journal", "title": f"advancement.{MODID}.botanical_scholar.title",
-           "description": f"advancement.{MODID}.botanical_scholar.description"}, "goal")
-
-    frame("master_herbalist", f"{MODID}:botanical_scholar",
-          {"common": {"trigger": f"{MODID}:herbalist_event",
-                      "conditions": {"event": "discover_herb", "count": len(common_herbs), "rarity": "COMMON"}}},
-          {"icon": "herbalistscraft:golden_chamomile", "title": f"advancement.{MODID}.master_herbalist.title",
-           "description": f"advancement.{MODID}.master_herbalist.description"}, "challenge")
-
-    frame("deep_knowledge", f"{MODID}:botanical_scholar",
-          {"recipes": {"trigger": f"{MODID}:herbalist_event",
-                       "conditions": {"event": "discover_recipe", "count": 25}}},
-          {"icon": "herbalistscraft:strong_healing_tonic", "title": f"advancement.{MODID}.deep_knowledge.title",
-           "description": f"advancement.{MODID}.deep_knowledge.description"}, "goal")
-
-    frame("four_seasons", f"{MODID}:botanical_scholar",
-          {"seasons": {"trigger": f"{MODID}:herbalist_set", "conditions": {"set": "season", "count": 4}}},
-          {"icon": "herbalistscraft:sun_tea", "title": f"advancement.{MODID}.four_seasons.title",
-           "description": f"advancement.{MODID}.four_seasons.description"}, "goal")
-
-    frame("wanderer", f"{MODID}:botanical_scholar",
-          {"biomes": {"trigger": f"{MODID}:herbalist_set", "conditions": {"set": "biome_group", "count": 8}}},
-          {"icon": "herbalistscraft:moonfrost_berry", "title": f"advancement.{MODID}.wanderer.title",
-           "description": f"advancement.{MODID}.wanderer.description"}, "goal")
-
-    frame("toxin_survivor", f"{MODID}:field_medicine",
-          {"purge": {"trigger": f"{MODID}:herbalist_event",
-                     "conditions": {"event": "purge_toxin", "count": 1}}},
-          {"icon": "herbalistscraft:detox_tonic", "title": f"advancement.{MODID}.toxin_survivor.title",
-           "description": f"advancement.{MODID}.toxin_survivor.description"}, "goal")
-
-    frame("trading_herbs", f"{MODID}:first_leaf",
-          {"trade": {"trigger": f"{MODID}:herbalist_event", "conditions": {"event": "trade_with_herbalist", "count": 1}}},
-          {"icon": "herbalistscraft:seed_pouch", "title": f"advancement.{MODID}.trading_herbs.title",
-           "description": f"advancement.{MODID}.trading_herbs.description"})
-
-    frame("ancient_knowledge", f"{MODID}:deep_knowledge",
-          {"ancient": {"trigger": f"{MODID}:herbalist_event",
-                       "conditions": {"event": "discover_medicine", "count": 1, "tier": 4}}},
-          {"icon": "herbalistscraft:dragonscale_draught", "title": f"advancement.{MODID}.ancient_knowledge.title",
-           "description": f"advancement.{MODID}.ancient_knowledge.description"}, "challenge")
-
-    log(f"  advancements: 14 advancement files ({len(common_herbs)} common herbs, {len(tier4)} ancient recipes)")
+    log(f"  advancements: 15 advancement files (root, first_leaf, bitter_beginning, drying_time, millwright, "
+        f"field_medicine, poisoners_art, botanical_scholar [{len(common_herbs)} common herbs], master_herbalist, "
+        f"deep_knowledge, four_seasons, wanderer, toxin_survivor, trading_herbs, ancient_knowledge [{len(tier4)} tier 4])")
 
 
 # ---------------------------------------------------------------------------

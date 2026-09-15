@@ -1,0 +1,46 @@
+{
+  "category": "STIMULANT",
+  "morphology": "GRASS",
+  "lore": "It grows on ridges where lightning strikes. The taste is ozone and urgency.",
+  "properties": {
+    "STIMULANT": 1.0,
+    "ENERGY": 0.6
+  },
+  "toxicity": "MEDIUM",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "SUMMER",
+    "AUTUMN"
+  ],
+  "biome_groups": [
+    "mountains"
+  ],
+  "placement": "HIGH_ELEVATION",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 0.85,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.45,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "stamina tonic",
+    "focus tonic"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:stormherb_crop",
+  "seed_item": "herbalistscraft:stormherb_seeds"
+}

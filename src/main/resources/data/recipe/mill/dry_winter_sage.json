@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:winter_sage"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_winter_sage",
+    "count": 1
+  },
+  "processing_time": 240
+}

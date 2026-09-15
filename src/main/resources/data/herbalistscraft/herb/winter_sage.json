@@ -1,0 +1,49 @@
+{
+  "category": "COOLING",
+  "morphology": "LEAF",
+  "lore": "A grey-green survivor of the long dark. It keeps the lungs clear when the cold settles in.",
+  "properties": {
+    "COOLING": 0.6,
+    "ANTISEPTIC": 0.4,
+    "COLD_PROTECTION": 0.4,
+    "RESPIRATORY": 0.4
+  },
+  "toxicity": "NONE",
+  "rarity": "COMMON",
+  "seasons": [
+    "WINTER",
+    "AUTUMN"
+  ],
+  "biome_groups": [
+    "taiga",
+    "mountains"
+  ],
+  "placement": "SURFACE",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 1.0,
+  "yield": {
+    "min": 1,
+    "max": 3
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.65,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "frost lung tonic",
+    "warming tonic"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:winter_sage_crop",
+  "seed_item": "herbalistscraft:winter_sage_seeds"
+}

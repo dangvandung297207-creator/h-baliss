@@ -1,0 +1,45 @@
+{
+  "category": "COOLING",
+  "morphology": "FLOWER",
+  "lore": "White bells that ring silently under snowfall, lulling fever and wakefulness alike.",
+  "properties": {
+    "COOLING": 0.9,
+    "SEDATIVE": 0.35
+  },
+  "toxicity": "LOW",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "WINTER"
+  ],
+  "biome_groups": [
+    "snowy"
+  ],
+  "placement": "SURFACE",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 0.8,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.4,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "sleep tea",
+    "cooling tea"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:snowbell_crop",
+  "seed_item": "herbalistscraft:snowbell_seeds"
+}

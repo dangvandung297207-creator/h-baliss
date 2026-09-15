@@ -1,0 +1,18 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:herbal_oil"
+  },
+  "herb": {
+    "item": "herbalistscraft:hemlock_extract"
+  },
+  "result": {
+    "id": "herbalistscraft:slowing_oil",
+    "count": 1
+  },
+  "brew_time": 220,
+  "medicine": "herbalistscraft:slowing_oil",
+  "extract": {
+    "item": "herbalistscraft:sleepwort_extract"
+  }
+}

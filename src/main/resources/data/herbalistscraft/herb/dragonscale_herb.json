@@ -1,0 +1,48 @@
+{
+  "category": "PROTECTIVE",
+  "morphology": "LEAF",
+  "lore": "Its leaves flake like scales and refuse every flame. The old texts call it the ward of wyrms.",
+  "properties": {
+    "FIRE_PROTECTION": 1.2,
+    "HEALING": 0.5,
+    "WARMING": 0.3
+  },
+  "toxicity": "MEDIUM",
+  "rarity": "VERY_RARE",
+  "seasons": [
+    "SUMMER",
+    "AUTUMN"
+  ],
+  "biome_groups": [
+    "mountains",
+    "nether"
+  ],
+  "placement": "HIGH_ELEVATION",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 0.4,
+  "yield": {
+    "min": 1,
+    "max": 1
+  },
+  "seed_return": {
+    "min": 0,
+    "max": 1
+  },
+  "regrow_chance": 0.1,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "fire salve",
+    "dragonscale draught"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:dragonscale_herb_crop",
+  "seed_item": "herbalistscraft:dragonscale_herb_seeds"
+}

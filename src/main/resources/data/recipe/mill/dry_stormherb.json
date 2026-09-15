@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:stormherb"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_stormherb",
+    "count": 1
+  },
+  "processing_time": 240
+}

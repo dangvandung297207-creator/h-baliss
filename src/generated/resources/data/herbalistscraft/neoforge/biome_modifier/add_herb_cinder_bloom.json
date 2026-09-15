@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/cinder_bloom",
+    "features": "herbalistscraft:herb_cinder_bloom",
+    "step": "vegetal_decoration"
+  }
+]

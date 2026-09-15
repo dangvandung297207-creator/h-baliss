@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/moonfrost_berry",
+    "features": "herbalistscraft:herb_moonfrost_berry",
+    "step": "vegetal_decoration"
+  }
+]

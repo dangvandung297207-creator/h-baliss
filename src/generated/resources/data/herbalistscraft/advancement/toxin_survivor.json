@@ -1,0 +1,23 @@
+{
+  "parent": "herbalistscraft:field_medicine",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "herbalistscraft:detox_tonic"
+    },
+    "title": {
+      "translate": "advancement.herbalistscraft.toxin_survivor.title"
+    },
+    "description": {
+      "translate": "advancement.herbalistscraft.toxin_survivor.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "category": "STIMULANT",
+  "morphology": "LEAF",
+  "lore": "Plains runners chew it before a long chase. It makes the legs forget they are tired.",
+  "properties": {
+    "STIMULANT": 0.7,
+    "ENERGY": 0.7
+  },
+  "toxicity": "LOW",
+  "rarity": "COMMON",
+  "seasons": [
+    "SUMMER"
+  ],
+  "biome_groups": [
+    "plains",
+    "savanna"
+  ],
+  "placement": "SURFACE",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 1.15,
+  "yield": {
+    "min": 1,
+    "max": 3
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.7,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed"
+  ],
+  "uses": [
+    "stamina tonic",
+    "herbal tea"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:swiftleaf_crop",
+  "seed_item": ""
+}

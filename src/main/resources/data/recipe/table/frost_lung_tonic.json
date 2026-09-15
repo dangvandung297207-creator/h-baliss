@@ -1,0 +1,21 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:water_vial"
+  },
+  "herb": {
+    "item": "herbalistscraft:winter_sage_powder"
+  },
+  "result": {
+    "id": "herbalistscraft:frost_lung_tonic",
+    "count": 1
+  },
+  "brew_time": 300,
+  "medicine": "herbalistscraft:frost_lung_tonic",
+  "extract": {
+    "item": "herbalistscraft:iceleaf_extract"
+  },
+  "catalyst": {
+    "item": "herbalistscraft:frost_crystal"
+  }
+}

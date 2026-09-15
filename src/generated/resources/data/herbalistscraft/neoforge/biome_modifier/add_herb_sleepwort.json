@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/sleepwort",
+    "features": "herbalistscraft:herb_sleepwort",
+    "step": "vegetal_decoration"
+  }
+]

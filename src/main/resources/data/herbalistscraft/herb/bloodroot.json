@@ -1,0 +1,45 @@
+{
+  "category": "HEALING",
+  "morphology": "ROOT",
+  "lore": "Torn from the ground it bleeds a crimson sap that closes wounds faster than any needle.",
+  "properties": {
+    "HEALING": 1.0,
+    "HEMOSTATIC": 0.7
+  },
+  "toxicity": "LOW",
+  "rarity": "COMMON",
+  "seasons": [
+    "SPRING",
+    "AUTUMN"
+  ],
+  "biome_groups": [
+    "plains",
+    "forest"
+  ],
+  "placement": "SURFACE",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 1.0,
+  "yield": {
+    "min": 1,
+    "max": 3
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.65,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed"
+  ],
+  "uses": [
+    "healing tonic",
+    "antiseptic salve",
+    "hemostatic"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:bloodroot_crop",
+  "seed_item": ""
+}

@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:wild_ginseng"
+  },
+  "result": {
+    "id": "herbalistscraft:wild_ginseng_powder",
+    "count": 1
+  },
+  "grind_time": 60,
+  "quality": 0.9
+}

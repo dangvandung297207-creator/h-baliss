@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/viperweed",
+    "features": "herbalistscraft:herb_viperweed",
+    "step": "vegetal_decoration"
+  }
+]

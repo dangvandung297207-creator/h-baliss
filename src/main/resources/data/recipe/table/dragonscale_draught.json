@@ -1,0 +1,21 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:moonwater"
+  },
+  "herb": {
+    "item": "herbalistscraft:dragonscale_herb_extract"
+  },
+  "result": {
+    "id": "herbalistscraft:dragonscale_draught",
+    "count": 1
+  },
+  "brew_time": 420,
+  "medicine": "herbalistscraft:dragonscale_draught",
+  "extract": {
+    "item": "herbalistscraft:cinder_bloom_extract"
+  },
+  "catalyst": {
+    "item": "herbalistscraft:ember_ash"
+  }
+}

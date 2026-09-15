@@ -1,0 +1,23 @@
+{
+  "parent": "herbalistscraft:botanical_scholar",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "herbalistscraft:moonfrost_berry"
+    },
+    "title": {
+      "translate": "advancement.herbalistscraft.wanderer.title"
+    },
+    "description": {
+      "translate": "advancement.herbalistscraft.wanderer.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

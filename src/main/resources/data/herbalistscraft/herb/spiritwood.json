@@ -1,0 +1,48 @@
+{
+  "category": "MEDICINAL",
+  "morphology": "BARK",
+  "lore": "Pale wood from a tree struck by lightning and left standing. It hums when medicine is near.",
+  "properties": {
+    "ANTISEPTIC": 0.7,
+    "REGENERATION": 0.35,
+    "ENERGY": 0.2
+  },
+  "toxicity": "LOW",
+  "rarity": "RARE",
+  "seasons": [
+    "AUTUMN",
+    "WINTER"
+  ],
+  "biome_groups": [
+    "forest",
+    "taiga"
+  ],
+  "placement": "SHADED",
+  "soil": "DIRT",
+  "light": "DIM",
+  "growth_speed": 0.6,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.25,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "detox tonic",
+    "life essence"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:spiritwood_crop",
+  "seed_item": "herbalistscraft:spiritwood_seeds"
+}

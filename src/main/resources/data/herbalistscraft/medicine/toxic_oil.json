@@ -1,0 +1,30 @@
+{
+  "kind": "OIL",
+  "tier": 1,
+  "rarity": "COMMON",
+  "color": "#4a6b2a",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 60,
+  "description": "Nightshade steeped in seed oil. Crude, cheap, and it works on anything with a blade.",
+  "discovery": "EXPERIMENT",
+  "effects": [],
+  "side_effects": [],
+  "item": "herbalistscraft:toxic_oil",
+  "herb_count": 1,
+  "coating": {
+    "charges": 12,
+    "duration_ticks": 2400,
+    "potency": 0.6,
+    "on_hit": [
+      {
+        "type": "VANILLA",
+        "effect": "minecraft:poison",
+        "duration": 60,
+        "amplifier": 0,
+        "amount": 0,
+        "chance": 1.0
+      }
+    ]
+  }
+}

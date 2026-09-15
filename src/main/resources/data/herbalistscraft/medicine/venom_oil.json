@@ -1,0 +1,38 @@
+{
+  "kind": "OIL",
+  "tier": 4,
+  "rarity": "VERY_RARE",
+  "color": "#1f4a1c",
+  "toxicity": "NONE",
+  "toxin_points": 0,
+  "cooldown": 60,
+  "description": "Viperweed drawn a second time through shadow ichor. Almost nothing survives the wound.",
+  "discovery": "LOOT",
+  "effects": [],
+  "side_effects": [],
+  "item": "herbalistscraft:venom_oil",
+  "herb_count": 1,
+  "coating": {
+    "charges": 16,
+    "duration_ticks": 3600,
+    "potency": 1.0,
+    "on_hit": [
+      {
+        "type": "VANILLA",
+        "effect": "minecraft:poison",
+        "duration": 200,
+        "amplifier": 1,
+        "amount": 0,
+        "chance": 1.0
+      },
+      {
+        "type": "HERBAL",
+        "effect": "wasting",
+        "duration": 160,
+        "amplifier": 0,
+        "amount": 0,
+        "chance": 1.0
+      }
+    ]
+  }
+}

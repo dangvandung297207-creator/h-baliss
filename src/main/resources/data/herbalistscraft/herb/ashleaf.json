@@ -1,0 +1,43 @@
+{
+  "category": "PROTECTIVE",
+  "morphology": "LEAF",
+  "lore": "Grey leaves that smoulder rather than burn. Nether locals brew them against the heat.",
+  "properties": {
+    "FIRE_PROTECTION": 0.9,
+    "WARMING": 0.4
+  },
+  "toxicity": "LOW",
+  "rarity": "COMMON",
+  "seasons": [
+    "SUMMER",
+    "AUTUMN"
+  ],
+  "biome_groups": [
+    "nether"
+  ],
+  "placement": "NETHER",
+  "soil": "NETHERRACK",
+  "light": "DIM",
+  "growth_speed": 0.8,
+  "yield": {
+    "min": 1,
+    "max": 3
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.5,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed"
+  ],
+  "uses": [
+    "fire salve",
+    "ember ash"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/netherrack",
+  "block": "herbalistscraft:ashleaf_crop",
+  "seed_item": ""
+}

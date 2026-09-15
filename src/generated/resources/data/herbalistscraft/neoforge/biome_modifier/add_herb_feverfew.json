@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/feverfew",
+    "features": "herbalistscraft:herb_feverfew",
+    "step": "vegetal_decoration"
+  }
+]

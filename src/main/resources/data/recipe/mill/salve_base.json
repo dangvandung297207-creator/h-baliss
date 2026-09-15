@@ -1,0 +1,14 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "minecraft:honeycomb"
+  },
+  "result": {
+    "id": "herbalistscraft:salve_base",
+    "count": 1
+  },
+  "processing_time": 220,
+  "additive": {
+    "item": "herbalistscraft:herbal_oil"
+  }
+}

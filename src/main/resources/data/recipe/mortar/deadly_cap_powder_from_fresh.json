@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:deadly_cap"
+  },
+  "result": {
+    "id": "herbalistscraft:deadly_cap_powder",
+    "count": 1
+  },
+  "grind_time": 60,
+  "quality": 0.9
+}

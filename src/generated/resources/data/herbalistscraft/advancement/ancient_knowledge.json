@@ -1,0 +1,23 @@
+{
+  "parent": "herbalistscraft:deep_knowledge",
+  "criteria": {
+    "granted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "herbalistscraft:dragonscale_draught"
+    },
+    "title": {
+      "translate": "advancement.herbalistscraft.ancient_knowledge.title"
+    },
+    "description": {
+      "translate": "advancement.herbalistscraft.ancient_knowledge.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

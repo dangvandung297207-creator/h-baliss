@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:hemlock"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_hemlock",
+    "count": 1
+  },
+  "processing_time": 240
+}

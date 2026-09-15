@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:cinnamon_bark"
+  },
+  "result": {
+    "id": "herbalistscraft:cinnamon_bark_powder",
+    "count": 1
+  },
+  "grind_time": 60,
+  "quality": 0.9
+}

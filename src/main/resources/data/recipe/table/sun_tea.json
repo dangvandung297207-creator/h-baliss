@@ -1,0 +1,18 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:spring_water_cup"
+  },
+  "herb": {
+    "item": "herbalistscraft:dried_sunleaf"
+  },
+  "result": {
+    "id": "herbalistscraft:sun_tea",
+    "count": 1
+  },
+  "brew_time": 130,
+  "medicine": "herbalistscraft:sun_tea",
+  "extract": {
+    "item": "herbalistscraft:sunpetal_extract"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:soul_soil",
+    "minecraft:soul_sand",
+    "minecraft:warped_nylium",
+    "minecraft:crimson_nylium"
+  ]
+}

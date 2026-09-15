@@ -1,0 +1,79 @@
+{
+  "grind": {
+    "category": "block",
+    "subtitle": "subtitles.herbalistscraft.grind",
+    "sounds": [
+      {
+        "name": "herbalistscraft:grind",
+        "stream": false,
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "mill": {
+    "category": "block",
+    "subtitle": "subtitles.herbalistscraft.mill",
+    "sounds": [
+      {
+        "name": "herbalistscraft:mill",
+        "stream": false,
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "pour": {
+    "category": "block",
+    "subtitle": "subtitles.herbalistscraft.pour",
+    "sounds": [
+      {
+        "name": "herbalistscraft:pour",
+        "stream": false,
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "dry": {
+    "category": "block",
+    "subtitle": "subtitles.herbalistscraft.dry",
+    "sounds": [
+      {
+        "name": "herbalistscraft:dry",
+        "stream": false,
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "salve": {
+    "category": "player",
+    "subtitle": "subtitles.herbalistscraft.salve",
+    "sounds": [
+      {
+        "name": "herbalistscraft:salve",
+        "stream": false,
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "discovery": {
+    "category": "player",
+    "subtitle": "subtitles.herbalistscraft.discovery",
+    "sounds": [
+      {
+        "name": "herbalistscraft:discovery",
+        "stream": false,
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "sip": {
+    "category": "player",
+    "subtitle": "subtitles.herbalistscraft.sip",
+    "sounds": [
+      {
+        "name": "herbalistscraft:sip",
+        "stream": false,
+        "attenuation_distance": 16
+      }
+    ]
+  }
+}

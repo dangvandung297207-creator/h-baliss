@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:yarrow"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_yarrow",
+    "count": 1
+  },
+  "processing_time": 240
+}

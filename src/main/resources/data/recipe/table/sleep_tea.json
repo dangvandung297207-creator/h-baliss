@@ -1,0 +1,21 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:spring_water_cup"
+  },
+  "herb": {
+    "item": "herbalistscraft:dried_moonflower"
+  },
+  "result": {
+    "id": "herbalistscraft:sleep_tea",
+    "count": 1
+  },
+  "brew_time": 180,
+  "medicine": "herbalistscraft:sleep_tea",
+  "extract": {
+    "item": "herbalistscraft:snowbell_extract"
+  },
+  "catalyst": {
+    "item": "herbalistscraft:frost_crystal"
+  }
+}

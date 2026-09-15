@@ -1,0 +1,21 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:moonwater"
+  },
+  "herb": {
+    "item": "herbalistscraft:wild_ginseng_extract"
+  },
+  "result": {
+    "id": "herbalistscraft:vitalis_tonic",
+    "count": 1
+  },
+  "brew_time": 400,
+  "medicine": "herbalistscraft:vitalis_tonic",
+  "extract": {
+    "item": "herbalistscraft:vitalis_root_extract"
+  },
+  "catalyst": {
+    "item": "herbalistscraft:life_essence"
+  }
+}

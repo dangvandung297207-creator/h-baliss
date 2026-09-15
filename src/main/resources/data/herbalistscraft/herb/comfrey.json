@@ -1,0 +1,46 @@
+{
+  "category": "HEALING",
+  "morphology": "LEAF",
+  "lore": "Knits bone and skin alike. The older herbalists call it knitbone and hoard it.",
+  "properties": {
+    "HEALING": 0.7,
+    "HEMOSTATIC": 0.5
+  },
+  "toxicity": "LOW",
+  "rarity": "COMMON",
+  "seasons": [
+    "SPRING",
+    "SUMMER"
+  ],
+  "biome_groups": [
+    "forest",
+    "swamp"
+  ],
+  "placement": "WETLAND",
+  "soil": "DIRT",
+  "light": "BRIGHT",
+  "growth_speed": 1.0,
+  "yield": {
+    "min": 1,
+    "max": 3
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.6,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder"
+  ],
+  "uses": [
+    "healing tonic",
+    "healing salve"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:comfrey_crop",
+  "seed_item": "herbalistscraft:comfrey_seeds"
+}

@@ -1,0 +1,18 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:spring_water_cup"
+  },
+  "herb": {
+    "item": "herbalistscraft:dried_golden_chamomile"
+  },
+  "result": {
+    "id": "herbalistscraft:herbal_tea",
+    "count": 1
+  },
+  "brew_time": 120,
+  "medicine": "herbalistscraft:herbal_tea",
+  "extract": {
+    "item": "herbalistscraft:red_clover_extract"
+  }
+}

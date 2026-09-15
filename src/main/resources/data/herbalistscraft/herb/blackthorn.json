@@ -1,0 +1,45 @@
+{
+  "category": "TOXIC",
+  "morphology": "BARK",
+  "lore": "A thorned scrub of the deep woods. Its bark stains the fingers and slows the blood.",
+  "properties": {
+    "TOXIC": 0.8,
+    "HEMOSTATIC": 0.4
+  },
+  "toxicity": "MEDIUM",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "AUTUMN"
+  ],
+  "biome_groups": [
+    "dark_forest"
+  ],
+  "placement": "SHADED",
+  "soil": "DIRT",
+  "light": "DARK",
+  "growth_speed": 0.8,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.4,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "bleeding oil",
+    "weakening oil"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/dirt",
+  "block": "herbalistscraft:blackthorn_crop",
+  "seed_item": "herbalistscraft:blackthorn_seeds"
+}

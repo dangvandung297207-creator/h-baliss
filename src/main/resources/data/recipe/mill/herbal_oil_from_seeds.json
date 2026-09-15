@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "tag": "herbalistscraft:mill_seeds"
+  },
+  "result": {
+    "id": "herbalistscraft:herbal_oil",
+    "count": 1
+  },
+  "processing_time": 200
+}

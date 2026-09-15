@@ -1,0 +1,46 @@
+{
+  "category": "STIMULANT",
+  "morphology": "FLOWER",
+  "lore": "Opens exactly at first light and closes at dusk. Brewed, it gives a night back to the sleepless.",
+  "properties": {
+    "STIMULANT": 0.9,
+    "ENERGY": 0.5,
+    "WARMING": 0.2
+  },
+  "toxicity": "LOW",
+  "rarity": "UNCOMMON",
+  "seasons": [
+    "SPRING"
+  ],
+  "biome_groups": [
+    "jungle"
+  ],
+  "placement": "SHADED",
+  "soil": "MOSS",
+  "light": "DIM",
+  "growth_speed": 0.75,
+  "yield": {
+    "min": 1,
+    "max": 2
+  },
+  "seed_return": {
+    "min": 1,
+    "max": 1
+  },
+  "regrow_chance": 0.4,
+  "fresh_days": 4,
+  "forms": [
+    "fresh",
+    "seed",
+    "dried",
+    "powder",
+    "extract"
+  ],
+  "uses": [
+    "focus tonic",
+    "focus tea"
+  ],
+  "soil_tag": "#herbalistscraft:herb_soils/moss",
+  "block": "herbalistscraft:dawnbloom_crop",
+  "seed_item": "herbalistscraft:dawnbloom_seeds"
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/spiritwood",
+    "features": "herbalistscraft:herb_spiritwood",
+    "step": "vegetal_decoration"
+  }
+]

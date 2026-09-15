@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/snowbell",
+    "features": "herbalistscraft:herb_snowbell",
+    "step": "vegetal_decoration"
+  }
+]

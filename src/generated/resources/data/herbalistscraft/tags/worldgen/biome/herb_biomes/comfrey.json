@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#herbalistscraft:herb_biomes/forest",
+    "#herbalistscraft:herb_biomes/swamp"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:wolfsbane"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_wolfsbane",
+    "count": 1
+  },
+  "processing_time": 240
+}

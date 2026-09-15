@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:ironbark"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_ironbark",
+    "count": 1
+  },
+  "processing_time": 240
+}

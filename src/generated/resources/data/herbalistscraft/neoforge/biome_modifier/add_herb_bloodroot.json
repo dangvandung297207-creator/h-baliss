@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/bloodroot",
+    "features": "herbalistscraft:herb_bloodroot",
+    "step": "vegetal_decoration"
+  }
+]

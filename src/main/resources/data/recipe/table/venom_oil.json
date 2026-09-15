@@ -1,0 +1,18 @@
+{
+  "type": "herbalistscraft:table",
+  "base": {
+    "item": "herbalistscraft:moonwater"
+  },
+  "herb": {
+    "item": "herbalistscraft:viperweed_extract"
+  },
+  "result": {
+    "id": "herbalistscraft:venom_oil",
+    "count": 1
+  },
+  "brew_time": 320,
+  "medicine": "herbalistscraft:venom_oil",
+  "catalyst": {
+    "item": "herbalistscraft:shadow_ichor"
+  }
+}

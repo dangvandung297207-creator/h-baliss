@@ -1,0 +1,38 @@
+{
+  "kind": "SALVE",
+  "tier": 1,
+  "rarity": "COMMON",
+  "color": "#b0564a",
+  "toxicity": "LOW",
+  "toxin_points": 6,
+  "cooldown": 240,
+  "description": "Bloodroot and comfrey in a wax base. Ordinary, reliable, always worth carrying.",
+  "discovery": "EXPERIMENT",
+  "effects": [
+    {
+      "type": "INSTANT_HEALTH",
+      "amount": 3,
+      "duration": 0,
+      "amplifier": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "CLEAR_BLEEDING",
+      "duration": 0,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    },
+    {
+      "type": "HERBAL",
+      "effect": "hemostasis",
+      "duration": 600,
+      "amplifier": 0,
+      "amount": 0,
+      "chance": 1.0
+    }
+  ],
+  "side_effects": [],
+  "item": "herbalistscraft:healing_salve",
+  "herb_count": 2
+}

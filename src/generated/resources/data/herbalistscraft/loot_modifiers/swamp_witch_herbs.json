@@ -1,0 +1,58 @@
+{
+  "type": "herbalistscraft:herb_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/spawn_bonus_chest"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/shipwreck_treasure"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "item": "herbalistscraft:journal_page_toxic",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:nightshade",
+      "weight": 4,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:toxic_oil",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:shadow_ichor",
+      "weight": 2,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:hemlock",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:sleepwort",
+      "weight": 2,
+      "min_count": 1,
+      "max_count": 1
+    }
+  ],
+  "rolls": 1,
+  "chance": 0.6
+}

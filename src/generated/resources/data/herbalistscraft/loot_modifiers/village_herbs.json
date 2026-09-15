@@ -1,0 +1,94 @@
+{
+  "type": "herbalistscraft:herb_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/village/village_plains_house"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/village/village_taiga_house"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/village/village_savanna_house"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/village/village_desert_house"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/village/village_snowy_house"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/village/village_temple"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/village/village_toolsmith"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:chests/village/village_mason"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "item": "herbalistscraft:journal_page_herbal",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:glass_vial",
+      "weight": 4,
+      "min_count": 1,
+      "max_count": 3
+    },
+    {
+      "item": "herbalistscraft:golden_chamomile",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:cleansage",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:marshroot",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:bitterroot",
+      "weight": 2,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:lavender",
+      "weight": 3,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": "herbalistscraft:seed_pouch",
+      "weight": 1,
+      "min_count": 1,
+      "max_count": 1
+    }
+  ],
+  "rolls": 1,
+  "chance": 0.6
+}

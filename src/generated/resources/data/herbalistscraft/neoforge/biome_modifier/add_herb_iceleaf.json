@@ -1,0 +1,8 @@
+[
+  {
+    "type": "neoforge:add_features",
+    "biomes": "#herbalistscraft:herb_biomes/iceleaf",
+    "features": "herbalistscraft:herb_iceleaf",
+    "step": "vegetal_decoration"
+  }
+]
