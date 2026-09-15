@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:frostmint"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_frostmint",
+    "count": 1
+  },
+  "processing_time": 240
+}

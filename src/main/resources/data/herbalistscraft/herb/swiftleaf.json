@@ -33,7 +33,10 @@
   },
   "forms": [
     "fresh",
-    "seed"
+    "seed",
+    "dried",
+    "powder",
+    "extract"
   ],
   "uses": [
     "stamina tonic",
@@ -41,5 +44,5 @@
   ],
   "soil_tag": "#herbalistscraft:herb_soils/dirt",
   "block": "herbalistscraft:swiftleaf_crop",
-  "seed_item": ""
+  "seed_item": "herbalistscraft:swiftleaf_seeds"
 }

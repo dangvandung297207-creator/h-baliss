@@ -26,7 +26,7 @@ CONTENT = REPO / "tools" / "content"
 
 sys.path.insert(0, str(REPO))
 
-from tools.gen import assets, data, java, sounds  # noqa: E402
+from tools.gen import assets, data, herbs as herb_rules, java, sounds  # noqa: E402
 
 
 def load(name: str):
@@ -42,6 +42,9 @@ def load_content() -> dict:
     item_file = load("items")
     lang = load("lang")
     item_file["items"] = [i for i in item_file["items"] if i.get("disabled") is not True]
+    # Resolve each herb's item forms once, so items, recipes, textures and loot all agree.
+    for herb in herbs:
+        herb["forms"] = herb_rules.forms_of(herb, medicines)
     return {
         "herbs": herbs,
         "medicines": medicines,

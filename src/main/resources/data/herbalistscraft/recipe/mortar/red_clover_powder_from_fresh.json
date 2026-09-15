@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:red_clover"
+  },
+  "result": {
+    "id": "herbalistscraft:red_clover_powder",
+    "count": 1
+  },
+  "grind_time": 60,
+  "quality": 0.9
+}

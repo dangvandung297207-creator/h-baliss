@@ -36,7 +36,8 @@
     "fresh",
     "seed",
     "dried",
-    "powder"
+    "powder",
+    "extract"
   ],
   "uses": [
     "healing tonic",

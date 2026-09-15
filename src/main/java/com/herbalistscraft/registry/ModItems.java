@@ -36,6 +36,12 @@ public final class ModItems {
             p -> new HerbItem(p, ModHerbs.BLOODROOT, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64));
     public static final DeferredItem<Item> BLOODROOT_SEEDS = ITEMS.registerItem("bloodroot_seeds",
             p -> new HerbSeedItem(p, ModHerbs.BLOODROOT), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> DRIED_BLOODROOT = ITEMS.registerItem("dried_bloodroot",
+            p -> new HerbItem(p, ModHerbs.BLOODROOT, HerbForm.DRIED, 0.8f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> BLOODROOT_POWDER = ITEMS.registerItem("bloodroot_powder",
+            p -> new HerbItem(p, ModHerbs.BLOODROOT, HerbForm.POWDER, 1.0f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> BLOODROOT_EXTRACT = ITEMS.registerItem("bloodroot_extract",
+            p -> new HerbItem(p, ModHerbs.BLOODROOT, HerbForm.EXTRACT, 1.5f), new Item.Properties().stacksTo(16));
 
     public static final DeferredItem<Item> HEARTLEAF = ITEMS.registerItem("heartleaf",
             p -> new HerbItem(p, ModHerbs.HEARTLEAF, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
@@ -52,6 +58,12 @@ public final class ModItems {
             p -> new HerbItem(p, ModHerbs.RED_CLOVER, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64));
     public static final DeferredItem<Item> RED_CLOVER_SEEDS = ITEMS.registerItem("red_clover_seeds",
             p -> new HerbSeedItem(p, ModHerbs.RED_CLOVER), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> DRIED_RED_CLOVER = ITEMS.registerItem("dried_red_clover",
+            p -> new HerbItem(p, ModHerbs.RED_CLOVER, HerbForm.DRIED, 0.8f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> RED_CLOVER_POWDER = ITEMS.registerItem("red_clover_powder",
+            p -> new HerbItem(p, ModHerbs.RED_CLOVER, HerbForm.POWDER, 1.0f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> RED_CLOVER_EXTRACT = ITEMS.registerItem("red_clover_extract",
+            p -> new HerbItem(p, ModHerbs.RED_CLOVER, HerbForm.EXTRACT, 1.5f), new Item.Properties().stacksTo(16));
 
     public static final DeferredItem<Item> VITALIS_ROOT = ITEMS.registerItem("vitalis_root",
             p -> new HerbItem(p, ModHerbs.VITALIS_ROOT, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64).rarity(Rarity.RARE));
@@ -83,6 +95,8 @@ public final class ModItems {
             p -> new HerbItem(p, ModHerbs.COMFREY, HerbForm.DRIED, 0.8f), new Item.Properties().stacksTo(64));
     public static final DeferredItem<Item> COMFREY_POWDER = ITEMS.registerItem("comfrey_powder",
             p -> new HerbItem(p, ModHerbs.COMFREY, HerbForm.POWDER, 1.0f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> COMFREY_EXTRACT = ITEMS.registerItem("comfrey_extract",
+            p -> new HerbItem(p, ModHerbs.COMFREY, HerbForm.EXTRACT, 1.5f), new Item.Properties().stacksTo(16));
 
     public static final DeferredItem<Item> SILVERLEAF = ITEMS.registerItem("silverleaf",
             p -> new HerbItem(p, ModHerbs.SILVERLEAF, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
@@ -99,6 +113,12 @@ public final class ModItems {
             p -> new HerbItem(p, ModHerbs.FROSTMINT, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64));
     public static final DeferredItem<Item> FROSTMINT_SEEDS = ITEMS.registerItem("frostmint_seeds",
             p -> new HerbSeedItem(p, ModHerbs.FROSTMINT), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> DRIED_FROSTMINT = ITEMS.registerItem("dried_frostmint",
+            p -> new HerbItem(p, ModHerbs.FROSTMINT, HerbForm.DRIED, 0.8f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> FROSTMINT_POWDER = ITEMS.registerItem("frostmint_powder",
+            p -> new HerbItem(p, ModHerbs.FROSTMINT, HerbForm.POWDER, 1.0f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> FROSTMINT_EXTRACT = ITEMS.registerItem("frostmint_extract",
+            p -> new HerbItem(p, ModHerbs.FROSTMINT, HerbForm.EXTRACT, 1.5f), new Item.Properties().stacksTo(16));
 
     public static final DeferredItem<Item> SNOWBELL = ITEMS.registerItem("snowbell",
             p -> new HerbItem(p, ModHerbs.SNOWBELL, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
@@ -166,6 +186,12 @@ public final class ModItems {
             p -> new HerbItem(p, ModHerbs.SUNLEAF, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64));
     public static final DeferredItem<Item> SUNLEAF_SEEDS = ITEMS.registerItem("sunleaf_seeds",
             p -> new HerbSeedItem(p, ModHerbs.SUNLEAF), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> DRIED_SUNLEAF = ITEMS.registerItem("dried_sunleaf",
+            p -> new HerbItem(p, ModHerbs.SUNLEAF, HerbForm.DRIED, 0.8f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> SUNLEAF_POWDER = ITEMS.registerItem("sunleaf_powder",
+            p -> new HerbItem(p, ModHerbs.SUNLEAF, HerbForm.POWDER, 1.0f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> SUNLEAF_EXTRACT = ITEMS.registerItem("sunleaf_extract",
+            p -> new HerbItem(p, ModHerbs.SUNLEAF, HerbForm.EXTRACT, 1.5f), new Item.Properties().stacksTo(16));
 
     public static final DeferredItem<Item> CINNAMON_BARK = ITEMS.registerItem("cinnamon_bark",
             p -> new HerbItem(p, ModHerbs.CINNAMON_BARK, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
@@ -290,6 +316,12 @@ public final class ModItems {
             p -> new HerbItem(p, ModHerbs.CLEANSAGE, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64));
     public static final DeferredItem<Item> CLEANSAGE_SEEDS = ITEMS.registerItem("cleansage_seeds",
             p -> new HerbSeedItem(p, ModHerbs.CLEANSAGE), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> DRIED_CLEANSAGE = ITEMS.registerItem("dried_cleansage",
+            p -> new HerbItem(p, ModHerbs.CLEANSAGE, HerbForm.DRIED, 0.8f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> CLEANSAGE_POWDER = ITEMS.registerItem("cleansage_powder",
+            p -> new HerbItem(p, ModHerbs.CLEANSAGE, HerbForm.POWDER, 1.0f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> CLEANSAGE_EXTRACT = ITEMS.registerItem("cleansage_extract",
+            p -> new HerbItem(p, ModHerbs.CLEANSAGE, HerbForm.EXTRACT, 1.5f), new Item.Properties().stacksTo(16));
 
     public static final DeferredItem<Item> BITTERROOT = ITEMS.registerItem("bitterroot",
             p -> new HerbItem(p, ModHerbs.BITTERROOT, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64));
@@ -306,6 +338,12 @@ public final class ModItems {
             p -> new HerbItem(p, ModHerbs.GOLDEN_CHAMOMILE, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64));
     public static final DeferredItem<Item> GOLDEN_CHAMOMILE_SEEDS = ITEMS.registerItem("golden_chamomile_seeds",
             p -> new HerbSeedItem(p, ModHerbs.GOLDEN_CHAMOMILE), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> DRIED_GOLDEN_CHAMOMILE = ITEMS.registerItem("dried_golden_chamomile",
+            p -> new HerbItem(p, ModHerbs.GOLDEN_CHAMOMILE, HerbForm.DRIED, 0.8f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> GOLDEN_CHAMOMILE_POWDER = ITEMS.registerItem("golden_chamomile_powder",
+            p -> new HerbItem(p, ModHerbs.GOLDEN_CHAMOMILE, HerbForm.POWDER, 1.0f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> GOLDEN_CHAMOMILE_EXTRACT = ITEMS.registerItem("golden_chamomile_extract",
+            p -> new HerbItem(p, ModHerbs.GOLDEN_CHAMOMILE, HerbForm.EXTRACT, 1.5f), new Item.Properties().stacksTo(16));
 
     public static final DeferredItem<Item> MARSHROOT = ITEMS.registerItem("marshroot",
             p -> new HerbItem(p, ModHerbs.MARSHROOT, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64));
@@ -388,6 +426,12 @@ public final class ModItems {
             p -> new HerbItem(p, ModHerbs.SWIFTLEAF, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64));
     public static final DeferredItem<Item> SWIFTLEAF_SEEDS = ITEMS.registerItem("swiftleaf_seeds",
             p -> new HerbSeedItem(p, ModHerbs.SWIFTLEAF), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> DRIED_SWIFTLEAF = ITEMS.registerItem("dried_swiftleaf",
+            p -> new HerbItem(p, ModHerbs.SWIFTLEAF, HerbForm.DRIED, 0.8f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> SWIFTLEAF_POWDER = ITEMS.registerItem("swiftleaf_powder",
+            p -> new HerbItem(p, ModHerbs.SWIFTLEAF, HerbForm.POWDER, 1.0f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> SWIFTLEAF_EXTRACT = ITEMS.registerItem("swiftleaf_extract",
+            p -> new HerbItem(p, ModHerbs.SWIFTLEAF, HerbForm.EXTRACT, 1.5f), new Item.Properties().stacksTo(16));
 
     public static final DeferredItem<Item> DAWNBLOOM = ITEMS.registerItem("dawnbloom",
             p -> new HerbItem(p, ModHerbs.DAWNBLOOM, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
@@ -437,6 +481,12 @@ public final class ModItems {
             p -> new HerbItem(p, ModHerbs.LAVENDER, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64));
     public static final DeferredItem<Item> LAVENDER_SEEDS = ITEMS.registerItem("lavender_seeds",
             p -> new HerbSeedItem(p, ModHerbs.LAVENDER), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> DRIED_LAVENDER = ITEMS.registerItem("dried_lavender",
+            p -> new HerbItem(p, ModHerbs.LAVENDER, HerbForm.DRIED, 0.8f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> LAVENDER_POWDER = ITEMS.registerItem("lavender_powder",
+            p -> new HerbItem(p, ModHerbs.LAVENDER, HerbForm.POWDER, 1.0f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> LAVENDER_EXTRACT = ITEMS.registerItem("lavender_extract",
+            p -> new HerbItem(p, ModHerbs.LAVENDER, HerbForm.EXTRACT, 1.5f), new Item.Properties().stacksTo(16));
 
     public static final DeferredItem<Item> SLEEPWORT = ITEMS.registerItem("sleepwort",
             p -> new HerbItem(p, ModHerbs.SLEEPWORT, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64).rarity(Rarity.RARE));
@@ -475,6 +525,12 @@ public final class ModItems {
             p -> new HerbItem(p, ModHerbs.ASHLEAF, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64));
     public static final DeferredItem<Item> ASHLEAF_SEEDS = ITEMS.registerItem("ashleaf_seeds",
             p -> new HerbSeedItem(p, ModHerbs.ASHLEAF), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> DRIED_ASHLEAF = ITEMS.registerItem("dried_ashleaf",
+            p -> new HerbItem(p, ModHerbs.ASHLEAF, HerbForm.DRIED, 0.8f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> ASHLEAF_POWDER = ITEMS.registerItem("ashleaf_powder",
+            p -> new HerbItem(p, ModHerbs.ASHLEAF, HerbForm.POWDER, 1.0f), new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> ASHLEAF_EXTRACT = ITEMS.registerItem("ashleaf_extract",
+            p -> new HerbItem(p, ModHerbs.ASHLEAF, HerbForm.EXTRACT, 1.5f), new Item.Properties().stacksTo(16));
 
     public static final DeferredItem<Item> DRAGONSCALE_HERB = ITEMS.registerItem("dragonscale_herb",
             p -> new HerbItem(p, ModHerbs.DRAGONSCALE_HERB, HerbForm.FRESH, 1.0f), new Item.Properties().stacksTo(64).rarity(Rarity.EPIC));

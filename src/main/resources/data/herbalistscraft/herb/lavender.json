@@ -34,7 +34,10 @@
   },
   "forms": [
     "fresh",
-    "seed"
+    "seed",
+    "dried",
+    "powder",
+    "extract"
   ],
   "uses": [
     "sleep tea",
@@ -42,5 +45,5 @@
   ],
   "soil_tag": "#herbalistscraft:herb_soils/dirt",
   "block": "herbalistscraft:lavender_crop",
-  "seed_item": ""
+  "seed_item": "herbalistscraft:lavender_seeds"
 }

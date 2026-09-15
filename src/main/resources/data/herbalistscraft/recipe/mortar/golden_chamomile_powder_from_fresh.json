@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:golden_chamomile"
+  },
+  "result": {
+    "id": "herbalistscraft:golden_chamomile_powder",
+    "count": 1
+  },
+  "grind_time": 60,
+  "quality": 0.9
+}

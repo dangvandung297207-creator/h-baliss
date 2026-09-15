@@ -33,7 +33,10 @@
   },
   "forms": [
     "fresh",
-    "seed"
+    "seed",
+    "dried",
+    "powder",
+    "extract"
   ],
   "uses": [
     "herbal tea",
@@ -41,5 +44,5 @@
   ],
   "soil_tag": "#herbalistscraft:herb_soils/dirt",
   "block": "herbalistscraft:golden_chamomile_crop",
-  "seed_item": ""
+  "seed_item": "herbalistscraft:golden_chamomile_seeds"
 }

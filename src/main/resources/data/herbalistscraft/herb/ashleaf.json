@@ -33,7 +33,10 @@
   },
   "forms": [
     "fresh",
-    "seed"
+    "seed",
+    "dried",
+    "powder",
+    "extract"
   ],
   "uses": [
     "fire salve",
@@ -41,5 +44,5 @@
   ],
   "soil_tag": "#herbalistscraft:herb_soils/netherrack",
   "block": "herbalistscraft:ashleaf_crop",
-  "seed_item": ""
+  "seed_item": "herbalistscraft:ashleaf_seeds"
 }

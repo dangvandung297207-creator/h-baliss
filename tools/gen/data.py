@@ -124,7 +124,7 @@ def _recipe(path: pathlib.Path, name: str, body: dict) -> None:
 
 
 def _recipes(data: pathlib.Path, herbs: list, medicines: list, log=print) -> None:
-    root = data / "recipe"
+    root = data / MODID / "recipe"
     by_id = {h["id"]: h for h in herbs}
     made = 0
 
@@ -583,8 +583,15 @@ def generate(root: pathlib.Path, herbs: list, medicines: list, lang: dict, log=p
     _herb_definitions(data, herbs, lang, log)
     _medicine_definitions(data, medicines, log)
     recipes = _recipes(data, herbs, medicines, log)
+    _structures(root, log)
     _tags(root, herbs, log)
     _worldgen(root, herbs, log)
     _loot(root, herbs, log)
     _advancements(root, herbs, medicines, lang, log)
     return {"recipes": recipes, "data_version": DATA_VERSION}
+
+
+def _structures(root: pathlib.Path, log=print) -> None:
+    from . import structures
+
+    structures.generate(root, log=log)

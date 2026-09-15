@@ -34,7 +34,10 @@
   },
   "forms": [
     "fresh",
-    "seed"
+    "seed",
+    "dried",
+    "powder",
+    "extract"
   ],
   "uses": [
     "sweetener",
@@ -42,5 +45,5 @@
   ],
   "soil_tag": "#herbalistscraft:herb_soils/dirt",
   "block": "herbalistscraft:red_clover_crop",
-  "seed_item": ""
+  "seed_item": "herbalistscraft:red_clover_seeds"
 }

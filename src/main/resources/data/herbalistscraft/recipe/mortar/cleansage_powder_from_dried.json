@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:dried_cleansage"
+  },
+  "result": {
+    "id": "herbalistscraft:cleansage_powder",
+    "count": 2
+  },
+  "grind_time": 80,
+  "quality": 1.15
+}

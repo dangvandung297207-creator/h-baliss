@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 5652419,
+    "spacing": 62,
+    "separation": 22
+  },
+  "structures": [
+    {
+      "structure": "herbalistscraft:ancient_apothecary",
+      "weight": 1
+    }
+  ]
+}

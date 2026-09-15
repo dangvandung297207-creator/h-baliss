@@ -1,0 +1,11 @@
+{
+  "type": "herbalistscraft:mill",
+  "ingredient": {
+    "item": "herbalistscraft:bloodroot"
+  },
+  "result": {
+    "id": "herbalistscraft:dried_bloodroot",
+    "count": 1
+  },
+  "processing_time": 240
+}

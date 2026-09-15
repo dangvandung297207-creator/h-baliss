@@ -217,7 +217,37 @@
         {
           "type": "minecraft:item",
           "weight": 3,
+          "name": "herbalistscraft:bloodroot_extract",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
           "name": "herbalistscraft:heartleaf_extract",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "herbalistscraft:red_clover_extract",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -262,7 +292,37 @@
         {
           "type": "minecraft:item",
           "weight": 3,
+          "name": "herbalistscraft:comfrey_extract",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
           "name": "herbalistscraft:silverleaf_extract",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "herbalistscraft:frostmint_extract",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -353,6 +413,21 @@
           "type": "minecraft:item",
           "weight": 3,
           "name": "herbalistscraft:emberroot_extract",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "herbalistscraft:sunleaf_extract",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -517,7 +592,37 @@
         {
           "type": "minecraft:item",
           "weight": 3,
+          "name": "herbalistscraft:cleansage_extract",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
           "name": "herbalistscraft:bitterroot_extract",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "herbalistscraft:golden_chamomile_extract",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -637,6 +742,21 @@
         {
           "type": "minecraft:item",
           "weight": 3,
+          "name": "herbalistscraft:swiftleaf_extract",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
           "name": "herbalistscraft:dawnbloom_extract",
           "functions": [
             {
@@ -697,6 +817,21 @@
         {
           "type": "minecraft:item",
           "weight": 3,
+          "name": "herbalistscraft:lavender_extract",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
           "name": "herbalistscraft:sleepwort_extract",
           "functions": [
             {
@@ -728,6 +863,21 @@
           "type": "minecraft:item",
           "weight": 3,
           "name": "herbalistscraft:ironbark_extract",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "herbalistscraft:ashleaf_extract",
           "functions": [
             {
               "function": "minecraft:set_count",

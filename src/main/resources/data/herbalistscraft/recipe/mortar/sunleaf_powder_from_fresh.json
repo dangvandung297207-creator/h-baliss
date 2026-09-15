@@ -1,0 +1,12 @@
+{
+  "type": "herbalistscraft:mortar",
+  "ingredient": {
+    "item": "herbalistscraft:sunleaf"
+  },
+  "result": {
+    "id": "herbalistscraft:sunleaf_powder",
+    "count": 1
+  },
+  "grind_time": 60,
+  "quality": 0.9
+}

@@ -270,6 +270,8 @@ def generate(root: pathlib.Path, herbs: list, medicines: list, items: list, expe
     for item in items:
         if item.get("kind") == "BLOCK":
             _item_model_block(assets / "models/item" / f"{item['id']}.json", item["block"])
+            # block items are named through the block key in 1.21
+            entries[f"block.{MODID}.{item['block']}"] = item["name"]
             counts["item_models"] += 1
 
     # ---- other items ---------------------------------------------------------

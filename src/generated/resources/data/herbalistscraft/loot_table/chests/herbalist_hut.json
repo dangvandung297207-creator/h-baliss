@@ -7,7 +7,37 @@
         {
           "type": "minecraft:item",
           "weight": 6,
+          "name": "herbalistscraft:bloodroot_seeds",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
           "name": "herbalistscraft:heartleaf_seeds",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
+          "name": "herbalistscraft:red_clover_seeds",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -68,6 +98,21 @@
           "type": "minecraft:item",
           "weight": 6,
           "name": "herbalistscraft:silverleaf_seeds",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
+          "name": "herbalistscraft:frostmint_seeds",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -158,6 +203,21 @@
           "type": "minecraft:item",
           "weight": 6,
           "name": "herbalistscraft:emberroot_seeds",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
+          "name": "herbalistscraft:sunleaf_seeds",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -337,7 +397,37 @@
         {
           "type": "minecraft:item",
           "weight": 6,
+          "name": "herbalistscraft:cleansage_seeds",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
           "name": "herbalistscraft:bitterroot_seeds",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
+          "name": "herbalistscraft:golden_chamomile_seeds",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -457,6 +547,21 @@
         {
           "type": "minecraft:item",
           "weight": 6,
+          "name": "herbalistscraft:swiftleaf_seeds",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
           "name": "herbalistscraft:dawnbloom_seeds",
           "functions": [
             {
@@ -517,6 +622,21 @@
         {
           "type": "minecraft:item",
           "weight": 6,
+          "name": "herbalistscraft:lavender_seeds",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
           "name": "herbalistscraft:sleepwort_seeds",
           "functions": [
             {
@@ -548,6 +668,21 @@
           "type": "minecraft:item",
           "weight": 6,
           "name": "herbalistscraft:ironbark_seeds",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
+          "name": "herbalistscraft:ashleaf_seeds",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -1347,7 +1482,37 @@
         {
           "type": "minecraft:item",
           "weight": 5,
+          "name": "herbalistscraft:dried_bloodroot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
           "name": "herbalistscraft:dried_heartleaf",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "herbalistscraft:dried_red_clover",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -1408,6 +1573,21 @@
           "type": "minecraft:item",
           "weight": 5,
           "name": "herbalistscraft:dried_silverleaf",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "herbalistscraft:dried_frostmint",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -1498,6 +1678,21 @@
           "type": "minecraft:item",
           "weight": 5,
           "name": "herbalistscraft:dried_emberroot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "herbalistscraft:dried_sunleaf",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -1677,7 +1872,37 @@
         {
           "type": "minecraft:item",
           "weight": 5,
+          "name": "herbalistscraft:dried_cleansage",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
           "name": "herbalistscraft:dried_bitterroot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "herbalistscraft:dried_golden_chamomile",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -1797,6 +2022,21 @@
         {
           "type": "minecraft:item",
           "weight": 5,
+          "name": "herbalistscraft:dried_swiftleaf",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
           "name": "herbalistscraft:dried_dawnbloom",
           "functions": [
             {
@@ -1857,6 +2097,21 @@
         {
           "type": "minecraft:item",
           "weight": 5,
+          "name": "herbalistscraft:dried_lavender",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
           "name": "herbalistscraft:dried_sleepwort",
           "functions": [
             {
@@ -1888,6 +2143,21 @@
           "type": "minecraft:item",
           "weight": 5,
           "name": "herbalistscraft:dried_ironbark",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "herbalistscraft:dried_ashleaf",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -1947,7 +2217,37 @@
         {
           "type": "minecraft:item",
           "weight": 3,
+          "name": "herbalistscraft:bloodroot_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
           "name": "herbalistscraft:heartleaf_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "herbalistscraft:red_clover_powder",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -2022,6 +2322,21 @@
         {
           "type": "minecraft:item",
           "weight": 3,
+          "name": "herbalistscraft:frostmint_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
           "name": "herbalistscraft:snowbell_powder",
           "functions": [
             {
@@ -2068,6 +2383,21 @@
           "type": "minecraft:item",
           "weight": 3,
           "name": "herbalistscraft:emberroot_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "herbalistscraft:sunleaf_powder",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -2247,7 +2577,37 @@
         {
           "type": "minecraft:item",
           "weight": 3,
+          "name": "herbalistscraft:cleansage_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
           "name": "herbalistscraft:bitterroot_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "herbalistscraft:golden_chamomile_powder",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -2367,6 +2727,21 @@
         {
           "type": "minecraft:item",
           "weight": 3,
+          "name": "herbalistscraft:swiftleaf_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
           "name": "herbalistscraft:dawnbloom_powder",
           "functions": [
             {
@@ -2427,6 +2802,21 @@
         {
           "type": "minecraft:item",
           "weight": 3,
+          "name": "herbalistscraft:lavender_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
           "name": "herbalistscraft:sleepwort_powder",
           "functions": [
             {
@@ -2458,6 +2848,21 @@
           "type": "minecraft:item",
           "weight": 3,
           "name": "herbalistscraft:ironbark_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "herbalistscraft:ashleaf_powder",
           "functions": [
             {
               "function": "minecraft:set_count",

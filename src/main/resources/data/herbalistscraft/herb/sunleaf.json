@@ -33,7 +33,10 @@
   },
   "forms": [
     "fresh",
-    "seed"
+    "seed",
+    "dried",
+    "powder",
+    "extract"
   ],
   "uses": [
     "warming tea",
@@ -41,5 +44,5 @@
   ],
   "soil_tag": "#herbalistscraft:herb_soils/sand",
   "block": "herbalistscraft:sunleaf_crop",
-  "seed_item": ""
+  "seed_item": "herbalistscraft:sunleaf_seeds"
 }
